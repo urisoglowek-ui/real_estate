@@ -170,9 +170,20 @@ footer .foot-brand{font-family:'Suez One',serif; color:var(--white); font-size:.
   .spine{display:none}
   .card,.hero,.chip{border-color:#ccc; background:#fff; box-shadow:none}
 }
+
+/* ---- top navigation ---- */
+.topnav{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topnav .nwrap{max-width:1060px;margin:0 auto;padding:0 16px;display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.topnav .nwrap::-webkit-scrollbar{display:none}
+.topnav a{flex:0 0 auto;color:var(--steel);text-decoration:none;font-size:.84rem;padding:12px 13px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s}
+.topnav a:hover{color:var(--white)}
+.topnav a.cur{color:var(--amber);border-bottom-color:var(--amber);font-weight:500}
+@media print{.topnav{display:none}}
 </style>
 </head>
 <body>
+<nav class="topnav"><div class="nwrap"><a href="index.html">⌂ ארגז הכלים</a><a href="noi.html">המכונה</a><a href="mao.html">מחשבון MAO</a><a href="flip-or-hold.html">התאומים</a><a href="multiplier.html">המכפיל</a><a href="waterfall.html">המפל</a><a href="rv.html" class="cur">דו"ח ה-RV</a></div></nav>
+
 <div class="spine" aria-hidden="true"></div>
 <div class="wrap">
 
