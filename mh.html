@@ -74,9 +74,9 @@ a.tool:hover{transform:translateY(-3px);border-color:var(--amber)}
 .tool .tn{font-family:'Suez One',serif;font-size:1.12rem;margin-bottom:6px}
 .tool .td{font-size:.86rem;color:var(--steel)}
 .tool .tb{display:inline-block;margin-top:12px;font-size:.76rem;color:var(--amber)}
-.gate{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(11,15,20,.82);backdrop-filter:blur(10px);padding:20px}
+.gate{position:fixed;inset:0;z-index:100;display:none;justify-content:center;background:rgba(11,15,20,.82);backdrop-filter:blur(10px);padding:20px;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .gate.show{display:flex}
-.gatecard{max-width:440px;width:100%;background:linear-gradient(180deg,#141D27,#0D141B);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative}
+.gatecard{max-width:440px;width:100%;margin:auto;background:linear-gradient(180deg,#141D27,#0D141B);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative}
 .gatecard::before{content:"";position:absolute;inset:-1px;border-radius:18px;padding:1px;background:linear-gradient(120deg,rgba(255,180,84,.55),transparent 35%,transparent 65%,rgba(240,120,24,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .gatecard .glogo{height:56px;margin:0 auto 12px;display:block;filter:drop-shadow(0 0 18px rgba(255,180,84,.2))}
 .gatecard h3{font-family:'Suez One',serif;font-weight:400;font-size:1.35rem;margin-bottom:8px}
