@@ -194,8 +194,10 @@ function calc(){
 for(const id of ids) document.getElementById(id).addEventListener('input',calc);
 
 (function(){
- var KEY='gate_ok', CODE='SC2026', g=document.getElementById('gate');
+ var GATE_OFF=true;  // email gate disabled by request — flip to false to re-enable
+ var KEY='gate_ok', CODE='SC2026', g=document.getElementById('sgate');
  if(!g) return;
+ if(GATE_OFF){ g.remove(); document.body.style.overflow=''; return; }
  var open=false; try{open=!!localStorage.getItem(KEY)}catch(e){}
  if(open) return;
  g.classList.add('show'); document.body.style.overflow='hidden';
