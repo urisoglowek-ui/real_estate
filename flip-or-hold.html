@@ -280,6 +280,11 @@ for(const id of ids) document.getElementById(id).addEventListener('input',calc);
 
 <div id="scgate" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(8,12,18,.82);backdrop-filter:blur(6px);padding:20px">
  <div style="background:var(--panel,#141D27);border:1px solid rgba(255,180,84,.4);border-radius:18px;max-width:430px;width:100%;padding:28px 26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.6)">
+  <div style="display:flex;justify-content:center;gap:8px;margin-bottom:6px">
+   <button type="button" class="scg_l" data-l="he" style="background:none;border:1px solid var(--line,#26344A);border-radius:8px;color:var(--steel,#A0AFC0);padding:4px 10px;cursor:pointer;font-family:inherit;font-size:.8rem">עברית</button>
+   <button type="button" class="scg_l" data-l="en" style="background:none;border:1px solid var(--line,#26344A);border-radius:8px;color:var(--steel,#A0AFC0);padding:4px 10px;cursor:pointer;font-family:inherit;font-size:.8rem">English</button>
+   <button type="button" class="scg_l" data-l="es" style="background:none;border:1px solid var(--line,#26344A);border-radius:8px;color:var(--steel,#A0AFC0);padding:4px 10px;cursor:pointer;font-family:inherit;font-size:.8rem">Español</button>
+  </div>
   <div style="font-size:2rem">🔓</div>
   <div id="scg_t" style="font-family:'Suez One',serif;font-size:1.3rem;color:var(--white,#F0F5FA);margin-top:8px">הכלים של המקצוענים — במייל אחד</div>
   <div id="scg_s" style="color:var(--steel,#A0AFC0);font-size:.92rem;margin-top:8px;line-height:1.55">השאירו מייל וקבלו גישה מיידית לכל המחשבונים — ולעדכוני עסקאות לפני כולם. פעם אחת, וזהו.</div>
@@ -306,7 +311,19 @@ for(const id of ids) document.getElementById(id).addEventListener('input',calc);
   document.getElementById('scg_b').textContent=d.b;
   document.getElementById('scg_n').placeholder=d.n;
   document.getElementById('scg_e').placeholder=d.e; }
- apply(); document.addEventListener('sc-lang',apply);
+ apply();
+ // gate language buttons proxy the site's own switcher (nav is under the overlay)
+ Array.prototype.forEach.call(document.querySelectorAll('.scg_l'),function(b){
+  b.addEventListener('click',function(){
+   var nb=document.querySelector('.lang[data-lang="'+b.getAttribute('data-l')+'"]');
+   if(nb) nb.click();
+   setTimeout(apply,30);
+  });
+ });
+ // and if anything else switches language, refresh gate texts too
+ document.addEventListener('click',function(ev){
+  if(ev.target && ev.target.closest && ev.target.closest('.lang')) setTimeout(apply,30);
+ },true);
  function unlock(){ try{localStorage.setItem('sc_tools_unlock','1');}catch(e){}
   g.style.transition='opacity .35s'; g.style.opacity='0';
   setTimeout(function(){ g.remove(); },380); }
