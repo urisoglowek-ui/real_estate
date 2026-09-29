@@ -1,0 +1,27 @@
+---
+layout: base
+title: Blog
+description: Uri Soglowek on U.S. real estate investing — deals, lessons and ideas from Soglowek Capital.
+permalink: /blog/
+---
+<main>
+<header class="phero"><div class="wrap">
+  <h1 class="rise d1" data-i18n="0">הבלוג</h1>
+  <p class="thesis rise d2" data-i18n="1">מחשבות, עסקאות ושיעורים מהשטח — מה שאני כותב ברשתות, במקום אחד.</p>
+</div></header>
+<section class="tight"><div class="wrap">
+{% if site.posts.size > 0 %}
+  <ul class="rows">
+  {% for post in site.posts %}{% assign pl = post.lang | default: 'he' %}
+    <li><a href="{{ post.url }}">
+      <div lang="{{ pl }}" dir="{% if pl == 'he' %}rtl{% else %}ltr{% endif %}"><span class="st closed"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time></span><span class="t">{{ post.title }}</span></div>
+      <p class="d" lang="{{ pl }}" dir="{% if pl == 'he' %}rtl{% else %}ltr{% endif %}">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | normalize_whitespace | truncate: 200 }}{% endif %}</p>
+      <span class="go" data-i18n="3">לקריאה</span>
+    </a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p class="lede" data-i18n="2">הפוסטים הראשונים בדרך.</p>
+{% endif %}
+</div></section>
+</main>

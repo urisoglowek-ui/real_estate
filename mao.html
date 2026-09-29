@@ -2,9 +2,15 @@
 <html lang="he" dir="rtl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MAO Calculator</title>
-<meta name="description" content="">
+<meta name="description" content="MAO calculator for fix-and-flip: from ARV to your maximum allowable offer, with a live sensitivity grid.">
+<link rel="canonical" href="https://soglowekcapital.com/mao.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Soglowek Capital">
+<meta property="og:title" content="MAO Calculator"><meta property="og:description" content="MAO calculator for fix-and-flip: from ARV to your maximum allowable offer, with a live sensitivity grid.">
+<meta property="og:url" content="https://soglowekcapital.com/mao.html"><meta property="og:image" content="https://soglowekcapital.com/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/atom+xml" title="Soglowek Capital — Blog" href="/blog/feed.xml">
 <meta name="theme-color" content="#0B0F14">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -141,17 +147,18 @@ input[type=range]{width:100%;accent-color:var(--amber);direction:ltr;margin:6px 
 .wf .minus span:last-child{color:var(--steel)}
 .wf .top span:last-child{color:var(--white);font-weight:600}
 </style>
-<link rel="stylesheet" href="site.css?v=e4df9c34">
-<link rel="stylesheet" href="pages.css?v=e8005876">
+<link rel="stylesheet" href="/site.css?v=336aab7b">
+<link rel="stylesheet" href="/pages.css?v=418a6413">
 </head><body>
 <nav class="nav" id="nav"><div class="wrap">
-  <a class="brand" href="index.html" aria-label="Soglowek Capital"><img src="logo.png" alt=""><span>Soglowek Capital</span></a>
-  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="links" data-s="menu"></button>
+  <a class="brand" href="/" aria-label="Soglowek Capital"><img src="/logo.png" alt=""><span>Soglowek Capital</span></a>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="links" data-s="menu">תפריט</button>
   <div class="links" id="links">
-    <a href="about.html" data-s="about"></a>
-    <a href="deals.html" data-s="deals"></a>
-    <a href="tools.html" data-s="tools"></a>
-    <a href="index.html#contact" class="navcta" data-s="contact"></a>
+    <a href="/about.html" data-s="about">אודות</a>
+    <a href="/deals.html" data-s="deals">העסקאות</a>
+    <a href="/tools.html" data-s="tools">המחשבונים</a>
+    <a href="/blog/" data-s="blog">בלוג</a>
+    <a href="/#contact" class="navcta" data-s="contact">צרו קשר</a>
     <div class="langs" role="group" aria-label="Language">
       <button class="lang" data-lang="he" lang="he">עב</button>
       <button class="lang" data-lang="en" lang="en">EN</button>
@@ -162,15 +169,16 @@ input[type=range]{width:100%;accent-color:var(--amber);direction:ltr;margin:6px 
 <main class="page wrap"><header><h1 data-i18n="8">הגיליון שאומר <span class="glow">לא</span></h1><p class="thesis" data-i18n="9">מחשבון ה-MAO: בונים את ההצעה מהסוף להתחלה — ממחיר המכירה הצפוי, דרך כל עלות שקיימת, עד המחיר המקסימלי לקנייה. מעליו — אין עסקה.</p></header><div class="grid"><div class="card"><h2 data-i18n="10">הנתונים שלכם</h2><div class="sec" data-i18n="11">מה הבית יימכר בו — ומה בדרך</div><div class="field"><label data-i18n="14">ARV — שווי לאחר שיפוץ<small data-i18n="12">מעסקאות סגורות בלבד, אמצע הטווח</small></label><input id="arv" type="number" value="780000"><span class="unit" data-i18n="13">₪</span></div><div class="field"><label data-i18n="17">עלויות מכירה<small data-i18n="15">תיווך + סגירה + ויתורים</small></label><input id="sellp" type="number" value="8" step="0.5"><span class="unit" data-i18n="16">%</span></div><div class="field"><label data-i18n="19">חודשי פרויקט</label><input id="mos" type="number" value="6"><span class="unit" data-i18n="18">ח'</span></div><div class="field"><label data-i18n="21">עלות החזקה לחודש</label><input id="hold" type="number" value="2000"><span class="unit" data-i18n="20">₪</span></div><div class="field"><label data-i18n="23">עלויות רכישה</label><input id="pur" type="number" value="13000"><span class="unit" data-i18n="22">₪</span></div><div class="sec" data-i18n="24">השיפוץ והמימון</div><div class="field"><label data-i18n="26">תקציב שיפוץ</label><input id="reh" type="number" value="115000"><span class="unit" data-i18n="25">₪</span></div><div class="field"><label data-i18n="28">כרית בלתי צפויות</label><input id="cont" type="number" value="15"><span class="unit" data-i18n="27">%</span></div><div class="field"><label data-i18n="31">בסיס הלוואת גישור משוער<small data-i18n="29">עדכנו לפי הצעת המלווה</small></label><input id="base" type="number" value="485000"><span class="unit" data-i18n="30">₪</span></div><div class="field"><label data-i18n="33">ריבית שנתית</label><input id="rate" type="number" value="10.5" step="0.1"><span class="unit" data-i18n="32">%</span></div><div class="field"><label data-i18n="35">נקודות</label><input id="pts" type="number" value="2" step="0.5"><span class="unit" data-i18n="34">%</span></div><div class="sec" data-i18n="36">הרווח שלכם</div><div class="field"><label data-i18n="39">רווח יעד<small data-i18n="37">% מה-ARV — זה שריון, לא חמדנות</small></label><input id="prof" type="number" value="14" step="0.5"><span class="unit" data-i18n="38">%</span></div><button class="btn" onclick="reset_ex()" data-i18n="40">איפוס לדוגמה מהספר (רחוב הרימון)</button></div><div class="card"><h2 data-i18n="41">המפל: מהסוף להתחלה</h2><ul class="wf"><li class="top"><span data-i18n="42">ARV — מחיר המכירה הצפוי</span><span id="w_arv"></span></li><li class="minus"><span data-i18n="43">− עלויות מכירה</span><span id="w_sell"></span></li><li class="minus"><span data-i18n="44">− החזקה לכל הפרויקט</span><span id="w_hold"></span></li><li class="minus"><span data-i18n="45">− עלות מימון (ריבית + נקודות)</span><span id="w_fin"></span></li><li class="minus"><span data-i18n="46">− עלויות רכישה</span><span id="w_pur"></span></li><li class="minus"><span data-i18n="47">− שיפוץ + כרית</span><span id="w_reh"></span></li><li class="minus"><span data-i18n="48">− רווח היעד שלכם</span><span id="w_prof"></span></li></ul><div class="result"><div class="lbl" data-i18n="49">MAO — המחיר המקסימלי לקנייה</div><div class="big" id="mao"></div><div class="verdict" data-i18n="50">מעל המספר הזה — אין עסקה. לא "כמעט", לא "נמתח קצת".</div><div class="rule70"><span data-i18n="51">בדיקת כלל ה-70% (מסננת בלבד):</span> <b id="r70"></b></div></div><div class="sense"><h2 style="font-size:1.05rem" data-i18n="52">רשת הרגישות — מה קורה כשמשהו זז</h2><table><tr><th></th><th data-i18n="53">שיפוץ כמתוכנן</th><th data-i18n="54">שיפוץ ‎+20%</th></tr><tr><th data-i18n="55">ARV כמתוכנן</th><td id="s00" class="base"></td><td id="s01"></td></tr><tr><th data-i18n="56">ARV ‎−5%</th><td id="s10"></td><td id="s11"></td></tr><tr><th data-i18n="57">ARV ‎−10%</th><td id="s20" class="bad"></td><td id="s21" class="bad"></td></tr></table><div class="note" data-i18n="58">כל תא הוא ה-MAO באותו תרחיש. אם הצעתם לפי התא האופטימי — התאים האחרים הם ההפסד שלכם. חותמים על הפינה הזהירה.</div></div></div></div></main>
 <footer><div class="wrap">
   <div class="fgrid">
-    <p class="fsig" data-s="sig"></p>
+    <p class="fsig" data-s="sig">להיות הכי טוב — אצל אחרים זו שאיפה. <span>אצלנו זו ירושה.</span></p>
     <nav class="flinks" aria-label="Footer">
-      <a href="about.html" data-s="about"></a><a href="tools.html" data-s="tools"></a>
-      <a href="deals.html" data-s="deals"></a><a href="index.html#contact" data-s="contact"></a>
+      <a href="/about.html" data-s="about">אודות</a><a href="/tools.html" data-s="tools">המחשבונים</a>
+      <a href="/deals.html" data-s="deals">העסקאות</a><a href="/blog/" data-s="blog">בלוג</a>
+      <a href="/#contact" data-s="contact">צרו קשר</a>
     </nav>
   </div>
   <div class="fbase">
-    <a class="brand" href="index.html"><img src="logo.png" alt="Soglowek Capital"></a>
-    <span data-s="disclaimer"></span>
+    <a class="brand" href="/"><img src="/logo.png" alt="Soglowek Capital"></a>
+    <span data-s="disclaimer">הכלים חינוכיים ואינם ייעוץ פיננסי, משפטי או מיסויי</span>
     <span class="num">© <span id="yr">2026</span> Soglowek Capital</span>
   </div>
 </div></footer>
@@ -278,7 +286,7 @@ for(const id of ids) document.getElementById(id).addEventListener('input',calc);
  });
 })();
 </script>
-<script src="site.js?v=056ecb5b"></script>
+<script src="/site.js?v=96a55eac"></script>
 
 <div id="scgate" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(8,12,18,.82);backdrop-filter:blur(6px);padding:20px">
  <div style="background:var(--panel,#141D27);border:1px solid rgba(255,180,84,.4);border-radius:18px;max-width:430px;width:100%;padding:28px 26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.6)">

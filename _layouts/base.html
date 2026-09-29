@@ -1,0 +1,48 @@
+---
+---
+<!DOCTYPE html>
+{% assign pl = page.lang | default: 'he' %}<html lang="{{ pl }}" dir="{% if pl == 'he' %}rtl{% else %}ltr{% endif %}"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+{% feed_meta %}
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css?v=336aab7b">
+</head><body>
+<nav class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="/" aria-label="Soglowek Capital"><img src="/logo.png" alt=""><span>Soglowek Capital</span></a>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="links" data-s="menu">תפריט</button>
+  <div class="links" id="links">
+    <a href="/about.html" data-s="about">אודות</a>
+    <a href="/deals.html" data-s="deals">העסקאות</a>
+    <a href="/tools.html" data-s="tools">המחשבונים</a>
+    <a href="/blog/" class="cur" aria-current="page" data-s="blog">בלוג</a>
+    <a href="/#contact" class="navcta" data-s="contact">צרו קשר</a>
+    <div class="langs" role="group" aria-label="Language">
+      <button class="lang" data-lang="he" lang="he">עב</button>
+      <button class="lang" data-lang="en" lang="en">EN</button>
+      <button class="lang" data-lang="es" lang="es">ES</button>
+    </div>
+  </div>
+</div></nav>
+{{ content }}
+<footer><div class="wrap">
+  <div class="fgrid">
+    <p class="fsig" data-s="sig">להיות הכי טוב — אצל אחרים זו שאיפה. <span>אצלנו זו ירושה.</span></p>
+    <nav class="flinks" aria-label="Footer">
+      <a href="/about.html" data-s="about">אודות</a><a href="/tools.html" data-s="tools">המחשבונים</a>
+      <a href="/deals.html" data-s="deals">העסקאות</a><a href="/blog/" data-s="blog">בלוג</a>
+      <a href="/#contact" data-s="contact">צרו קשר</a>
+    </nav>
+  </div>
+  <div class="fbase">
+    <a class="brand" href="/"><img src="/logo.png" alt="Soglowek Capital"></a>
+    <span data-s="disclaimer">הכלים חינוכיים ואינם ייעוץ פיננסי, משפטי או מיסויי</span>
+    <span class="num">© <span id="yr">2026</span> Soglowek Capital</span>
+  </div>
+</div></footer>
+{% raw %}<script>window.__T={"he": ["הבלוג", "מחשבות, עסקאות ושיעורים מהשטח — מה שאני כותב ברשתות, במקום אחד.", "הפוסטים הראשונים בדרך.", "לקריאה", "לכל הפוסטים", "הפוסט המקורי:", "רוצים לשמוע על העסקה הבאה?"], "en": ["Blog", "Thoughts, deals and lessons from the field — what I write on social media, all in one place.", "The first posts are on their way.", "Read", "All posts", "Original post:", "Want to hear about the next deal?"], "es": ["Blog", "Ideas, operaciones y lecciones desde el terreno — lo que escribo en redes, todo en un solo lugar.", "Las primeras publicaciones están en camino.", "Leer", "Todas las publicaciones", "Publicación original:", "¿Quieres saber de la próxima operación?"]};</script>
+<script src="/site.js?v=96a55eac"></script>
+{% endraw %}</body></html>

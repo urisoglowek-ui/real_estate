@@ -1,0 +1,23 @@
+---
+layout: base
+---
+{% assign pl = page.lang | default: 'he' %}
+<main>
+<article lang="{{ pl }}" dir="{% if pl == 'he' %}rtl{% else %}ltr{% endif %}">
+<header class="phero post-head"><div class="wrap">
+  <p class="post-meta rise d1"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d.%m.%Y" }}</time></p>
+  <h1 class="rise d1">{{ page.title }}</h1>
+  {% if page.description %}<p class="thesis rise d2">{{ page.description }}</p>{% endif %}
+</div></header>
+<section class="post-body"><div class="wrap"><div class="prose">
+{{ content }}
+</div></div></section>
+</article>
+<section class="post-foot"><div class="wrap">
+  {% if page.source %}{% assign src = page.source | downcase %}
+  <p><span data-i18n="5">הפוסט המקורי:</span> <a href="{{ page.source }}" target="_blank" rel="noopener">{% if src contains 'linkedin' %}LinkedIn{% elsif src contains 'instagram' %}Instagram{% elsif src contains 'facebook' %}Facebook{% elsif src contains 'x.com' or src contains 'twitter' %}X{% elsif src contains 'tiktok' %}TikTok{% elsif src contains 'youtube' %}YouTube{% else %}{{ page.source }}{% endif %}</a></p>
+  {% endif %}
+  <p class="post-next"><span data-i18n="6">רוצים לשמוע על העסקה הבאה?</span> <a href="/#contact" data-s="contact">צרו קשר</a></p>
+  <a class="tlink primary" href="/blog/" data-i18n="4">לכל הפוסטים</a>
+</div></section>
+</main>

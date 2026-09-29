@@ -2,9 +2,15 @@
 <html lang="he" dir="rtl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profit Waterfall</title>
-<meta name="description" content="">
+<meta name="description" content="Profit waterfall calculator for passive investors: how every unit of profit splits between partners.">
+<link rel="canonical" href="https://soglowekcapital.com/waterfall.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Soglowek Capital">
+<meta property="og:title" content="Profit Waterfall"><meta property="og:description" content="Profit waterfall calculator for passive investors: how every unit of profit splits between partners.">
+<meta property="og:url" content="https://soglowekcapital.com/waterfall.html"><meta property="og:image" content="https://soglowekcapital.com/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/atom+xml" title="Soglowek Capital — Blog" href="/blog/feed.xml">
 <meta name="theme-color" content="#0B0F14">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -141,17 +147,18 @@ input[type=range]{width:100%;accent-color:var(--amber);direction:ltr;margin:6px 
 .wf .minus span:last-child{color:var(--steel)}
 .wf .top span:last-child{color:var(--white);font-weight:600}
 </style>
-<link rel="stylesheet" href="site.css?v=e4df9c34">
-<link rel="stylesheet" href="pages.css?v=e8005876">
+<link rel="stylesheet" href="/site.css?v=336aab7b">
+<link rel="stylesheet" href="/pages.css?v=418a6413">
 </head><body>
 <nav class="nav" id="nav"><div class="wrap">
-  <a class="brand" href="index.html" aria-label="Soglowek Capital"><img src="logo.png" alt=""><span>Soglowek Capital</span></a>
-  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="links" data-s="menu"></button>
+  <a class="brand" href="/" aria-label="Soglowek Capital"><img src="/logo.png" alt=""><span>Soglowek Capital</span></a>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="links" data-s="menu">תפריט</button>
   <div class="links" id="links">
-    <a href="about.html" data-s="about"></a>
-    <a href="deals.html" data-s="deals"></a>
-    <a href="tools.html" data-s="tools"></a>
-    <a href="index.html#contact" class="navcta" data-s="contact"></a>
+    <a href="/about.html" data-s="about">אודות</a>
+    <a href="/deals.html" data-s="deals">העסקאות</a>
+    <a href="/tools.html" data-s="tools">המחשבונים</a>
+    <a href="/blog/" data-s="blog">בלוג</a>
+    <a href="/#contact" class="navcta" data-s="contact">צרו קשר</a>
     <div class="langs" role="group" aria-label="Language">
       <button class="lang" data-lang="he" lang="he">עב</button>
       <button class="lang" data-lang="en" lang="en">EN</button>
@@ -162,15 +169,16 @@ input[type=range]{width:100%;accent-color:var(--amber);direction:ltr;margin:6px 
 <main class="page wrap"><header><h1 data-i18n="8">מי מקבל, <span class="glow">מתי, וכמה</span></h1><p class="thesis" data-i18n="9">הוזמנתם להשקיע בסינדיקציה? הזינו את תנאי העסקה וראו איך כל שקל רווח מתחלק — ומה מגיע אליכם בכל תרחיש. לא הבטחות: צנרת.</p></header><div class="grid"><div class="card"><h2 data-i18n="10">העסקה שהוצעה לכם</h2><div class="field"><label data-i18n="12">סך הון המשקיעים בעסקה</label><input id="equity" type="number" value="4100000"><span class="unit" data-i18n="11">₪</span></div><div class="field"><label data-i18n="14">ההשקעה שלכם</label><input id="mine" type="number" value="200000"><span class="unit" data-i18n="13">₪</span></div><div class="field"><label data-i18n="16">תשואה מועדפת</label><input id="pref" type="number" value="7" step="0.5"><span class="unit" data-i18n="15">%</span></div><div class="field"><label data-i18n="18">חלוקת הרווח שמעל — למשקיעים</label><input id="split" type="number" value="70"><span class="unit" data-i18n="17">%</span></div><div class="sec" data-i18n="19">תרחיש הרווח השנתי לחלוקה</div><div class="field" style="border:none"><label><span data-i18n="20">רווח לחלוקה:</span> <b class="num" id="profv"></b></label></div><input type="range" id="prof" min="0" max="900000" step="10000" value="500000"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="setP(180000)" data-i18n="21">שנה חלשה</button><button class="btn" onclick="setP(500000)" data-i18n="22">שנת הבסיס</button><button class="btn" onclick="setP(750000)" data-i18n="23">שנה טובה</button></div><div class="note" data-i18n="24">שימו לב מה קורה כשגוררים את הסליידר מתחת לסכום המועדפת: היזם מקבל אפס — לפני שאתם מקבלים פחות.</div></div><div class="card"><h2 data-i18n="25">איך כל שקל מתחלק</h2><ul class="rows"><li class="dim"><span data-i18n="26">מדרגה 1 · המועדפת (למשקיעים, ראשונים)</span><span id="w_pref"></span></li><li class="dim"><span data-i18n="27">מדרגה 2 · חלק המשקיעים ברווח שמעל</span><span id="w_inv"></span></li><li class="dim"><span data-i18n="28">מדרגה 2 · חלק היזם (דמי הצלחה)</span><span id="w_gp"></span></li><li class="strong"><span data-i18n="29">סך למשקיעים</span><span id="w_tot"></span></li></ul><div id="short" class="note" style="color:var(--red)"></div><div class="result"><div class="lbl" data-i18n="30">החלק שלכם השנה (לפי חלקכם בהון)</div><div class="big" id="my_amt"></div><div class="sub"><span data-i18n="31">תשואה שוטפת על השקעתכם:</span> <b class="num" id="my_pct"></b></div></div><div class="note" data-i18n="32">המועדפת אינה ריבית מובטחת.</div></div></div></main>
 <footer><div class="wrap">
   <div class="fgrid">
-    <p class="fsig" data-s="sig"></p>
+    <p class="fsig" data-s="sig">להיות הכי טוב — אצל אחרים זו שאיפה. <span>אצלנו זו ירושה.</span></p>
     <nav class="flinks" aria-label="Footer">
-      <a href="about.html" data-s="about"></a><a href="tools.html" data-s="tools"></a>
-      <a href="deals.html" data-s="deals"></a><a href="index.html#contact" data-s="contact"></a>
+      <a href="/about.html" data-s="about">אודות</a><a href="/tools.html" data-s="tools">המחשבונים</a>
+      <a href="/deals.html" data-s="deals">העסקאות</a><a href="/blog/" data-s="blog">בלוג</a>
+      <a href="/#contact" data-s="contact">צרו קשר</a>
     </nav>
   </div>
   <div class="fbase">
-    <a class="brand" href="index.html"><img src="logo.png" alt="Soglowek Capital"></a>
-    <span data-s="disclaimer"></span>
+    <a class="brand" href="/"><img src="/logo.png" alt="Soglowek Capital"></a>
+    <span data-s="disclaimer">הכלים חינוכיים ואינם ייעוץ פיננסי, משפטי או מיסויי</span>
     <span class="num">© <span id="yr">2026</span> Soglowek Capital</span>
   </div>
 </div></footer>
@@ -271,7 +279,7 @@ for(const id of ids) document.getElementById(id).addEventListener('input',calc);
  });
 })();
 </script>
-<script src="site.js?v=056ecb5b"></script>
+<script src="/site.js?v=96a55eac"></script>
 
 <div id="scgate" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(8,12,18,.82);backdrop-filter:blur(6px);padding:20px">
  <div style="background:var(--panel,#141D27);border:1px solid rgba(255,180,84,.4);border-radius:18px;max-width:430px;width:100%;padding:28px 26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.6)">

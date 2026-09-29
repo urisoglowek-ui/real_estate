@@ -3,11 +3,11 @@
    shared strings below use data-s="key". */
 (function(){
  var S={
-  he:{about:'אודות',home:'הבית',services:'השירותים',deals:'העסקאות',tools:'המחשבונים',reports:'הדוחות',books:'הספרים',sm:'כסף חכם',mentorship:'הליווי',contact:'צרו קשר',menu:'תפריט',
+  he:{about:'אודות',blog:'בלוג',home:'הבית',services:'השירותים',deals:'העסקאות',tools:'המחשבונים',reports:'הדוחות',books:'הספרים',sm:'כסף חכם',mentorship:'הליווי',contact:'צרו קשר',menu:'תפריט',
       sig:'להיות הכי טוב — אצל אחרים זו שאיפה. <span>אצלנו זו ירושה.</span>',name:'אורי זוגלובק',disclaimer:'הכלים חינוכיים ואינם ייעוץ פיננסי, משפטי או מיסויי'},
-  en:{about:'About',home:'Home',services:'Services',deals:'Our Deals',tools:'Calculators',reports:'Reports',books:'The Books',sm:'Smart Money',mentorship:'Mentorship',contact:'Contact us',menu:'Menu',
+  en:{about:'About',blog:'Blog',home:'Home',services:'Services',deals:'Our Deals',tools:'Calculators',reports:'Reports',books:'The Books',sm:'Smart Money',mentorship:'Mentorship',contact:'Contact us',menu:'Menu',
       sig:'Being the best — for others, an aspiration. <span>For us, an inheritance.</span>',name:'Uri Soglowek',disclaimer:'Educational tools only — not financial, legal or tax advice'},
-  es:{about:'Sobre mí',home:'Inicio',services:'Servicios',deals:'Operaciones',tools:'Calculadoras',reports:'Informes',books:'Los Libros',sm:'Dinero Inteligente',mentorship:'Mentoría',contact:'Contáctanos',menu:'Menú',
+  es:{about:'Sobre mí',blog:'Blog',home:'Inicio',services:'Servicios',deals:'Operaciones',tools:'Calculadoras',reports:'Informes',books:'Los Libros',sm:'Dinero Inteligente',mentorship:'Mentoría',contact:'Contáctanos',menu:'Menú',
       sig:'Ser los mejores — para otros, una aspiración. <span>Para nosotros, una herencia.</span>',name:'Uri Soglowek',disclaimer:'Herramientas educativas — no constituyen asesoría financiera, legal o fiscal'}
  };
  var T=window.__T||{};

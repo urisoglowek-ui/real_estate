@@ -2,9 +2,15 @@
 <html lang="he" dir="rtl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flip or Hold</title>
-<meta name="description" content="">
+<meta name="description" content="Flip or BRRRR? One deal, two paths side by side — capital now vs. cash flow for years.">
+<link rel="canonical" href="https://soglowekcapital.com/flip-or-hold.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Soglowek Capital">
+<meta property="og:title" content="Flip or Hold"><meta property="og:description" content="Flip or BRRRR? One deal, two paths side by side — capital now vs. cash flow for years.">
+<meta property="og:url" content="https://soglowekcapital.com/flip-or-hold.html"><meta property="og:image" content="https://soglowekcapital.com/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/atom+xml" title="Soglowek Capital — Blog" href="/blog/feed.xml">
 <meta name="theme-color" content="#0B0F14">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -141,17 +147,18 @@ input[type=range]{width:100%;accent-color:var(--amber);direction:ltr;margin:6px 
 .wf .minus span:last-child{color:var(--steel)}
 .wf .top span:last-child{color:var(--white);font-weight:600}
 </style>
-<link rel="stylesheet" href="site.css?v=e4df9c34">
-<link rel="stylesheet" href="pages.css?v=e8005876">
+<link rel="stylesheet" href="/site.css?v=336aab7b">
+<link rel="stylesheet" href="/pages.css?v=418a6413">
 </head><body>
 <nav class="nav" id="nav"><div class="wrap">
-  <a class="brand" href="index.html" aria-label="Soglowek Capital"><img src="logo.png" alt=""><span>Soglowek Capital</span></a>
-  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="links" data-s="menu"></button>
+  <a class="brand" href="/" aria-label="Soglowek Capital"><img src="/logo.png" alt=""><span>Soglowek Capital</span></a>
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="links" data-s="menu">תפריט</button>
   <div class="links" id="links">
-    <a href="about.html" data-s="about"></a>
-    <a href="deals.html" data-s="deals"></a>
-    <a href="tools.html" data-s="tools"></a>
-    <a href="index.html#contact" class="navcta" data-s="contact"></a>
+    <a href="/about.html" data-s="about">אודות</a>
+    <a href="/deals.html" data-s="deals">העסקאות</a>
+    <a href="/tools.html" data-s="tools">המחשבונים</a>
+    <a href="/blog/" data-s="blog">בלוג</a>
+    <a href="/#contact" class="navcta" data-s="contact">צרו קשר</a>
     <div class="langs" role="group" aria-label="Language">
       <button class="lang" data-lang="he" lang="he">עב</button>
       <button class="lang" data-lang="en" lang="en">EN</button>
@@ -162,15 +169,16 @@ input[type=range]{width:100%;accent-color:var(--amber);direction:ltr;margin:6px 
 <main class="page wrap"><header><h1 data-i18n="8">למכור — או <span class="glow">להחזיק?</span></h1><p class="thesis" data-i18n="9">אותה קנייה, אותו שיפוץ — שתי יציאות. הזינו עסקה אחת וראו את שני התאומים זה מול זה: מנת ההון של הפליפ מול התזרים וההון-החוזר של ה-BRRRR.</p></header><div class="grid"><div class="card"><h2 data-i18n="10">עסקה אחת — שני מסלולים</h2><div class="sec" data-i18n="11">הקנייה וההשבחה (משותף לתאומים)</div><div class="field"><label data-i18n="13">מחיר קנייה</label><input id="buy" type="number" value="415000"><span class="unit" data-i18n="12">₪</span></div><div class="field"><label data-i18n="15">שיפוץ כולל כרית</label><input id="reh" type="number" value="132000"><span class="unit" data-i18n="14">₪</span></div><div class="field"><label data-i18n="17">עלויות רכישה + החזקה + מימון</label><input id="costs" type="number" value="52000"><span class="unit" data-i18n="16">₪</span></div><div class="field"><label data-i18n="19">ARV — שווי לאחר שיפוץ</label><input id="arv" type="number" value="780000"><span class="unit" data-i18n="18">₪</span></div><div class="sec" data-i18n="20">מסלול הפליפ (מכירה)</div><div class="field"><label data-i18n="22">עלויות מכירה</label><input id="sellp" type="number" value="8" step="0.5"><span class="unit" data-i18n="21">%</span></div><div class="field"><label data-i18n="25">מס משוער על הרווח<small data-i18n="23">הכנסה עסקית! התייעצו ברו"ח</small></label><input id="taxp" type="number" value="30"><span class="unit" data-i18n="24">%</span></div><div class="field"><label data-i18n="27">חודשי פרויקט</label><input id="mos" type="number" value="6"><span class="unit" data-i18n="26">ח'</span></div><div class="sec" data-i18n="28">מסלול ה-BRRRR (החזקה ומיחזור)</div><div class="field"><label data-i18n="30">שכירות חודשית</label><input id="rent" type="number" value="3900"><span class="unit" data-i18n="29">₪</span></div><div class="field"><label data-i18n="32">יחס הוצאות תפעול</label><input id="expr" type="number" value="38"><span class="unit" data-i18n="31">%</span></div><div class="field"><label data-i18n="34">מיחזור — LTV</label><input id="ltv" type="number" value="75"><span class="unit" data-i18n="33">%</span></div><div class="field"><label data-i18n="36">ריבית מיחזור</label><input id="rrate" type="number" value="6.9" step="0.1"><span class="unit" data-i18n="35">%</span></div><div class="field"><label data-i18n="38">תקופה</label><input id="yrs" type="number" value="30"><span class="unit" data-i18n="37">שנים</span></div></div><div class="card"><h2 data-i18n="39">התאומים, זה מול זה</h2><div class="sec" data-i18n="40">פליפ — מנת הון עכשיו</div><ul class="rows"><li class="dim"><span data-i18n="41">רווח לפני מס</span><span id="f_gross"></span></li><li class="dim"><span data-i18n="42">מס משוער</span><span id="f_tax"></span></li><li class="strong"><span><span data-i18n="43">נטו ביד, תוך</span> <span class="num" id="f_mos"></span> <span data-i18n="44">חודשים</span></span><span id="f_net"></span></li></ul><div class="sec" style="margin-top:18px" data-i18n="45">BRRRR — תזרים לשנים</div><ul class="rows"><li class="dim"><span data-i18n="46">הלוואת מיחזור</span><span id="b_loan"></span></li><li class="dim"><span data-i18n="47">הון שנשאר כלוא בעסקה</span><span id="b_left"></span></li><li class="dim"><span data-i18n="48">NOI שנתי</span><span id="b_noi"></span></li><li class="dim"><span>DSCR <span id="b_badge"></span></span><span id="b_dscr"></span></li><li class="strong"><span data-i18n="49">תזרים שנתי אחרי חוב</span><span id="b_cf"></span></li><li class="strong"><span data-i18n="50">תשואה על ההון הכלוא</span><span id="b_coc"></span></li></ul><div class="result"><div class="lbl" data-i18n="51">ההשוואה בשורה אחת</div><div id="verdict" style="font-size:1rem;margin-top:6px"></div></div><div class="note" data-i18n="52">המספרים לא מכריעים לבד — ארבע השאלות מהספר כן.</div></div></div></main>
 <footer><div class="wrap">
   <div class="fgrid">
-    <p class="fsig" data-s="sig"></p>
+    <p class="fsig" data-s="sig">להיות הכי טוב — אצל אחרים זו שאיפה. <span>אצלנו זו ירושה.</span></p>
     <nav class="flinks" aria-label="Footer">
-      <a href="about.html" data-s="about"></a><a href="tools.html" data-s="tools"></a>
-      <a href="deals.html" data-s="deals"></a><a href="index.html#contact" data-s="contact"></a>
+      <a href="/about.html" data-s="about">אודות</a><a href="/tools.html" data-s="tools">המחשבונים</a>
+      <a href="/deals.html" data-s="deals">העסקאות</a><a href="/blog/" data-s="blog">בלוג</a>
+      <a href="/#contact" data-s="contact">צרו קשר</a>
     </nav>
   </div>
   <div class="fbase">
-    <a class="brand" href="index.html"><img src="logo.png" alt="Soglowek Capital"></a>
-    <span data-s="disclaimer"></span>
+    <a class="brand" href="/"><img src="/logo.png" alt="Soglowek Capital"></a>
+    <span data-s="disclaimer">הכלים חינוכיים ואינם ייעוץ פיננסי, משפטי או מיסויי</span>
     <span class="num">© <span id="yr">2026</span> Soglowek Capital</span>
   </div>
 </div></footer>
@@ -279,7 +287,7 @@ for(const id of ids) document.getElementById(id).addEventListener('input',calc);
  });
 })();
 </script>
-<script src="site.js?v=056ecb5b"></script>
+<script src="/site.js?v=96a55eac"></script>
 
 <div id="scgate" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(8,12,18,.82);backdrop-filter:blur(6px);padding:20px">
  <div style="background:var(--panel,#141D27);border:1px solid rgba(255,180,84,.4);border-radius:18px;max-width:430px;width:100%;padding:28px 26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.6)">

@@ -192,3 +192,4 @@ footer{margin:0!important;border:0!important;text-align:start!important;font-siz
 #dl_f input{background:transparent!important;border:0!important;border-bottom:1px solid #2A3845!important;border-radius:0!important;padding:12px 0!important;margin-bottom:18px!important;font-size:1.05rem!important;text-align:start!important}
 #dl_f input:focus{outline:none;border-bottom-color:var(--amber)!important}
 #dl_f .btn{width:auto!important}
+[dir="rtl"] .big2,[dir="rtl"] .pill b,[dir="rtl"] .kpi b,[dir="rtl"] .bm b,[dir="rtl"] .odometer,[dir="rtl"] .big{text-align:right!important}

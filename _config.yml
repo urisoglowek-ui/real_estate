@@ -1,0 +1,63 @@
+# Soglowek Capital — GitHub Pages (Jekyll) settings
+title: Soglowek Capital
+description: U.S. income-producing real estate — the real estate arm of the Soglowek Family Office.
+url: https://soglowekcapital.com
+author: Uri Soglowek
+lang: he
+logo: /logo.png
+timezone: Asia/Jerusalem
+social:
+  name: Soglowek Capital
+  links: []
+
+# Blog posts live in _posts/ as YYYY-MM-DD-some-words.md and appear at /blog/some-words/
+permalink: /blog/:title/
+defaults:
+  - scope: {path: "_posts", type: posts}
+    values: {layout: post}
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true   # keep the line breaks from social posts
+
+plugins:
+  - jekyll-seo-tag    # titles, descriptions, social previews, article data for Google
+  - jekyll-sitemap    # /sitemap.xml
+  - jekyll-feed       # /blog/feed.xml
+feed:
+  path: blog/feed.xml
+
+# pages removed from the site — never publish them, even if still in the repository
+exclude:
+  - services.html
+  - reports.html
+  - rv.html
+  - mentorship.html
+  - upcoming.html
+  - books.html
+  - sm.html
+  - book1.html
+  - book2.html
+  - book3.html
+  - book4.html
+  - book5.html
+  - book6.html
+  - book7.html
+  - book8.html
+  - book9.html
+  - deal-3rd-ave.html
+  - deal-hollow.html
+  # older pages and files the new site no longer uses
+  - construction.html
+  - dealflow.html
+  - deal-timberwood.html
+  - fund.html
+  - invest.html
+  - lending.html
+  - mh.html
+  - pm.html
+  - webinar.html
+  - deals.xml
+  - "book *"
+  - "cover*.png"
