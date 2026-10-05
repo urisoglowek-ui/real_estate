@@ -37,8 +37,7 @@
     <s class="was num"><span class="sr">מחיר מלא </span>350$</s>
   </p>
   <div class="ctas rise d4">
-    <!-- TODO: href is replaced by STRIPE_PAYMENT_LINK when Uri pastes the Stripe link (Go Beyond Media LLC). -->
-    <a class="tlink primary" data-buy href="#buy">לרכישה — 99$</a>
+    <a class="tlink primary" data-buy href="https://buy.stripe.com/28EdRa5SK3EL6IE8tBfEk00">לרכישה — 99$</a>
   </div>
 </div></header>
 
@@ -107,8 +106,7 @@
     <s class="was num"><span class="sr">מחיר מלא </span>350$</s>
   </p>
   <div class="ctas">
-    <!-- TODO: href is replaced by STRIPE_PAYMENT_LINK when Uri pastes the Stripe link (Go Beyond Media LLC). -->
-    <a class="tlink primary" data-buy href="#buy">לרכישה — 99$</a>
+    <a class="tlink primary" data-buy href="https://buy.stripe.com/28EdRa5SK3EL6IE8tBfEk00">לרכישה — 99$</a>
   </div>
   <p class="note">המכירה באמצעות Go Beyond Media LLC.</p>
   <p><a class="mail" href="mailto:uri@soglowekcapital.com">uri@soglowekcapital.com</a></p>
@@ -133,9 +131,8 @@
 </div></footer>
 
 <script>
-// TODO: paste the live Stripe Payment Link here (seller: Go Beyond Media LLC).
-// Leave empty until the link exists. Do not put a placeholder checkout URL.
-const STRIPE_PAYMENT_LINK = '';
+// Stripe Payment Link — seller: Go Beyond Media LLC.
+const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/28EdRa5SK3EL6IE8tBfEk00';
 (function(){
   if(!STRIPE_PAYMENT_LINK) return;
   document.querySelectorAll('[data-buy]').forEach(function(a){ a.href = STRIPE_PAYMENT_LINK; });
