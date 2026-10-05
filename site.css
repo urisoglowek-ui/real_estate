@@ -294,7 +294,6 @@ a.buy:focus-visible{outline:2px solid var(--white);outline-offset:3px}
 @media (max-width:720px){
   .perks{grid-template-columns:1fr;gap:18px}
   a.buy{width:100%}
-  .course-hero .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 }
 @media (max-width:560px){
   .price{gap:12px}
