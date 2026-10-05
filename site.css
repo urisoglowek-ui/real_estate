@@ -253,13 +253,16 @@ section.tight{padding-top:0}
 .course-hero h1{max-width:none;font-size:clamp(2.75rem,7.2vw,6.1rem);line-height:1.05;letter-spacing:-.025em}
 .course-hero h1 span{display:block;color:var(--amber);text-wrap:balance}
 .course-hero h1 .kicker{color:var(--white)}
-.price{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-top:28px}
-.price .was{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,2.8vw,2.5rem);color:var(--steel);text-decoration:line-through;text-decoration-thickness:2px}
+.price{display:flex;align-items:baseline;gap:clamp(14px,2vw,22px);flex-wrap:wrap;margin-top:28px}
+.price .was{font-family:var(--serif);font-weight:400;font-size:clamp(2.85rem,4.8vw,4.15rem);line-height:1;color:var(--steel);text-decoration:line-through;text-decoration-thickness:.08em}
 .price .now{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,6vw,5rem);line-height:1;color:var(--amber)}
 .perks{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px;margin-top:32px}
 .perks b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.35rem,2vw,1.75rem);line-height:1.25;color:var(--white)}
 .perks b .num{color:var(--amber)}
 .perks span{display:block;margin-top:8px;color:var(--steel);font-size:1.02rem;line-height:1.55;max-width:32ch}
+.gift-amt{display:flex;align-items:center;gap:.2em;margin-top:6px;font-family:var(--serif);font-weight:400;font-size:clamp(3.15rem,10vw,4.6rem);line-height:1;color:var(--amber)}
+.gift-amt .num{font-size:1em;line-height:1;color:inherit}
+.gift-icon{width:.8em;height:.8em;flex:0 0 auto}
 a.buy{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 32px;background:var(--amber);color:var(--asphalt);text-decoration:none;font:600 1.15rem var(--sans);border:0;border-radius:12px;transition:background .2s,color .2s}
 a.buy:hover{background:var(--white);color:var(--asphalt);text-decoration:none}
 a.buy:focus-visible{outline:2px solid var(--white);outline-offset:3px}
