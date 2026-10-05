@@ -256,13 +256,26 @@ section.tight{padding-top:0}
 .price{display:flex;align-items:baseline;gap:clamp(14px,2vw,22px);flex-wrap:wrap;margin-top:28px}
 .price .was{font-family:var(--serif);font-weight:400;font-size:clamp(2.85rem,4.8vw,4.15rem);line-height:1;color:var(--steel);text-decoration:line-through;text-decoration-thickness:.08em}
 .price .now{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,6vw,5rem);line-height:1;color:var(--amber)}
-.perks{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px;margin-top:32px}
+.perks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-top:32px}
 .perks b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.35rem,2vw,1.75rem);line-height:1.25;color:var(--white)}
 .perks b .num{color:var(--amber)}
-.perks span{display:block;margin-top:8px;color:var(--steel);font-size:1.02rem;line-height:1.55;max-width:32ch}
+.perks span{display:block;margin-top:8px;color:var(--steel);font-size:1.02rem;line-height:1.55;max-width:36ch}
+.perks .firm{display:inline;margin:0;max-width:none;color:inherit;font-size:inherit;white-space:nowrap}
 .gift-amt{display:flex;align-items:center;gap:.2em;margin-top:6px;font-family:var(--serif);font-weight:400;font-size:clamp(3.15rem,10vw,4.6rem);line-height:1;color:var(--amber)}
 .gift-amt .num{font-size:1em;line-height:1;color:inherit}
 .gift-icon{width:.8em;height:.8em;flex:0 0 auto}
+.buybar{position:fixed;z-index:45;inset-inline:0;bottom:0;display:flex;justify-content:center;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(11,15,20,.96);border-top:1px solid #2A3845;backdrop-filter:blur(10px)}
+.buybar .buy{width:100%;max-width:420px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.course-page{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+@media (min-width:721px){
+  .perks>.gift{grid-column:1 / -1;display:flex;align-items:center;justify-content:flex-start;gap:20px 56px;margin:0;padding:22px 28px;background:var(--panel);border:1px solid rgba(255,180,84,.45);border-inline-start:4px solid var(--amber);border-radius:16px}
+  .perks>.gift .gift-main{flex:0 0 auto}
+  .perks>.gift .gift-amt{margin-top:4px}
+  .perks>.gift .gift-copy{flex:1 1 auto;margin-top:0;max-width:46ch}
+  .buybar{inset-inline-start:auto;inset-inline-end:28px;width:max-content;bottom:calc(20px + env(safe-area-inset-bottom,0px));padding:0;background:transparent;border:0;backdrop-filter:none}
+  .buybar .buy{width:auto;min-width:210px}
+  .course-page{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+}
 a.buy{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 32px;background:var(--amber);color:var(--asphalt);text-decoration:none;font:600 1.15rem var(--sans);border:0;border-radius:12px;transition:background .2s,color .2s}
 a.buy:hover{background:var(--white);color:var(--asphalt);text-decoration:none}
 a.buy:focus-visible{outline:2px solid var(--white);outline-offset:3px}
@@ -281,6 +294,7 @@ a.buy:focus-visible{outline:2px solid var(--white);outline-offset:3px}
 @media (max-width:720px){
   .perks{grid-template-columns:1fr;gap:18px}
   a.buy{width:100%}
+  .course-hero .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 }
 @media (max-width:560px){
   .price{gap:12px}
