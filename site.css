@@ -302,8 +302,12 @@ a.buy:focus-visible{outline:2px solid var(--white);outline-offset:3px}
   .course-hero h1{font-size:clamp(2.15rem,11vw,2.75rem)}
   .course-page .h2{font-size:clamp(2.05rem,9.5vw,2.55rem)}
 }
-.wa{position:fixed;z-index:46;left:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#25D366;color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.28);text-decoration:none}
-.wa svg{width:32px;height:32px;display:block}
-.wa:hover{background:#1ebe5d}
-.wa:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.wa{position:fixed;z-index:46;left:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:8px;width:max-content;max-width:calc(100vw - 40px);padding:12px 18px;border-radius:18px;background:linear-gradient(180deg,#E6C68A 0%,#C9A063 100%);color:#0B0F14;font-family:var(--sans);font-weight:700;font-size:.95rem;line-height:1.15;white-space:nowrap;text-decoration:none;box-shadow:0 8px 24px rgba(201,160,99,.45)}
+.wa svg{width:22px;height:22px;display:block;flex:none}
+.wa:hover{background:linear-gradient(180deg,#F0D7A4 0%,#D4AD72 100%)}
+.wa:focus-visible{outline:2px solid #0B0F14;outline-offset:3px}
+html:not([lang="he"]) .wa{display:none}
+@media (max-width:720px){
+  .wa{left:16px;right:16px;width:auto;max-width:none;justify-content:center}
+}
 .course-page .wa{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
