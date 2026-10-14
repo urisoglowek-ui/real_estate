@@ -310,4 +310,3 @@ html:not([lang="he"]) .wa{display:none}
 @media (max-width:720px){
   .wa{left:16px;right:16px;width:auto;max-width:none;justify-content:center}
 }
-.course-page .wa{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
