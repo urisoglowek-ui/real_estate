@@ -6,11 +6,11 @@ layout: null
 {% raw %}<!DOCTYPE html>
 <html lang="he" dir="rtl" data-own-reveal><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>יום צילום אחד. שנה שלמה של תוכן — זוגלובק</title>
-<meta name="description" content="נוכחות דיגיטלית מלאה לבעלי עסקים: יום הפקה אחד, ותוכן כל יום בכל הרשתות — בקול ובפנים שלכם.">
+<title>מצלמים פעם אחת. שנה שלמה של תוכן — זוגלובק</title>
+<meta name="description" content="נוכחות דיגיטלית מלאה לבעלי עסקים: צילום אחד, ותוכן כל יום בכל הרשתות — בקול ובפנים שלכם.">
 <link rel="canonical" href="https://soglowekcapital.com/content-offer.html">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Soglowek Capital">
-<meta property="og:title" content="יום צילום אחד. שנה שלמה של תוכן — זוגלובק"><meta property="og:description" content="נוכחות דיגיטלית מלאה לבעלי עסקים: יום הפקה אחד, ותוכן כל יום בכל הרשתות — בקול ובפנים שלכם.">
+<meta property="og:title" content="מצלמים פעם אחת. שנה שלמה של תוכן — זוגלובק"><meta property="og:description" content="נוכחות דיגיטלית מלאה לבעלי עסקים: צילום אחד, ותוכן כל יום בכל הרשתות — בקול ובפנים שלכם.">
 <meta property="og:url" content="https://soglowekcapital.com/content-offer.html"><meta property="og:image" content="https://soglowekcapital.com/logo.png">
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="application/atom+xml" title="Soglowek Capital — Blog" href="/blog/feed.xml">
@@ -182,6 +182,14 @@ layout: null
 .ex-slides{min-width:0;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;direction:ltr}
 .ex-slides img{flex:0 0 auto;width:clamp(200px,24vw,280px);height:auto;max-width:none;aspect-ratio:4/5;object-fit:cover;border-radius:6px;scroll-snap-align:start}
 @media (max-width:760px){.ex-row{grid-template-columns:1fr}.ex-row .phone{max-width:240px;margin:0 auto}}
+
+/* floating CTA to the form */
+.fab{position:fixed;left:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;background:var(--amber);color:#0B0F14;font:700 1.05rem var(--sans);text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}
+.fab.on{opacity:1;transform:none;pointer-events:auto}
+.fab:hover{background:#FFC47A}
+.fab:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+@media (max-width:600px){.fab{left:16px;right:16px;justify-content:center}}
+@media (prefers-reduced-motion:reduce){.fab{transition:none}}
 </style>
 </head><body>
 <script>document.documentElement.classList.add('js')</script>
@@ -205,7 +213,7 @@ layout: null
 <header class="hero"><div class="wrap">
   <div>
     <p class="label ov">מקבלים עד 7 לקוחות</p>
-    <h1 class="ov">יום צילום אחד. שנה שלמה של תוכן — <span class="hand">בקול ובפנים שלכם.</span></h1>
+    <h1 class="ov">מצלמים פעם אחת. שנה שלמה של תוכן — <span class="hand">בקול ובפנים שלכם.</span></h1>
     <p class="lede ov">אתם מומחים בתחום שלכם. אנחנו הופכים את המומחיות הזו לנוכחות דיגיטלית קבועה ולזרם לקוחות — בלי שתעמדו מול מצלמה כל שבוע.</p>
     <div class="ctas ov">
       <a class="tlink primary" href="#start">בדקו אם נשאר מקום</a>
@@ -233,11 +241,11 @@ layout: null
 
 <section id="method"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">02</span> שיטת יום אחד</p>
+    <p class="label"><span class="n">02</span> שיטת צילום אחד</p>
     <h2>אתם מצלמים <span class="hand">פעם אחת.</span> אנחנו מפרסמים כל יום.</h2>
   </div>
   <div class="steps3">
-    <div class="panel ov"><div class="num">01</div><h3>יום הפקה אחד</h3><p>באולפן, עם צלם וידאו, צלם סטילס, תאורה וסאונד. זה כל הזמן שנדרש מכם.</p></div>
+    <div class="panel ov"><div class="num">01</div><h3>צילום אחד</h3><p>מצלמים לבד, לפי מדריך מלא שאנחנו שולחים — או ביום הפקה באולפן עם צלם, בתוספת תשלום. לא רוצים להצטלם? ניצור עבורכם אווטאר בתלת-ממד או בדו-ממד.</p></div>
     <div class="panel ov"><div class="num">02</div><h3>הדמות והקול שלכם</h3><p>שתי דמויות דיגיטליות ושכפול קול בעברית — כך שתופיעו בתוכן חדש בלי לצלם שוב.</p></div>
     <div class="panel ov"><div class="num">03</div><h3>צוות תוכן מלא</h3><p>כותבים, עורכים, מעצבים ומנהלי רשתות שמפרסמים בשמכם, בכל הרשתות, כל יום.</p></div>
   </div>
@@ -339,6 +347,8 @@ layout: null
       <figcaption><img src="/media/testimonials/moises-agami.jpg" alt="מויזס אגמי" loading="lazy"><span><b>מויזס אגמי</b><i>מנכ״ל ואלור, חברת פיתוח נדל״ן בפלורידה</i></span><small class="tr">תורגם מאנגלית</small></figcaption></figure>
     <figure class="panel quote ov"><blockquote>״עבדתי עם אורי על כמה פרויקטים במשך יותר משנה. הוא הוביל <b>פרויקטים שנראו בלתי אפשריים להפקה</b>, ומצא להם פתרונות מחוץ לקופסה — עם הבנה וניסיון ברמה המקצועית הגבוהה ביותר.״</blockquote>
       <figcaption><img src="/media/testimonials/darius.jpg" alt="דריוס וילהר" loading="lazy"><span><b>דריוס וילהר</b><i>בעלים של חברת הפקה הוליוודית</i></span><small class="tr">תורגם מאנגלית</small></figcaption></figure>
+    <figure class="panel quote ov"><blockquote>״אורי התחיל לעבוד איתי כשלא היו לי רשתות חברתיות, לא היו לנו לידים, ואף אחד לא הכיר אותנו. אורי יצר תוכנית עבודה ויצא לדרך. <b>היום יש לנו יותר מ-35 מיליון צפיות.</b>״</blockquote>
+      <figcaption><img src="/media/testimonials/eliyahu-yardeni.jpg" alt="אליהו ירדני" loading="lazy"><span><b>אליהו ירדני</b><i></i></span></figcaption></figure>
   </div>
 </div></section>
 
@@ -351,12 +361,13 @@ layout: null
     <div class="panel ov">
       <h3><i class="dot" style="background:var(--sage)"></i>הקמה — פעם אחת</h3>
       <ol class="roman">
-        <li>יום הפקה מקצועי עם צלם וידאו וצלם סטילס, תאורה וסאונד באולפן</li>
+        <li>מדריך מלא לצילום עצמי — איך לצלם את החומרים לדמויות הדיגיטליות ולשכפול הקול</li>
         <li>שתי דמויות דיגיטליות שלכם, שמופיעות בתוכן בלי שתצטרכו לצלם שוב</li>
+        <li>לא רוצים להצטלם בכלל? ניצור עבורכם אווטאר מונפש בתלת-ממד או בדו-ממד, שיופיע בתוכן במקומכם</li>
         <li>שכפול הקול שלכם בעברית ברמה מקצועית</li>
         <li>מיתוג, שפה ויזואלית ואסטרטגיית תוכן</li>
-        <li>חמישה דפי נחיתה לאיסוף לידים</li>
-        <li>שש מתנות דיגיטליות לקהל שלכם, כמו מדריכים וצ'קליסטים להורדה</li>
+        <li>דף נחיתה אחד לאיסוף לידים</li>
+        <li>שתי מתנות דיגיטליות לקהל שלכם, כמו מדריכים וצ'קליסטים להורדה</li>
         <li>מערכת הודעות פרטיות אוטומטית ששולחת לעוקבים את המתנות ואוספת את פרטיהם</li>
       </ol>
     </div>
@@ -442,8 +453,9 @@ layout: null
   </div>
   <div class="offer single">
     <div class="panel ov">
-      <p class="bigprice">₪3,450<small>לחודש + מע״מ</small></p>
-      <p class="setup">+ הקמה חד-פעמית: ₪650 + מע״מ</p>
+      <p class="bigprice">₪3,450<small>לחודש</small></p>
+      <p class="setup">+ הקמה חד-פעמית: ₪650 · ללא מע״מ</p>
+      <p class="setup" style="margin-top:6px;color:var(--steel)">יום הפקה באולפן עם צלם וידאו וצלם סטילס — בתוספת תשלום.</p>
       <p class="anchor">צוות כזה בתוך העסק — צלם, עורך, מעצב, כותב ומנהל סושיאל — עולה עשרות אלפי שקלים בחודש, עוד לפני ציוד ותוכנות.</p>
       <ul class="terms">
         <li><b>עוזבים בכל רגע.</b> בלי התחייבות. החודש שבו עוזבים משולם במלואו, ואין החזר על חודש.</li>
@@ -487,7 +499,7 @@ layout: null
     <div class="panel ov"><h3><i class="dot" style="background:var(--peach)"></i>לא מתאים אם</h3><ul>
       <li>אתם מחפשים פתרון זול</li>
       <li>אתם מצפים לתוצאה תוך שבוע</li>
-      <li>אתם לא מוכנים להקדיש יום הפקה אחד</li></ul></div>
+      <li>אתם לא מוכנים להקדיש זמן לצילום אחד</li></ul></div>
   </div>
 </div></section>
 
@@ -498,7 +510,7 @@ layout: null
   </div>
   <div class="faq">
     <details class="ov"><summary>הדמות הדיגיטלית תיראה מזויפת?</summary><p>הדמויות נבנות מהצילומים שלכם ביום ההפקה, והקול משוכפל מהקול שלכם. ראו את הדוגמאות למעלה.</p></details>
-    <details class="ov"><summary>כמה זמן זה ידרוש ממני?</summary><p>יום הפקה אחד, ושיחת אסטרטגיה אחת בחודש. את השאר אנחנו עושים.</p></details>
+    <details class="ov"><summary>כמה זמן זה ידרוש ממני?</summary><p>צילום אחד — לבד לפי המדריך שלנו, או ביום הפקה באולפן — ושיחת אסטרטגיה אחת בחודש. את השאר אנחנו עושים.</p></details>
     <details class="ov"><summary>זה מתאים גם לעורכי דין ורואי חשבון?</summary><p>כן. התוכן מקצועי ומותאם לתחום שלכם.</p></details>
     <details class="ov"><summary>למי שייך התוכן?</summary><p>לכם — כולל הדמויות הדיגיטליות והקול.</p></details>
     <details class="ov"><summary>מה אם זה לא מתאים לי?</summary><p>אפשר לעזוב בכל רגע, בלי התחייבות. החודש שבו עוזבים משולם במלואו, ואין החזר על חודש.</p></details>
@@ -519,8 +531,8 @@ layout: null
     <ol class="roman ov" style="margin-top:0">
       <li>שולחים את הפרטים</li>
       <li>שיחת היכרות קצרה: מה המטרות שלכם ומי הקהל</li>
-      <li>בוחרים חבילה ומתאמים יום הפקה</li>
-      <li>תוך כשבועיים מיום ההפקה — התוכן הראשון באוויר</li>
+      <li>מצטרפים ומקבלים מדריך צילום מלא</li>
+      <li>תוך 14 יום מההצטרפות — התוכן הראשון באוויר</li>
     </ol>
     <form class="cf ov" id="leadform">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
@@ -539,6 +551,7 @@ layout: null
 </div></section>
 
 </main>
+<a class="fab" id="fab" href="#start" aria-label="אני רוצה להירשם לתוכנית — לטופס יצירת הקשר">אני רוצה להירשם לתוכנית<span aria-hidden="true">←</span></a>
 <script>
 (function(){
   var els=[].slice.call(document.querySelectorAll('.ov'));
@@ -555,6 +568,12 @@ layout: null
   var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
     if(e.isIntersecting){ if(v.preload==='none'){v.preload='auto';v.load();} var p=v.play(); if(p&&p.catch)p.catch(function(){}); } else v.pause(); })},{threshold:.35});
   vids.forEach(function(v){io.observe(v)});
+})();
+/* floating CTA: shown from page load, hidden while the form is on screen */
+(function(){
+  var b=document.getElementById('fab'), form=document.getElementById('start');
+  if(!b) return; b.classList.add('on');
+  if(form&&'IntersectionObserver' in window) new IntersectionObserver(function(es){ b.classList.toggle('on', !es[0].isIntersecting); },{threshold:.15}).observe(form);
 })();
 /* lead form -> email (same service as the site's contact form) */
 (function(){
