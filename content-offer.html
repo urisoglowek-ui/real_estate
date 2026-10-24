@@ -161,7 +161,7 @@ layout: null
 @media (max-width:760px){.tablets2{grid-template-columns:1fr}}
 @media (max-width:520px){.shots.three{grid-template-columns:1fr 1fr}.shots.three figure:last-child{grid-column:1/-1}}
 .own-note{margin-top:clamp(56px,7vw,88px);max-width:60ch;font-size:1.15rem}
-.phones.own{margin-top:36px}
+.phones.own{margin-top:clamp(48px,6vw,72px)}
 .offer.single{grid-template-columns:1fr;max-width:760px}
 .ptitle{margin-top:48px;font-family:var(--serif);font-weight:400;font-size:1.5rem;color:var(--amber)}
 .plan{width:100%;border-collapse:collapse;margin-top:16px}
@@ -190,6 +190,50 @@ layout: null
 .fab:focus-visible{outline:2px solid var(--white);outline-offset:3px}
 @media (max-width:600px){.fab{left:16px;right:16px;justify-content:center}}
 @media (prefers-reduced-motion:reduce){.fab{transition:none}}
+.bighead{margin-top:44px;font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.25;color:var(--white);max-width:30ch}
+#method .bighead{margin-top:0}
+
+/* AI agents network (proprietary technology) */
+.agents{margin:clamp(40px,5vw,64px) 0 0;border:1px solid rgba(143,163,184,.18);border-radius:18px;background:linear-gradient(180deg,#0E141B,#0B0F14);padding:18px 18px 22px;overflow:hidden}
+.agents svg{display:block;width:100%;height:auto}
+.ag-top{display:flex;justify-content:space-between;align-items:center;direction:ltr;font:600 .78rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;color:var(--steel);padding:0 4px 8px}
+.ag-live{display:inline-flex;align-items:center;gap:8px;color:var(--green)}
+.ag-live i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:agBlink 1.4s infinite}
+.ag-links path{stroke:#FFB454;stroke-opacity:.35;stroke-width:1.4;stroke-dasharray:4 6;animation:agFlow 1.6s linear infinite}
+.ag-links path.peer{stroke:#8FA3B8;stroke-opacity:.25;animation-duration:2.6s}
+.ag-packets circle{fill:#FFB454;filter:drop-shadow(0 0 6px #FFB454)}
+.ag-packets circle.pk2{fill:#8FD3FF;filter:drop-shadow(0 0 5px #8FD3FF)}
+.ag-core .ring{fill:none;stroke:#FFB454;stroke-opacity:.5;transform-origin:500px 260px}
+.ag-core .r1{stroke-dasharray:6 10;animation:agSpin 9s linear infinite}
+.ag-core .r2{stroke-opacity:.2;stroke-dasharray:2 14;animation:agSpin 14s linear infinite reverse}
+.ag-core .core-disc{fill:#121A22;stroke:#FFB454;stroke-width:1.5}
+.core-t{fill:#F2F6FA;font:600 17px var(--sans);text-anchor:middle}
+.core-s{fill:#FFB454;font:600 10px ui-monospace,Menlo,monospace;letter-spacing:.14em;text-anchor:middle}
+.ag-node rect{fill:#121A22;stroke:#8FA3B8;stroke-opacity:.35;animation:agNode 4s ease-in-out infinite;animation-delay:var(--d)}
+.ag-node .st{fill:#5AD18F;animation:agBlink 1.6s infinite;animation-delay:var(--d)}
+.ag-node .n{fill:#F2F6FA;font:600 16px var(--sans);text-anchor:middle}
+.ag-node .m{fill:#8FA3B8;font:500 9.5px ui-monospace,Menlo,monospace;letter-spacing:.08em;text-anchor:middle}
+.ag-log{position:relative;height:1.6em;margin-top:6px;direction:ltr;font:500 .82rem ui-monospace,SFMono-Regular,Menlo,monospace;color:#5AD18F;overflow:hidden}
+.ag-log span{position:absolute;inset:0;opacity:0;animation:agLog 12s infinite}
+.ag-log span:nth-child(2){animation-delay:3s}.ag-log span:nth-child(3){animation-delay:6s}.ag-log span:nth-child(4){animation-delay:9s}
+.agents figcaption{margin-top:12px;color:var(--steel);font-size:.98rem}
+@keyframes agFlow{to{stroke-dashoffset:-20}}
+@keyframes agSpin{to{transform:rotate(360deg)}}
+@keyframes agBlink{50%{opacity:.25}}
+@keyframes agNode{0%,100%{stroke:#8FA3B8;stroke-opacity:.35}50%{stroke:#FFB454;stroke-opacity:.9}}
+@keyframes agLog{0%{opacity:0;transform:translateY(8px)}4%,22%{opacity:1;transform:none}26%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.agents *{animation:none!important}.ag-packets{display:none}.ag-log span:first-child{opacity:1}}
+.agents .ag-m{display:none}
+.ag-core .rm{transform-origin:200px 310px}
+.ag-m .ag-node .n{font-size:14px}.ag-m .ag-node .m{font-size:8.5px}
+@media (max-width:640px){
+  .agents .ag-d{display:none}.agents .ag-m{display:block}
+  .agents{padding:14px 12px 18px}
+  .ag-top{flex-direction:column;align-items:flex-start;gap:4px;font-size:.68rem}
+  .ag-log{font-size:.68rem;white-space:nowrap}
+  .ag-log span{overflow:hidden;text-overflow:ellipsis}
+}
+.bighead-sub{margin-top:22px;max-width:60ch;font-size:1.2rem;line-height:1.7}
 </style>
 </head><body>
 <script>document.documentElement.classList.add('js')</script>
@@ -240,62 +284,111 @@ layout: null
 </div></section>
 
 <section id="method"><div class="wrap">
-  <div class="head ov">
-    <p class="label"><span class="n">02</span> שיטת צילום אחד</p>
-    <h2>אתם מצלמים <span class="hand">פעם אחת.</span> אנחנו מפרסמים כל יום.</h2>
-  </div>
-  <div class="steps3">
-    <div class="panel ov"><div class="num">01</div><h3>צילום אחד</h3><p>מצלמים לבד, לפי מדריך מלא שאנחנו שולחים — או ביום הפקה באולפן עם צלם, בתוספת תשלום. לא רוצים להצטלם? ניצור עבורכם אווטאר בתלת-ממד או בדו-ממד.</p></div>
-    <div class="panel ov"><div class="num">02</div><h3>הדמות והקול שלכם</h3><p>שתי דמויות דיגיטליות ושכפול קול בעברית — כך שתופיעו בתוכן חדש בלי לצלם שוב.</p></div>
-    <div class="panel ov"><div class="num">03</div><h3>צוות תוכן מלא</h3><p>כותבים, עורכים, מעצבים ומנהלי רשתות שמפרסמים בשמכם, בכל הרשתות, כל יום.</p></div>
-  </div>
-  <p class="lede ov" style="margin-top:44px;max-width:62ch;font-size:1.15rem">היום, בעזרת בינה מלאכותית, אפשר לעשות את זה במאמץ קטן משמעותית — אבל רק אם מישהו עם ידע וניסיון בשיווק מחבר את כל הכלים כך שיעבדו יחד. החיבורים וההתממשקויות לוקחים זמן, וזמן, כבעלי עסק, אין לכם.</p>
-  <p class="statement ov">אנחנו עושים את החיבורים. אתם מקבלים את התוצאה.</p>
-  <p class="lede ov own-note">דוגמאות לתוכן שאנחנו מייצרים לעצמנו — ומופץ כל יום למאות אלפי אנשים בכל הרשתות שלנו.</p>
-  <div class="phones mix own">
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-c1.mp4" poster="/media/showcase/own-c1.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-c2.mp4" poster="/media/showcase/own-c2.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-c3.mp4" poster="/media/showcase/own-c3.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-c4.mp4" poster="/media/showcase/own-c4.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-c5.mp4" poster="/media/showcase/own-c5.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-c6.mp4" poster="/media/showcase/own-c6.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-r21.mp4" poster="/media/showcase/own-r21.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-contractor.mp4" poster="/media/showcase/own-contractor.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/own-v2.mp4" poster="/media/showcase/own-v2.jpg" muted loop playsinline preload="none" aria-label="רילס שהפקנו לעצמנו"></video></div></figure>
-  </div>
-</div></section>
+  <h3 class="bighead ov">יותר מ-20 שנה של שיווק ופרסום — <span class="hand">בתוך טכנולוגיה אחת.</span></h3>
+  <p class="lede ov bighead-sub">פיתחנו מערכת שעושה את העבודה של צוות שיווק שלם: לומדת את העסק שלכם, כותבת, עורכת, מעצבת ומפרסמת — בקול ובפנים שלכם, בכל הרשתות, כל יום. אתם מקבלים את התוצאה של משרד פרסום, בלי לנהל אף אחד.</p>
+  <figure class="agents ov" aria-label="סוכני בינה מלאכותית שעובדים יחד ומתקשרים זה עם זה — טכנולוגיה קניינית">
+    <div class="ag-top"><span class="ag-live"><i></i>LIVE</span><span>OMNI·CORE — Proprietary Technology</span></div>
+    <svg class="ag-d" viewBox="0 0 1000 520" role="img" aria-hidden="true">
+      <defs>
+        <radialGradient id="ag-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFB454" stop-opacity=".35"/><stop offset="1" stop-color="#FFB454" stop-opacity="0"/></radialGradient>
+        <pattern id="ag-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8FA3B8" stroke-opacity=".07"/></pattern>
+      </defs>
+      <rect width="1000" height="520" fill="url(#ag-grid)"/>
+      <!-- links: every agent talks to the core, and to its neighbours -->
+      <g class="ag-links" fill="none">
+        <path id="l1" d="M255 110 C 360 110 400 200 452 236"/>
+        <path id="l2" d="M500 88 L 500 204"/>
+        <path id="l3" d="M745 110 C 640 110 600 200 548 236"/>
+        <path id="l4" d="M745 410 C 640 410 600 320 548 284"/>
+        <path id="l5" d="M500 432 L 500 316"/>
+        <path id="l6" d="M255 410 C 360 410 400 320 452 284"/>
+        <path id="p12" class="peer" d="M255 92 Q 380 40 415 60"/>
+        <path id="p23" class="peer" d="M585 60 Q 620 40 745 92"/>
+        <path id="p34" class="peer" d="M830 138 L 830 382"/>
+        <path id="p45" class="peer" d="M745 428 Q 620 480 585 460"/>
+        <path id="p56" class="peer" d="M415 460 Q 380 480 255 428"/>
+        <path id="p61" class="peer" d="M170 382 L 170 138"/>
+      </g>
+      <!-- data packets travelling between agents and the core -->
+      <g class="ag-packets">
+        <circle r="4"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="2.2s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#l2"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="3s" repeatCount="indefinite" begin=".6s"><mpath href="#l3"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="2.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" begin=".3s"><mpath href="#l4"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="2.8s" repeatCount="indefinite" begin="1s"><mpath href="#l5"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="2.5s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" begin=".8s"><mpath href="#l6"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3.4s" repeatCount="indefinite"><mpath href="#p12"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3.8s" repeatCount="indefinite" begin="1.2s"><mpath href="#p34"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3.2s" repeatCount="indefinite" begin=".5s"><mpath href="#p56"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3.6s" repeatCount="indefinite" begin="1.6s"><mpath href="#p23"/></animateMotion></circle>
+      </g>
+      <!-- core -->
+      <g class="ag-core">
+        <circle cx="500" cy="260" r="120" fill="url(#ag-glow)"/>
+        <circle class="ring r1" cx="500" cy="260" r="66"/>
+        <circle class="ring r2" cx="500" cy="260" r="80"/>
+        <circle cx="500" cy="260" r="52" class="core-disc"/>
+        <text x="500" y="254" class="core-t">המנוע שלנו</text>
+        <text x="500" y="276" class="core-s">OMNI·CORE</text>
+      </g>
+      <!-- agents -->
+      <g class="ag-node" style="--d:0s"><rect x="85" y="82" width="170" height="56" rx="10"/><circle class="st" cx="103" cy="100" r="4"/><text x="170" y="108" class="n">סוכן אסטרטגיה</text><text x="170" y="127" class="m">AGENT_01 · STRATEGY</text></g>
+      <g class="ag-node" style="--d:.4s"><rect x="415" y="32" width="170" height="56" rx="10"/><circle class="st" cx="433" cy="50" r="4"/><text x="500" y="58" class="n">סוכן כתיבה</text><text x="500" y="77" class="m">AGENT_02 · COPY</text></g>
+      <g class="ag-node" style="--d:.8s"><rect x="745" y="82" width="170" height="56" rx="10"/><circle class="st" cx="763" cy="100" r="4"/><text x="830" y="108" class="n">סוכן וידאו</text><text x="830" y="127" class="m">AGENT_03 · VIDEO</text></g>
+      <g class="ag-node" style="--d:1.2s"><rect x="745" y="382" width="170" height="56" rx="10"/><circle class="st" cx="763" cy="400" r="4"/><text x="830" y="408" class="n">סוכן עיצוב</text><text x="830" y="427" class="m">AGENT_04 · DESIGN</text></g>
+      <g class="ag-node" style="--d:1.6s"><rect x="415" y="432" width="170" height="56" rx="10"/><circle class="st" cx="433" cy="450" r="4"/><text x="500" y="458" class="n">סוכן הפצה</text><text x="500" y="477" class="m">AGENT_05 · DISTRIBUTE</text></g>
+      <g class="ag-node" style="--d:2s"><rect x="85" y="382" width="170" height="56" rx="10"/><circle class="st" cx="103" cy="400" r="4"/><text x="170" y="408" class="n">סוכן לידים</text><text x="170" y="427" class="m">AGENT_06 · LEADS</text></g>
+    </svg>
+    <svg class="ag-m" viewBox="0 0 400 620" role="img" aria-hidden="true">
+      <rect width="400" height="620" fill="url(#ag-grid)"/>
+      <g class="ag-links" fill="none">
+        <path id="m1" d="M73 96 C73 200 150 262 167 282"/>
+        <path id="m2" d="M327 96 C327 200 250 262 233 282"/>
+        <path id="m3" d="M138 310 L154 310"/>
+        <path id="m4" d="M262 310 L246 310"/>
+        <path id="m5" d="M73 524 C73 420 150 358 167 338"/>
+        <path id="m6" d="M327 524 C327 420 250 358 233 338"/>
+        <path id="mp1" class="peer" d="M138 68 L262 68"/>
+        <path id="mp2" class="peer" d="M24 96 L24 282"/>
+        <path id="mp3" class="peer" d="M376 96 L376 282"/>
+        <path id="mp4" class="peer" d="M24 338 L24 524"/>
+        <path id="mp5" class="peer" d="M376 338 L376 524"/>
+        <path id="mp6" class="peer" d="M138 552 L262 552"/>
+      </g>
+      <g class="ag-packets">
+        <circle r="4"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#m1"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="2.2s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" begin=".4s"><mpath href="#m2"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="2.8s" repeatCount="indefinite" begin=".8s"><mpath href="#m5"/></animateMotion></circle>
+        <circle r="4"><animateMotion dur="2.6s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" begin="1.1s"><mpath href="#m6"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#mp1"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3.4s" repeatCount="indefinite" begin=".6s"><mpath href="#mp3"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.2s"><mpath href="#mp4"/></animateMotion></circle>
+        <circle r="3" class="pk2"><animateMotion dur="3s" repeatCount="indefinite" begin="1.6s"><mpath href="#mp6"/></animateMotion></circle>
+      </g>
+      <g class="ag-core">
+        <circle cx="200" cy="310" r="90" fill="url(#ag-glow)"/>
+        <circle class="ring r1 rm" cx="200" cy="310" r="52"/>
+        <circle cx="200" cy="310" r="44" class="core-disc"/>
+        <text x="200" y="306" class="core-t" style="font-size:14px">המנוע שלנו</text>
+        <text x="200" y="324" class="core-s" style="font-size:8px">OMNI·CORE</text>
+      </g>
+      <g class="ag-node" style="--d:0s"><rect x="8" y="40" width="130" height="56" rx="10"/><circle class="st" cx="22" cy="54" r="4"/><text x="73" y="67" class="n">סוכן אסטרטגיה</text><text x="73" y="85" class="m">AGENT_01</text></g><g class="ag-node" style="--d:0.4s"><rect x="262" y="40" width="130" height="56" rx="10"/><circle class="st" cx="276" cy="54" r="4"/><text x="327" y="67" class="n">סוכן כתיבה</text><text x="327" y="85" class="m">AGENT_02</text></g><g class="ag-node" style="--d:0.8s"><rect x="262" y="282" width="130" height="56" rx="10"/><circle class="st" cx="276" cy="296" r="4"/><text x="327" y="309" class="n">סוכן וידאו</text><text x="327" y="327" class="m">AGENT_03</text></g><g class="ag-node" style="--d:1.2s"><rect x="262" y="524" width="130" height="56" rx="10"/><circle class="st" cx="276" cy="538" r="4"/><text x="327" y="551" class="n">סוכן עיצוב</text><text x="327" y="569" class="m">AGENT_04</text></g><g class="ag-node" style="--d:1.6s"><rect x="8" y="524" width="130" height="56" rx="10"/><circle class="st" cx="22" cy="538" r="4"/><text x="73" y="551" class="n">סוכן הפצה</text><text x="73" y="569" class="m">AGENT_05</text></g><g class="ag-node" style="--d:2s"><rect x="8" y="282" width="130" height="56" rx="10"/><circle class="st" cx="22" cy="296" r="4"/><text x="73" y="309" class="n">סוכן לידים</text><text x="73" y="327" class="m">AGENT_06</text></g>
+    </svg>
+    <div class="ag-log" aria-hidden="true">
+      <span>&gt; agent_02.copy → script ready · tone: brand_voice ✓</span>
+      <span>&gt; agent_03.video → reel rendered · 9:16 · captions ✓</span>
+      <span>&gt; agent_05.distribute → 6 platforms scheduled ✓</span>
+      <span>&gt; agent_06.leads → new lead → inbox ✓</span>
+    </div>
+    <figcaption>טכנולוגיה קניינית שפיתחנו: צוות של סוכני בינה מלאכותית שעובדים יחד, מעבירים מידע זה לזה, ומפיקים את התוכן שלכם — כל יום.</figcaption>
+  </figure>
 
-<section id="showcase"><div class="wrap">
-  <div class="head ov">
-    <p class="label"><span class="n">03</span> תיק עבודות</p>
-    <h2>תיק <span class="hand">עבודות</span></h2>
-    <p>מבחר מהתוכן שהפקנו ללקוחות, לפרויקטים ולעסק שלנו.</p>
-  </div>
-  <div class="phones mix">
-    <figure class="ov"><div class="phone"><video src="/media/showcase/course-r3.mp4" poster="/media/showcase/course-r3.jpg" muted loop playsinline preload="none" aria-label="רילס לקורס"></video></div><figcaption>רילס לקורס — דמות מונפשת</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/clinic-karli.mp4" poster="/media/showcase/clinic-karli.jpg" muted loop playsinline preload="none" aria-label="רילס לקליניקה"></video></div><figcaption>רילס לקליניקה — טיפול באור אדום</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/marina-pointe.mp4" poster="/media/showcase/marina-pointe.jpg" muted loop playsinline preload="none" aria-label="מרינה פוינט"></video></div><figcaption>מרינה פוינט — טמפה</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/fernway-day.mp4" poster="/media/showcase/fernway-day.jpg" muted loop playsinline preload="none" aria-label="סרטון שיווק לנכס"></video></div><figcaption>סרטון שיווק לנכס — עם שיר מקורי</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/biz-tlusso.mp4" poster="/media/showcase/biz-tlusso.jpg" muted loop playsinline preload="none" aria-label="רילס לעסק"></video></div><figcaption>רילס לעסק — טי-לוסו</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/stpete-launch.mp4" poster="/media/showcase/stpete-launch.jpg" muted loop playsinline preload="none" aria-label="ערב השקה"></video></div><figcaption>רוש בובואה סנט פיט — ערב ההשקה</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/serena-welcome.mp4" poster="/media/showcase/serena-welcome.jpg" muted loop playsinline preload="none" aria-label="סרינה ביי דה סי"></video></div><figcaption>סרינה ביי דה סי — סיור עם מגישה</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/biz-euphoria.mp4" poster="/media/showcase/biz-euphoria.jpg" muted loop playsinline preload="none" aria-label="רילס לעסק"></video></div><figcaption>רילס לעסק — אופוריה, תלבושות קרנבל</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/roche-bobois.mp4" poster="/media/showcase/roche-bobois.jpg" muted loop playsinline preload="none" aria-label="אירוע השקה"></video></div><figcaption>רוש בובואה סנט פיט — אירוע ההשקה</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/course-r9.mp4" poster="/media/showcase/course-r9.jpg" muted loop playsinline preload="none" aria-label="רילס לקורס"></video></div><figcaption>רילס לקורס — מתוך סדרה</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/serena-sunset.mp4" poster="/media/showcase/serena-sunset.jpg" muted loop playsinline preload="none" aria-label="סרינה ביי דה סי"></video></div><figcaption>סרינה ביי דה סי — שקיעה</figcaption></figure>
-    <figure class="ov"><div class="phone"><video src="/media/showcase/fernway-tour.mp4" poster="/media/showcase/fernway-tour.jpg" muted loop playsinline preload="none" aria-label="סיור בנכס עם מגישה דיגיטלית"></video></div><figcaption>סיור בנכס עם מגישה דיגיטלית</figcaption></figure>
-    <figure class="ov"><div class="phone"><video class="contain" src="/media/showcase/dream-teaser.mp4" poster="/media/showcase/dream-teaser.jpg" muted loop playsinline preload="none" aria-label="טיזר"></video></div><figcaption>טיזר לפרויקט</figcaption></figure>
-  </div>
-  <figure class="tablet-wrap ov"><div class="tablet"><video src="/media/showcase/youtube-ep01.mp4" poster="/media/showcase/youtube-ep01.jpg" muted loop playsinline preload="none" aria-label="פרק ראשון בסדרת היוטיוב"></video></div><figcaption>יוטיוב — הפרק הראשון בסדרה</figcaption></figure>
-  <div class="tablets2">
-    <figure class="tablet-wrap ov"><div class="tablet"><video src="/media/showcase/ad-direct2voters.mp4" poster="/media/showcase/ad-direct2voters.jpg" muted loop playsinline preload="none" aria-label="פרסומת לעסק"></video></div><figcaption>פרסומת לעסק — דיירקט טו ווטרס</figcaption></figure>
-    <figure class="tablet-wrap ov"><div class="tablet"><video src="/media/showcase/brand-emerald.mp4" poster="/media/showcase/brand-emerald.jpg" muted loop playsinline preload="none" aria-label="סרטון תדמית לעסק"></video></div><figcaption>סרטון תדמית לעסק — אמרלד מייסונרי</figcaption></figure>
-  </div>
+  <p class="statement ov">אנחנו עושים את החיבורים. אתם מקבלים את התוצאה.</p>
 </div></section>
 
 <section id="examples"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">04</span> דוגמאות ללקוחות</p>
+    <p class="label"><span class="n">02</span> דוגמאות ללקוחות</p>
     <h2>ככה זה ייראה <span class="hand">בתחום שלכם</span></h2>
     <p>לקוחות לדוגמה מארבעה תחומים — לכל אחד שפה עיצובית משלו: רילס עם אנימציות וקרוסלה של שש שקופיות.</p>
   </div>
@@ -306,6 +399,10 @@ layout: null
         <div class="phone"><video src="/media/examples/realtor-reel.mp4" poster="/media/examples/realtor-reel.jpg" muted loop playsinline preload="none" aria-label="רילס לדוגמה — נדל״ן"></video></div>
         <div class="ex-slides"><img src="/media/examples/realtor-1.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 1" loading="lazy"><img src="/media/examples/realtor-2.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 2" loading="lazy"><img src="/media/examples/realtor-3.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 3" loading="lazy"><img src="/media/examples/realtor-4.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 4" loading="lazy"><img src="/media/examples/realtor-5.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 5" loading="lazy"><img src="/media/examples/realtor-6.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 6" loading="lazy"></div>
       </div>
+    </div>
+    <div class="example ov">
+      <div class="ex-head"><p class="label">נדל״ן — סיור בנכס</p><h3>סיור בנכס עם מגישה דיגיטלית</h3><p class="ex-note">הלקוח: <span dir="ltr">McPeak Realty Group Inc.</span> · סרטון שיווק לנכס, עם מגישה שמציגה אותו במקומכם</p></div>
+      <div class="ex-row"><div class="phone"><video src="/media/showcase/fernway-tour.mp4" poster="/media/showcase/fernway-tour.jpg" muted loop playsinline preload="none" aria-label="סיור בנכס עם מגישה דיגיטלית"></video></div></div>
     </div>
     <div class="example ov">
       <div class="ex-head"><p class="label">משכנתאות ופיננסים</p><h3>אורנה לב — משכנתאות בפלורידה</h3><p class="ex-note">עברית · צבעוני ואנרגטי, גרפים ומונים</p></div>
@@ -333,7 +430,7 @@ layout: null
 
 <section id="testimonials"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">05</span> מה אומרים עלינו</p>
+    <p class="label"><span class="n">03</span> מה אומרים עלינו</p>
     <h2>מה אומרים מי שעבדו איתנו</h2>
   </div>
   <div class="quotes">
@@ -354,7 +451,7 @@ layout: null
 
 <section id="includes"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">06</span> מה מקבלים</p>
+    <p class="label"><span class="n">04</span> מה מקבלים</p>
     <h2>כל מה שצריך כדי להיות נוכחים — <span class="hand">בלי לעשות כלום</span></h2>
   </div>
   <div class="cols">
@@ -389,7 +486,7 @@ layout: null
 
 <section id="why"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">07</span> למה אנחנו</p>
+    <p class="label"><span class="n">05</span> למה אנחנו</p>
     <h2>איך אני יודע? כי ראיתי את זה <span class="hand">מכל הצדדים</span></h2>
     <p>עבדנו עם למעלה מ-1,000 לקוחות, ואני מכיר את כל הבעיות שלכם. יצרתי אלפי יחידות מדיה לבעלי עסקים, הפקתי מדיה ליזמי הנדל"ן הגדולים בארה"ב, ותוכן שהגיע למיליוני אנשים.</p>
   </div>
@@ -448,7 +545,7 @@ layout: null
 
 <section id="price"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">08</span> המחיר</p>
+    <p class="label"><span class="n">06</span> המחיר</p>
     <h2>פחות מעלות של עובד אחד. <span class="hand">צוות שלם.</span></h2>
   </div>
   <div class="offer single">
@@ -487,7 +584,7 @@ layout: null
 
 <section id="fit"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">09</span> למי זה מתאים</p>
+    <p class="label"><span class="n">07</span> למי זה מתאים</p>
     <h2>האם זה בשבילכם?</h2>
   </div>
   <div class="fit">
@@ -505,7 +602,7 @@ layout: null
 
 <section id="faq"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">10</span> שאלות ותשובות</p>
+    <p class="label"><span class="n">08</span> שאלות ותשובות</p>
     <h2>שאלות ותשובות</h2>
   </div>
   <div class="faq">
@@ -524,7 +621,7 @@ layout: null
 
 <section id="start"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">11</span> בדקו אם נשאר מקום</p>
+    <p class="label"><span class="n">09</span> בדקו אם נשאר מקום</p>
     <h2>מקבלים עד 7 לקוחות. <span class="hand">בדקו אם נשאר מקום.</span></h2>
   </div>
   <div class="formwrap">
