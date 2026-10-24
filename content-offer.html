@@ -162,6 +162,26 @@ layout: null
 @media (max-width:520px){.shots.three{grid-template-columns:1fr 1fr}.shots.three figure:last-child{grid-column:1/-1}}
 .own-note{margin-top:clamp(56px,7vw,88px);max-width:60ch;font-size:1.15rem}
 .phones.own{margin-top:36px}
+.offer.single{grid-template-columns:1fr;max-width:760px}
+.ptitle{margin-top:48px;font-family:var(--serif);font-weight:400;font-size:1.5rem;color:var(--amber)}
+.plan{width:100%;border-collapse:collapse;margin-top:16px}
+.plan th,.plan td{padding:14px 0;border-bottom:1px solid rgba(242,246,250,.1);text-align:start;vertical-align:top;line-height:1.7}
+.plan th{width:34%;font-weight:600;color:var(--white)}
+.plan td{color:var(--body)}
+.terms.bonus{margin-top:12px}
+.plan-sum{margin-top:20px}
+.plan-sum b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.6vw,2rem);color:var(--amber)}
+.plan-sum span{display:block;margin-top:6px;color:var(--steel)}
+
+/* client examples */
+.examples{margin-top:56px;display:grid;gap:clamp(64px,8vw,104px)}
+.ex-head h3{margin-top:8px;font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.2rem)}
+.ex-note{margin-top:6px;color:var(--steel);font-size:.95rem}
+.ex-row{margin-top:24px;display:grid;grid-template-columns:minmax(200px,250px) 1fr;gap:clamp(20px,3vw,40px);align-items:center}
+.ex-row .phone{width:100%}
+.ex-slides{min-width:0;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;direction:ltr}
+.ex-slides img{flex:0 0 auto;width:clamp(200px,24vw,280px);height:auto;max-width:none;aspect-ratio:4/5;object-fit:cover;border-radius:6px;scroll-snap-align:start}
+@media (max-width:760px){.ex-row{grid-template-columns:1fr}.ex-row .phone{max-width:240px;margin:0 auto}}
 </style>
 </head><body>
 <script>document.documentElement.classList.add('js')</script>
@@ -218,7 +238,7 @@ layout: null
   </div>
   <div class="steps3">
     <div class="panel ov"><div class="num">01</div><h3>יום הפקה אחד</h3><p>באולפן, עם צלם וידאו, צלם סטילס, תאורה וסאונד. זה כל הזמן שנדרש מכם.</p></div>
-    <div class="panel ov"><div class="num">02</div><h3>הדמות והקול שלכם</h3><p>שש דמויות דיגיטליות ושכפול קול בעברית — כך שתופיעו בתוכן חדש בלי לצלם שוב.</p></div>
+    <div class="panel ov"><div class="num">02</div><h3>הדמות והקול שלכם</h3><p>שתי דמויות דיגיטליות ושכפול קול בעברית — כך שתופיעו בתוכן חדש בלי לצלם שוב.</p></div>
     <div class="panel ov"><div class="num">03</div><h3>צוות תוכן מלא</h3><p>כותבים, עורכים, מעצבים ומנהלי רשתות שמפרסמים בשמכם, בכל הרשתות, כל יום.</p></div>
   </div>
   <p class="lede ov" style="margin-top:44px;max-width:62ch;font-size:1.15rem">היום, בעזרת בינה מלאכותית, אפשר לעשות את זה במאמץ קטן משמעותית — אבל רק אם מישהו עם ידע וניסיון בשיווק מחבר את כל הכלים כך שיעבדו יחד. החיבורים וההתממשקויות לוקחים זמן, וזמן, כבעלי עסק, אין לכם.</p>
@@ -265,9 +285,47 @@ layout: null
   </div>
 </div></section>
 
+<section id="examples"><div class="wrap">
+  <div class="head ov">
+    <p class="label"><span class="n">04</span> דוגמאות ללקוחות</p>
+    <h2>ככה זה ייראה <span class="hand">בתחום שלכם</span></h2>
+    <p>לקוחות לדוגמה מארבעה תחומים — לכל אחד שפה עיצובית משלו: רילס עם אנימציות וקרוסלה של שש שקופיות.</p>
+  </div>
+  <div class="examples">
+    <div class="example ov">
+      <div class="ex-head"><p class="label">נדל״ן</p><h3>דנה ויטפילד — מתווכת בפלורידה</h3><p class="ex-note">אנגלית · עיצוב מגזיני, אנימציות אלגנטיות</p></div>
+      <div class="ex-row">
+        <div class="phone"><video src="/media/examples/realtor-reel.mp4" poster="/media/examples/realtor-reel.jpg" muted loop playsinline preload="none" aria-label="רילס לדוגמה — נדל״ן"></video></div>
+        <div class="ex-slides"><img src="/media/examples/realtor-1.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 1" loading="lazy"><img src="/media/examples/realtor-2.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 2" loading="lazy"><img src="/media/examples/realtor-3.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 3" loading="lazy"><img src="/media/examples/realtor-4.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 4" loading="lazy"><img src="/media/examples/realtor-5.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 5" loading="lazy"><img src="/media/examples/realtor-6.jpg" alt="קרוסלה לדוגמה — נדל״ן, שקופית 6" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="example ov">
+      <div class="ex-head"><p class="label">משכנתאות ופיננסים</p><h3>אורנה לב — משכנתאות בפלורידה</h3><p class="ex-note">עברית · צבעוני ואנרגטי, גרפים ומונים</p></div>
+      <div class="ex-row">
+        <div class="phone"><video src="/media/examples/mortgage-reel.mp4" poster="/media/examples/mortgage-reel.jpg" muted loop playsinline preload="none" aria-label="רילס לדוגמה — משכנתאות ופיננסים"></video></div>
+        <div class="ex-slides"><img src="/media/examples/mortgage-1.jpg" alt="קרוסלה לדוגמה — משכנתאות ופיננסים, שקופית 1" loading="lazy"><img src="/media/examples/mortgage-2.jpg" alt="קרוסלה לדוגמה — משכנתאות ופיננסים, שקופית 2" loading="lazy"><img src="/media/examples/mortgage-3.jpg" alt="קרוסלה לדוגמה — משכנתאות ופיננסים, שקופית 3" loading="lazy"><img src="/media/examples/mortgage-4.jpg" alt="קרוסלה לדוגמה — משכנתאות ופיננסים, שקופית 4" loading="lazy"><img src="/media/examples/mortgage-5.jpg" alt="קרוסלה לדוגמה — משכנתאות ופיננסים, שקופית 5" loading="lazy"><img src="/media/examples/mortgage-6.jpg" alt="קרוסלה לדוגמה — משכנתאות ופיננסים, שקופית 6" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="example ov">
+      <div class="ex-head"><p class="label">מרפאות פרטיות</p><h3>מרפאת רו — רפואה פונקציונלית</h3><p class="ex-note">אנגלית · רגוע ונקי, תנועה רכה</p></div>
+      <div class="ex-row">
+        <div class="phone"><video src="/media/examples/clinic-reel.mp4" poster="/media/examples/clinic-reel.jpg" muted loop playsinline preload="none" aria-label="רילס לדוגמה — מרפאות פרטיות"></video></div>
+        <div class="ex-slides"><img src="/media/examples/clinic-1.jpg" alt="קרוסלה לדוגמה — מרפאות פרטיות, שקופית 1" loading="lazy"><img src="/media/examples/clinic-2.jpg" alt="קרוסלה לדוגמה — מרפאות פרטיות, שקופית 2" loading="lazy"><img src="/media/examples/clinic-3.jpg" alt="קרוסלה לדוגמה — מרפאות פרטיות, שקופית 3" loading="lazy"><img src="/media/examples/clinic-4.jpg" alt="קרוסלה לדוגמה — מרפאות פרטיות, שקופית 4" loading="lazy"><img src="/media/examples/clinic-5.jpg" alt="קרוסלה לדוגמה — מרפאות פרטיות, שקופית 5" loading="lazy"><img src="/media/examples/clinic-6.jpg" alt="קרוסלה לדוגמה — מרפאות פרטיות, שקופית 6" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="example ov">
+      <div class="ex-head"><p class="label">מאמנים, יועצים ומרצים</p><h3>מאיה קסלר — מרצה ומאמנת</h3><p class="ex-note">אנגלית · טיפוגרפיה נועזת, קצב מהיר</p></div>
+      <div class="ex-row">
+        <div class="phone"><video src="/media/examples/coach-reel.mp4" poster="/media/examples/coach-reel.jpg" muted loop playsinline preload="none" aria-label="רילס לדוגמה — מאמנים, יועצים ומרצים"></video></div>
+        <div class="ex-slides"><img src="/media/examples/coach-1.jpg" alt="קרוסלה לדוגמה — מאמנים, יועצים ומרצים, שקופית 1" loading="lazy"><img src="/media/examples/coach-2.jpg" alt="קרוסלה לדוגמה — מאמנים, יועצים ומרצים, שקופית 2" loading="lazy"><img src="/media/examples/coach-3.jpg" alt="קרוסלה לדוגמה — מאמנים, יועצים ומרצים, שקופית 3" loading="lazy"><img src="/media/examples/coach-4.jpg" alt="קרוסלה לדוגמה — מאמנים, יועצים ומרצים, שקופית 4" loading="lazy"><img src="/media/examples/coach-5.jpg" alt="קרוסלה לדוגמה — מאמנים, יועצים ומרצים, שקופית 5" loading="lazy"><img src="/media/examples/coach-6.jpg" alt="קרוסלה לדוגמה — מאמנים, יועצים ומרצים, שקופית 6" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
 <section id="testimonials"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">04</span> מה אומרים עלינו</p>
+    <p class="label"><span class="n">05</span> מה אומרים עלינו</p>
     <h2>מה אומרים מי שעבדו איתנו</h2>
   </div>
   <div class="quotes">
@@ -286,7 +344,7 @@ layout: null
 
 <section id="includes"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">05</span> מה מקבלים</p>
+    <p class="label"><span class="n">06</span> מה מקבלים</p>
     <h2>כל מה שצריך כדי להיות נוכחים — <span class="hand">בלי לעשות כלום</span></h2>
   </div>
   <div class="cols">
@@ -294,7 +352,7 @@ layout: null
       <h3><i class="dot" style="background:var(--sage)"></i>הקמה — פעם אחת</h3>
       <ol class="roman">
         <li>יום הפקה מקצועי עם צלם וידאו וצלם סטילס, תאורה וסאונד באולפן</li>
-        <li>שש דמויות דיגיטליות שלכם, שמופיעות בתוכן בלי שתצטרכו לצלם שוב</li>
+        <li>שתי דמויות דיגיטליות שלכם, שמופיעות בתוכן בלי שתצטרכו לצלם שוב</li>
         <li>שכפול הקול שלכם בעברית ברמה מקצועית</li>
         <li>מיתוג, שפה ויזואלית ואסטרטגיית תוכן</li>
         <li>חמישה דפי נחיתה לאיסוף לידים</li>
@@ -305,11 +363,12 @@ layout: null
     <div class="panel ov">
       <h3><i class="dot" style="background:var(--peach)"></i>כל חודש</h3>
       <ol class="roman">
-        <li><span><b>יוטיוב:</b> סרטון של 4 דקות בכל שבוע — הלקוחות מכירים אתכם עוד לפני שהם מתקשרים.</span></li>
-        <li><span><b>אינסטגרם:</b> 3 רילס ו-3 קרוסלות בשבוע, ו-3 סטוריז ביום — אתם בפיד שלהם כל יום.</span></li>
-        <li><span><b>טיקטוק:</b> 3 סרטונים בשבוע — מגיעים לקהל חדש שעוד לא מכיר אתכם.</span></li>
-        <li><span><b>פייסבוק:</b> פוסט וידאו ופוסט תוכן בכל שבוע.</span></li>
-        <li><span><b>לינקדאין וטוויטר:</b> פוסטים מקצועיים — סמכות מול לקוחות עסקיים.</span></li>
+        <li><span><b>אינסטגרם:</b> 2 רילס ו-2 קרוסלות בשבוע, ו-2 סטוריז ביום, 5 ימים בשבוע — אתם בפיד שלהם כל יום.</span></li>
+        <li><span><b>טיקטוק:</b> 2 סרטונים בשבוע — מגיעים לקהל חדש שעוד לא מכיר אתכם.</span></li>
+        <li><span><b>יוטיוב:</b> 2 סרטוני שורטס בשבוע — הלקוחות מכירים אתכם עוד לפני שהם מתקשרים.</span></li>
+        <li><span><b>פייסבוק:</b> 2 פוסטים בשבוע — וידאו ותוכן.</span></li>
+        <li><span><b>לינקדאין:</b> פוסט מקצועי אחד בשבוע — סמכות מול לקוחות עסקיים.</span></li>
+        <li><span><b>X (טוויטר):</b> פוסט אחד בשבוע.</span></li>
         <li><span><b>ויזואלים ברמה קולנועית</b> — נראים כמו המותג המוביל בתחום.</span></li>
         <li><span><b>דוח שבועי ושיחת אסטרטגיה חודשית</b> — יודעים בדיוק מה עובד.</span></li>
       </ol>
@@ -319,7 +378,7 @@ layout: null
 
 <section id="why"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">06</span> למה אנחנו</p>
+    <p class="label"><span class="n">07</span> למה אנחנו</p>
     <h2>איך אני יודע? כי ראיתי את זה <span class="hand">מכל הצדדים</span></h2>
     <p>עבדנו עם למעלה מ-1,000 לקוחות, ואני מכיר את כל הבעיות שלכם. יצרתי אלפי יחידות מדיה לבעלי עסקים, הפקתי מדיה ליזמי הנדל"ן הגדולים בארה"ב, ותוכן שהגיע למיליוני אנשים.</p>
   </div>
@@ -378,13 +437,13 @@ layout: null
 
 <section id="price"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">07</span> המחיר</p>
+    <p class="label"><span class="n">08</span> המחיר</p>
     <h2>פחות מעלות של עובד אחד. <span class="hand">צוות שלם.</span></h2>
   </div>
-  <div class="offer">
+  <div class="offer single">
     <div class="panel ov">
-      <p class="bigprice">2,000 דולר<small>לחודש</small></p>
-      <p class="setup">+ הקמה חד-פעמית: ₪7,500 + מע״מ</p>
+      <p class="bigprice">₪3,450<small>לחודש + מע״מ</small></p>
+      <p class="setup">+ הקמה חד-פעמית: ₪650 + מע״מ</p>
       <p class="anchor">צוות כזה בתוך העסק — צלם, עורך, מעצב, כותב ומנהל סושיאל — עולה עשרות אלפי שקלים בחודש, עוד לפני ציוד ותוכנות.</p>
       <ul class="terms">
         <li><b>עוזבים בכל רגע.</b> בלי התחייבות. החודש שבו עוזבים משולם במלואו, ואין החזר על חודש.</li>
@@ -392,34 +451,31 @@ layout: null
         <li><b>תוצאות.</b> אנחנו ממליצים לתת לזה 3 חודשים — זה הזמן שלוקח לרשתות ולקהל להכיר אתכם.</li>
         <li><b>הכול שלכם.</b> כל התוכן, הדמויות הדיגיטליות והקול — בבעלותכם המלאה, גם אם תעזבו.</li>
       </ul>
+      <h3 class="ptitle">מה מקבלים בכל חודש</h3>
+      <table class="plan">
+        <tr><th>אינסטגרם</th><td>2 רילס + 2 קרוסלות בשבוע<br>2 סטוריז ביום, 5 ימים בשבוע</td></tr>
+        <tr><th>טיקטוק</th><td>2 סרטונים בשבוע</td></tr>
+        <tr><th>יוטיוב</th><td>2 סרטוני שורטס בשבוע</td></tr>
+        <tr><th>פייסבוק</th><td>2 פוסטים בשבוע</td></tr>
+        <tr><th>לינקדאין</th><td>פוסט אחד בשבוע</td></tr>
+        <tr><th>X (טוויטר)</th><td>פוסט אחד בשבוע</td></tr>
+      </table>
+      <p class="plan-sum"><b>סה״כ: 88 פרסומים בכל חודש</b><span>48 פוסטים וסרטונים + 40 סטוריז — יותר מ-1,000 פרסומים בשנה.</span></p>
+      <h3 class="ptitle">בונוס</h3>
+      <ul class="terms bonus">
+        <li><b>תכנון אסטרטגי לשנה קדימה.</b> תוכנית תוכן מלאה לכל פלטפורמה, ל-12 החודשים הקרובים.</li>
+        <li><b>כלים מתקדמים.</b> הודעות ישירות אוטומטיות שמגיעות לכל לקוח שמתעניין.</li>
+        <li><b>מתנות דיגיטליות.</b> מדריכים וצ'קליסטים שאנחנו יוצרים לקהל היעד שלכם — ואוספים בעזרתם לידים.</li>
+        <li><b>כפיל קולי מתקדם.</b> שכפול הקול שלכם ברמה מקצועית — התוכן נשמע בדיוק כמוכם.</li>
+      </ul>
       <p class="pull">״מחלום — למוצר שמכניס מיליון שקלים.״<small>עומרי דן, פרויקט 001</small></p>
-    </div>
-    <div class="side">
-      <div class="panel ov">
-        <h3>רוצים גם קורס?</h3>
-        <p>אנחנו הופכים את הידע שלכם לקורס מקצועי ומוכן למכירה. <b style="color:var(--gold);font-weight:500">בחבילה עם הריטיינר — 20% הנחה על הקורס.</b></p>
-        <ul class="mini">
-          <li><span>מיני-קורס חינמי לאיסוף לידים</span><span>₪8,000</span></li>
-          <li><span>קורס בתשלום, עד כשעתיים</span><span>₪32,000</span></li>
-          <li><span>קורס פרימיום עם קהילה ומשפכים</span><span>₪48,000</span></li>
-        </ul>
-        <p style="font-size:.88rem;color:var(--dim)">המחירים לפני מע״מ ולפני ההנחה.</p>
-      </div>
-      <div class="panel ov" style="margin-top:20px">
-        <h3>תוספות</h3>
-        <ul class="mini">
-          <li><span>פודקאסט חודשי<small>פרק של שעה, כולל מראיין ועבודת תחקיר. אחרי העריכה מופקים ממנו 4 קטעים של עד 4 דקות ו-5 קטעים של עד דקה.</small></span><span>לפי הצעה</span></li>
-          <li><span>ניהול קמפיינים ממומנים</span><span>₪3,500 לחודש</span></li>
-          <li><span>הקמת חברה אמריקאית למכירה בדולרים</span><span>₪5,000</span></li>
-        </ul>
-      </div>
     </div>
   </div>
 </div></section>
 
 <section id="fit"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">08</span> למי זה מתאים</p>
+    <p class="label"><span class="n">09</span> למי זה מתאים</p>
     <h2>האם זה בשבילכם?</h2>
   </div>
   <div class="fit">
@@ -437,7 +493,7 @@ layout: null
 
 <section id="faq"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">09</span> שאלות ותשובות</p>
+    <p class="label"><span class="n">10</span> שאלות ותשובות</p>
     <h2>שאלות ותשובות</h2>
   </div>
   <div class="faq">
@@ -456,7 +512,7 @@ layout: null
 
 <section id="start"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">10</span> בדקו אם נשאר מקום</p>
+    <p class="label"><span class="n">11</span> בדקו אם נשאר מקום</p>
     <h2>מקבלים עד 7 לקוחות. <span class="hand">בדקו אם נשאר מקום.</span></h2>
   </div>
   <div class="formwrap">
