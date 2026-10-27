@@ -6,11 +6,11 @@ layout: null
 {% raw %}<!DOCTYPE html>
 <html lang="he" dir="rtl" data-own-reveal><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OmniPresence Accelerator — זוגלובק</title>
-<meta name="description" content="נוכחות דיגיטלית מלאה לבעלי עסקים: תוכן כל יום בכל הרשתות — בסגנון שלכם.">
+<title>Omni Core — זוגלובק</title>
+<meta name="description" content="אתם המומחים. אנחנו המדיה. תוכן שנבנה לכל רשת בנפרד, כל יום — בסגנון שלכם.">
 <link rel="canonical" href="https://soglowekcapital.com/content-offer.html">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Soglowek Capital">
-<meta property="og:title" content="OmniPresence Accelerator — זוגלובק"><meta property="og:description" content="נוכחות דיגיטלית מלאה לבעלי עסקים: תוכן כל יום בכל הרשתות — בסגנון שלכם.">
+<meta property="og:title" content="Omni Core — זוגלובק"><meta property="og:description" content="אתם המומחים. אנחנו המדיה. תוכן שנבנה לכל רשת בנפרד, כל יום — בסגנון שלכם.">
 <meta property="og:url" content="https://soglowekcapital.com/content-offer.html"><meta property="og:image" content="https://soglowekcapital.com/logo.png">
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="application/atom+xml" title="Soglowek Capital — Blog" href="/blog/feed.xml">
@@ -258,6 +258,74 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
 #method .solution + .bighead{margin-top:clamp(40px,5vw,64px)}
 #method .solution + .bighead-sub{margin-top:clamp(28px,3.5vw,44px)}
 .solsub{margin-top:18px}.solsub b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,2.8vw,2.3rem);color:var(--amber)}.solsub span{display:block;margin-top:8px;color:var(--steel);font-size:1.12rem;max-width:60ch}
+/* hero tagline + three tiers (text only: a rule over each column, amber on the recommended one) */
+.hero .tagline{margin-top:20px;font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.25}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px);margin-top:48px;align-items:stretch}
+.tier{display:flex;flex-direction:column;border-top:1px solid #2A3845;padding-top:22px}
+.tier.rec{border-top:2px solid var(--amber)}
+.tier-rec{color:var(--amber);font-weight:600;font-size:.92rem;min-height:1.6em}
+.tier h3{margin-top:6px;font-family:var(--serif);font-weight:400;font-size:1.7rem;color:var(--white);text-align:right}
+.tier.rec h3{color:var(--amber)}
+.tier-price{margin-top:14px;font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,4.6vw,3.6rem);line-height:1;color:var(--amber)}
+.tier-price small{font-family:var(--sans);font-size:1rem;color:var(--steel);margin-inline-start:8px}
+.tier-setup{margin-top:10px;color:var(--steel);font-size:.95rem}
+.tier-line{margin-top:18px;color:var(--white);font-weight:600}
+.tier-list{list-style:none;margin-top:12px;flex:1}
+.tier-list li{padding:7px 0;color:var(--body)}
+.tier-per{margin-top:18px;color:var(--steel);font-size:.95rem}
+.tier-per b{color:var(--white);font-weight:600}
+.tier-cta{margin-top:18px;align-self:flex-start}
+.cf select{width:100%;background:transparent;border:0;border-bottom:1px solid #2A3845;font:400 1.1rem var(--sans);color:var(--white);padding:12px 0;margin-top:4px;border-radius:0}
+.cf select:focus{outline:none;border-bottom-color:var(--amber)}
+.cf select option{background:#121A22;color:var(--white)}
+#price .offer.single{margin-top:clamp(48px,6vw,80px)}
+@media (max-width:900px){.tiers{grid-template-columns:1fr}.tier-rec[aria-hidden]{display:none}}
+/* why us: a short history list */
+.history{list-style:none;margin-top:clamp(48px,6vw,72px);max-width:880px}
+.history li{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-top:1px solid #2A3845;color:var(--body)}
+.history li:last-child{border-bottom:1px solid #2A3845}
+.history li b{font-family:var(--serif);font-weight:400;font-size:1.2rem;color:var(--amber)}
+.why-shots{margin-top:clamp(48px,6vw,72px)}
+@media (max-width:600px){.history li{grid-template-columns:1fr;gap:4px}}
+.tier-list li b{color:var(--white);font-weight:600}
+/* tier details: the sell on the right, the facts and price on the left */
+.plans{display:grid;gap:clamp(64px,8vw,112px);margin-top:48px}
+.plan-detail{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,5vw,80px);align-items:start;border-top:1px solid #2A3845;padding-top:clamp(32px,4vw,48px);scroll-margin-top:90px}
+.plan-detail:target{border-top:2px solid var(--amber)}
+.pd-head{margin-top:12px;font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.2}
+.pd-pitch{margin-top:18px;font-size:1.12rem;color:var(--body);max-width:56ch}
+.pd-sub{margin-top:28px;font-weight:600;color:var(--white);font-size:1rem}
+.pd-fit{list-style:none;margin-top:8px}
+.pd-fit li{padding:6px 0;color:var(--body)}
+.pd-fit li::before{content:"·";color:var(--amber);margin-inline-end:10px;font-weight:700}
+.pd-facts .plan th{width:38%}
+.pd-cta{margin-top:24px;display:inline-block}
+@media (max-width:900px){.plan-detail{grid-template-columns:1fr}}
+.pd-pay{margin-top:12px;color:var(--steel);font-size:.9rem;max-width:44ch}
+.cf textarea{min-height:96px}
+/* tier comparison table (what "בחרו מסלול" opens) */
+.cmp-wrap{margin-top:48px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cmp{width:100%;min-width:720px;border-collapse:collapse}
+.cmp th,.cmp td{padding:14px 16px;border-bottom:1px solid #2A3845;text-align:start;vertical-align:top;line-height:1.6;color:var(--body)}
+.cmp tbody th{width:18%;font-weight:600;color:var(--white)}
+.cmp thead th{border-bottom:2px solid #2A3845;font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--white);vertical-align:bottom}
+.cmp .rec{background:rgba(255,180,84,.06)}
+.cmp thead th.rec{border-bottom-color:var(--amber);color:var(--amber)}
+.cmp-rec{display:inline-block;margin-bottom:8px;padding:2px 12px;border-radius:999px;background:var(--amber);color:#0B0F14;font:700 .8rem var(--sans)}
+.cmp-rec{display:table}
+.cmp-note{font:400 .85rem var(--sans);color:var(--steel)}
+.cmp-price{font-family:var(--serif);font-weight:300;font-size:1.9rem;color:var(--amber)}
+.cmp-unit{color:var(--amber)}
+.cmp-actions td,.cmp-actions th{border-bottom:0;padding-top:22px}
+.cmp-pay{display:inline-block}
+.cmp-more{display:block;margin-top:10px;color:var(--steel);font-size:.9rem}
+.cmp-hint{display:none;margin-top:32px;color:var(--steel);font-size:.9rem}
+@media (max-width:760px){.cmp-hint{display:block}.cmp-wrap{margin-top:12px}}
+/* "לתשלום" as a real button: filled on the recommended tier, outlined on the others */
+.cmp .cmp-pay{display:inline-flex;justify-content:center;min-width:132px;min-height:48px;padding:0 26px;border-radius:999px;border:1.5px solid var(--amber);color:var(--amber);font:700 1.05rem var(--sans);text-decoration:none;transition:background .2s,color .2s}
+.cmp .cmp-pay.primary{background:var(--amber);color:#0B0F14}
+.cmp .cmp-pay:hover{background:var(--amber);color:#0B0F14;text-decoration:none}
+.cmp .cmp-pay:focus-visible{outline:2px solid var(--white);outline-offset:3px}
 </style>
 </head><body>
 <script>document.documentElement.classList.add('js')</script>
@@ -280,11 +348,12 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
 <main>
 <header class="hero"><div class="wrap">
   <div>
-    <p class="label ov">מקבלים עד 7 לקוחות</p>
-    <h1 class="ov" dir="ltr" style="text-align:right">OmniPresence <span class="hand">Accelerator</span></h1>
-    <p class="lede ov">אתם מומחים בתחום שלכם. אנחנו הופכים את המומחיות הזו לנוכחות דיגיטלית קבועה ולזרם לקוחות — בלי שתעמדו מול מצלמה כל שבוע.</p>
+    <p class="label ov">מחלקת המדיה שלכם</p>
+    <h1 class="ov" dir="ltr" style="text-align:right">Omni <span class="hand">Core</span></h1>
+    <p class="tagline ov">אתם המומחים. <span class="hand">אנחנו המדיה.</span></p>
+    <p class="lede ov">אנחנו הופכים את המומחיות שלכם לנוכחות דיגיטלית קבועה ולזרם לקוחות — תוכן שנבנה לכל רשת בנפרד, כל יום, בלי שתעמדו מול מצלמה כל שבוע.</p>
     <div class="ctas ov">
-      <a class="tlink primary" href="#start">בדקו אם נשאר מקום</a>
+      <a class="tlink primary" href="#price">בחרו מסלול</a>
       <a class="tlink" href="#method">איך זה עובד</a>
     </div>
     <p class="proofline ov"><span>הפקנו את אבא חטוב ופרויקט 001</span><span>מיליון צפיות בחודש</span><span>סוקרנו ברשת אי-בי-סי</span><span>רוש בובואה וואלור</span></p>
@@ -311,12 +380,12 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
 <section id="method"><div class="wrap">
   <div class="solution ov">
     <p class="label"><span class="n">02</span> הפתרון</p>
-    <h3 class="bighead solhead"><span dir="ltr">OmniPresence Accelerator</span> — <span class="hand">ערוץ המדיה שלכם, על טייס אוטומטי.</span></h3>
-    <p class="solsub"><b>88 פרסומים בכל חודש</b><span>48 פוסטים וסרטונים + 40 סטוריז — יותר מ-1,000 פרסומים בשנה, שנוצרים על ידי מערכת שלומדת את התחרות שלכם.</span></p>
+    <h3 class="bighead solhead"><span dir="ltr">Omni Core</span> — <span class="hand">ערוץ המדיה שלכם, על טייס אוטומטי.</span></h3>
+    <p class="solsub"><b>שלושה מסלולים, החל מ-₪650 בחודש</b><span>עד כמעט 300 פרסומים בחודש בשש רשתות, שנוצרים על ידי מערכת שלומדת את העסק ואת התחרות שלכם.</span></p>
   </div>
-    <p class="lede ov bighead-sub"><b dir="ltr">OmniCore</b> הוא הניסיון השיווקי המצטבר של יותר מ-20 שנה, בשילוב עם בינה מלאכותית. המערכת שלנו לומדת את העסק שלכם, כותבת, עורכת, מעצבת ומפרסמת — בסגנון שלכם, בכל הרשתות, כל יום. אתם מקבלים את התוצאה של משרד פרסום, בלי לנהל אף אחד.</p>
-  <figure class="agents ov" aria-label="OmniCore: שלושה שלבים של סוכני בינה מלאכותית — מודיעין, יצירה, הפצה ולידים — שעובדים יחד ומתקשרים זה עם זה. טכנולוגיה קניינית.">
-    <div class="ag-top"><span class="ag-live"><i></i>LIVE · 12 AGENTS</span><span>OmniCore — Proprietary Technology</span></div>
+    <p class="lede ov bighead-sub"><b dir="ltr">Omni Core</b> הוא הניסיון השיווקי המצטבר של יותר מ-20 שנה, בשילוב עם בינה מלאכותית. המערכת שלנו לומדת את העסק שלכם, כותבת, עורכת, מעצבת ומפרסמת — בסגנון שלכם, בכל הרשתות, כל יום. אתם מקבלים את התוצאה של משרד פרסום, בלי לנהל אף אחד.</p>
+  <figure class="agents ov" aria-label="Omni Core: שלושה שלבים של סוכני בינה מלאכותית — מודיעין, יצירה, הפצה ולידים — שעובדים יחד ומתקשרים זה עם זה. טכנולוגיה קניינית.">
+    <div class="ag-top"><span class="ag-live"><i></i>LIVE · 12 AGENTS</span><span>Omni Core — Proprietary Technology</span></div>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
       <radialGradient id="ag-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFB454" stop-opacity=".35"/><stop offset="1" stop-color="#FFB454" stop-opacity="0"/></radialGradient>
       <pattern id="ag-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8FA3B8" stroke-opacity=".07"/></pattern>
@@ -334,7 +403,7 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
 <text x="980" y="572" class="stage-he">הפצה ולידים</text>
 <g class="ag-links" fill="none"><path id="ag-d0" d="M230 121.0 C 230 222.5, 500 234, 500 294"/><path id="ag-d1" d="M500 121.0 C 500 222.5, 500 234, 500 294"/><path id="ag-d2" d="M770 121.0 C 770 222.5, 500 234, 500 294"/><path id="ag-d3" d="M285.0 260 C 392.5 260, 392.5 350, 444 350"/><path id="ag-d4" d="M285.0 350 C 392.5 350, 392.5 350, 444 350"/><path id="ag-d5" d="M285.0 440 C 392.5 440, 392.5 350, 444 350"/><path id="ag-d6" d="M715.0 260 C 607.5 260, 607.5 350, 556 350"/><path id="ag-d7" d="M715.0 350 C 607.5 350, 607.5 350, 556 350"/><path id="ag-d8" d="M715.0 440 C 607.5 440, 607.5 350, 556 350"/><path id="ag-d9" d="M500 406 C 500 466, 230 480.0, 230 584.0"/><path id="ag-d10" d="M500 406 C 500 466, 500 480.0, 500 584.0"/><path id="ag-d11" d="M500 406 C 500 466, 770 480.0, 770 584.0"/><path id="ag-dp0" class="peer" d="M325.0 95 L405.0 95"/><path id="ag-dp1" class="peer" d="M595.0 95 L675.0 95"/><path id="ag-dp2" class="peer" d="M325.0 610 L405.0 610"/><path id="ag-dp3" class="peer" d="M595.0 610 L675.0 610"/><path id="ag-dp4" class="peer" d="M190 286.0 L190 324.0"/><path id="ag-dp5" class="peer" d="M190 376.0 L190 414.0"/><path id="ag-dp6" class="peer" d="M810 286.0 L810 324.0"/><path id="ag-dp7" class="peer" d="M810 376.0 L810 414.0"/></g>
 <g class="ag-packets"><circle r="3.6"><animateMotion dur="2.7s" repeatCount="indefinite" begin="0.3s"><mpath href="#ag-d0"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0.1s"><mpath href="#ag-d1"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.1s" repeatCount="indefinite" begin="0.7s"><mpath href="#ag-d2"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.3s" repeatCount="indefinite" begin="1.0s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#ag-d3"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.3s" repeatCount="indefinite" begin="0.9s"><mpath href="#ag-d4"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.3s" repeatCount="indefinite" begin="0.2s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#ag-d5"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.9s" repeatCount="indefinite" begin="1.7s"><mpath href="#ag-d6"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#ag-d7"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.9s"><mpath href="#ag-d8"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.1s" repeatCount="indefinite" begin="0.8s"><mpath href="#ag-d9"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.8s" repeatCount="indefinite" begin="0.1s"><mpath href="#ag-d10"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.6s" repeatCount="indefinite" begin="0.6s"><mpath href="#ag-d11"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="2.8s" repeatCount="indefinite" begin="0.2s"><mpath href="#ag-dp0"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.1s" repeatCount="indefinite" begin="1.6s"><mpath href="#ag-dp1"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="2.9s" repeatCount="indefinite" begin="1.2s"><mpath href="#ag-dp2"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.6s" repeatCount="indefinite" begin="0.7s"><mpath href="#ag-dp3"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.5s" repeatCount="indefinite" begin="0.1s"><mpath href="#ag-dp4"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="2.7s" repeatCount="indefinite" begin="0.4s"><mpath href="#ag-dp5"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.7s" repeatCount="indefinite" begin="0.9s"><mpath href="#ag-dp6"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.1s" repeatCount="indefinite" begin="1.2s"><mpath href="#ag-dp7"/></animateMotion></circle></g>
-<g class="ag-core"><circle cx="500" cy="350" r="123" fill="url(#ag-glow)"/><circle class="ring r1" style="transform-origin:500px 350px" cx="500" cy="350" r="70"/><circle class="ring r2" style="transform-origin:500px 350px" cx="500" cy="350" r="84"/><circle cx="500" cy="350" r="56" class="core-disc"/><text x="500" y="348" class="core-t" style="font-size:16px">המנוע שלנו</text><text x="500" y="366" class="core-s">OmniCore</text></g>
+<g class="ag-core"><circle cx="500" cy="350" r="123" fill="url(#ag-glow)"/><circle class="ring r1" style="transform-origin:500px 350px" cx="500" cy="350" r="70"/><circle class="ring r2" style="transform-origin:500px 350px" cx="500" cy="350" r="84"/><circle cx="500" cy="350" r="56" class="core-disc"/><text x="500" y="348" class="core-t" style="font-size:16px">המנוע שלנו</text><text x="500" y="366" class="core-s">Omni Core</text></g>
 <g class="ag-node" style="--d:0.0s"><rect x="135" y="69" width="190" height="52" rx="10"/><circle class="st" cx="148" cy="82" r="3.5"/><text x="230" y="94" class="n" style="font-size:15px">סוכן מחקר מתחרים</text><text x="230" y="110" class="m" style="font-size:9px">AGENT_01 · COMPETITORS</text></g>
 <g class="ag-node" style="--d:0.4s"><rect x="405" y="69" width="190" height="52" rx="10"/><circle class="st" cx="418" cy="82" r="3.5"/><text x="500" y="94" class="n" style="font-size:15px">סוכן סריקת חדשות</text><text x="500" y="110" class="m" style="font-size:9px">AGENT_02 · NEWS_FEED</text></g>
 <g class="ag-node" style="--d:0.8s"><rect x="675" y="69" width="190" height="52" rx="10"/><circle class="st" cx="688" cy="82" r="3.5"/><text x="770" y="94" class="n" style="font-size:15px">סוכן Real-Time Marketing</text><text x="770" y="110" class="m" style="font-size:9px">AGENT_03 · TRENDS_LIVE</text></g>
@@ -361,7 +430,7 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
 <text x="388" y="632" class="stage-he">הפצה ולידים</text>
 <g class="ag-links" fill="none"><path id="ag-m0" d="M72 116.0 C 72 236.0, 200 282, 200 342"/><path id="ag-m1" d="M200 116.0 C 200 236.0, 200 282, 200 342"/><path id="ag-m2" d="M328 116.0 C 328 236.0, 200 282, 200 342"/><path id="ag-m3" d="M129.0 290 C 164.5 290, 164.5 380, 162 380"/><path id="ag-m4" d="M129.0 380 C 164.5 380, 164.5 380, 162 380"/><path id="ag-m5" d="M129.0 470 C 164.5 470, 164.5 380, 162 380"/><path id="ag-m6" d="M271.0 290 C 235.5 290, 235.5 380, 238 380"/><path id="ag-m7" d="M271.0 380 C 235.5 380, 235.5 380, 238 380"/><path id="ag-m8" d="M271.0 470 C 235.5 470, 235.5 380, 238 380"/><path id="ag-m9" d="M200 418 C 200 478, 72 524.0, 72 644.0"/><path id="ag-m10" d="M200 418 C 200 478, 200 524.0, 200 644.0"/><path id="ag-m11" d="M200 418 C 200 478, 328 524.0, 328 644.0"/><path id="ag-mp0" class="peer" d="M133.0 92 L139.0 92"/><path id="ag-mp1" class="peer" d="M261.0 92 L267.0 92"/><path id="ag-mp2" class="peer" d="M133.0 668 L139.0 668"/><path id="ag-mp3" class="peer" d="M261.0 668 L267.0 668"/><path id="ag-mp4" class="peer" d="M68 314.0 L68 356.0"/><path id="ag-mp5" class="peer" d="M68 404.0 L68 446.0"/><path id="ag-mp6" class="peer" d="M332 314.0 L332 356.0"/><path id="ag-mp7" class="peer" d="M332 404.0 L332 446.0"/></g>
 <g class="ag-packets"><circle r="3.6"><animateMotion dur="2.9s" repeatCount="indefinite" begin="0.6s"><mpath href="#ag-m0"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.5s" repeatCount="indefinite" begin="1.4s"><mpath href="#ag-m1"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.1s"><mpath href="#ag-m2"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.0s" repeatCount="indefinite" begin="1.8s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#ag-m3"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.4s" repeatCount="indefinite" begin="0.6s"><mpath href="#ag-m4"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.8s" repeatCount="indefinite" begin="0.2s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#ag-m5"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.9s" repeatCount="indefinite" begin="1.5s"><mpath href="#ag-m6"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.0s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#ag-m7"/></animateMotion></circle><circle r="3.6"><animateMotion dur="2.3s" repeatCount="indefinite" begin="1.3s"><mpath href="#ag-m8"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.4s" repeatCount="indefinite" begin="1.1s"><mpath href="#ag-m9"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.6s" repeatCount="indefinite" begin="0.6s"><mpath href="#ag-m10"/></animateMotion></circle><circle r="3.6"><animateMotion dur="3.3s" repeatCount="indefinite" begin="1.2s"><mpath href="#ag-m11"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.5s" repeatCount="indefinite" begin="0.9s"><mpath href="#ag-mp0"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.9s" repeatCount="indefinite" begin="1.9s"><mpath href="#ag-mp1"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.4s" repeatCount="indefinite" begin="1.3s"><mpath href="#ag-mp2"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="2.7s" repeatCount="indefinite" begin="1.4s"><mpath href="#ag-mp3"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.6s" repeatCount="indefinite" begin="2.0s"><mpath href="#ag-mp4"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.9s" repeatCount="indefinite" begin="0.6s"><mpath href="#ag-mp5"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.3s"><mpath href="#ag-mp6"/></animateMotion></circle><circle r="2.6" class="pk2"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.9s"><mpath href="#ag-mp7"/></animateMotion></circle></g>
-<g class="ag-core"><circle cx="200" cy="380" r="84" fill="url(#ag-glow)"/><circle class="ring r1" style="transform-origin:200px 380px" cx="200" cy="380" r="52"/><circle class="ring r2" style="transform-origin:200px 380px" cx="200" cy="380" r="66"/><circle cx="200" cy="380" r="38" class="core-disc"/><text x="200" y="378" class="core-t" style="font-size:12px">המנוע שלנו</text><text x="200" y="392" class="core-s">OmniCore</text></g>
+<g class="ag-core"><circle cx="200" cy="380" r="84" fill="url(#ag-glow)"/><circle class="ring r1" style="transform-origin:200px 380px" cx="200" cy="380" r="52"/><circle class="ring r2" style="transform-origin:200px 380px" cx="200" cy="380" r="66"/><circle cx="200" cy="380" r="38" class="core-disc"/><text x="200" y="378" class="core-t" style="font-size:12px">המנוע שלנו</text><text x="200" y="392" class="core-s">Omni Core</text></g>
 <g class="ag-node" style="--d:0.0s"><rect x="11" y="68" width="122" height="48" rx="10"/><circle class="st" cx="24" cy="81" r="3.5"/><text x="72" y="91" class="n" style="font-size:10.5px">סוכן מחקר מתחרים</text><text x="72" y="104" class="m" style="font-size:6.5px">AGENT_01 · COMPETITORS</text></g>
 <g class="ag-node" style="--d:0.4s"><rect x="139" y="68" width="122" height="48" rx="10"/><circle class="st" cx="152" cy="81" r="3.5"/><text x="200" y="91" class="n" style="font-size:10.5px">סוכן סריקת חדשות</text><text x="200" y="104" class="m" style="font-size:6.5px">AGENT_02 · NEWS_FEED</text></g>
 <g class="ag-node" style="--d:0.8s"><rect x="267" y="68" width="122" height="48" rx="10"/><circle class="st" cx="280" cy="81" r="3.5"/><text x="328" y="91" class="n" style="font-size:10.5px">סוכן Real-Time Marketing</text><text x="328" y="104" class="m" style="font-size:6.5px">AGENT_03 · TRENDS_LIVE</text></g>
@@ -396,37 +465,35 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
   </div>
   <div class="cols">
     <div class="panel ov">
-      <h3><i class="dot" style="background:var(--sage)"></i>הקמה — פעם אחת</h3>
+      <h3><i class="dot" style="background:var(--sage)"></i>בכל המסלולים</h3>
       <ol class="roman">
         <li>מחקר על העסק, המוצר והתחרות שלכם</li>
-        <li>יצירת קריאייטיב מלא ו-Brand Voice — שפה וטון דיבור ייחודיים לעסק שלכם</li>
-        <li>מיתוג, שפה ויזואלית ואסטרטגיית תוכן</li>
-        <li>דף נחיתה אחד לאיסוף לידים</li>
-        <li>שתי מתנות דיגיטליות לקהל שלכם, כמו מדריכים וצ'קליסטים להורדה</li>
-        <li>מערכת הודעות פרטיות אוטומטית ששולחת לעוקבים את המתנות ואוספת את פרטיהם</li>
+        <li>קול המותג (Brand Voice) — שפה וטון דיבור ייחודיים לעסק שלכם</li>
+        <li>שפה ויזואלית ואסטרטגיית תוכן</li>
+        <li>ויזואלים ברמה קולנועית — נראים כמו המותג המוביל בתחום</li>
+        <li>דוח ביצועים — יודעים בדיוק מה עובד</li>
+        <li>כל התוכן בבעלותכם המלאה</li>
       </ol>
     </div>
     <div class="panel ov">
-      <h3><i class="dot" style="background:var(--peach)"></i>כל חודש</h3>
+      <h3><i class="dot" style="background:var(--peach)"></i>כל פריט נבנה לרשת שלו</h3>
       <ol class="roman">
-        <li><span><b>אינסטגרם:</b> 2 רילס ו-2 קרוסלות בשבוע, ו-2 סטוריז ביום, 5 ימים בשבוע — אתם בפיד שלהם כל יום.</span></li>
-        <li><span><b>טיקטוק:</b> 2 סרטונים בשבוע — מגיעים לקהל חדש שעוד לא מכיר אתכם.</span></li>
-        <li><span><b>יוטיוב:</b> 2 סרטוני שורטס בשבוע — הלקוחות מכירים אתכם עוד לפני שהם מתקשרים.</span></li>
-        <li><span><b>פייסבוק:</b> 2 פוסטים בשבוע — וידאו ותוכן.</span></li>
-        <li><span><b>לינקדאין:</b> פוסט מקצועי אחד בשבוע — סמכות מול לקוחות עסקיים.</span></li>
-        <li><span><b>X (טוויטר):</b> פוסט אחד בשבוע.</span></li>
-        <li><span><b>ויזואלים ברמה קולנועית</b> — נראים כמו המותג המוביל בתחום.</span></li>
-        <li><span><b>דוח שבועי ושיחת אסטרטגיה חודשית</b> — יודעים בדיוק מה עובד.</span></li>
+        <li><span><b>אינסטגרם:</b> רילס אנכיים עם הוק בשנייה הראשונה, קרוסלות ששומרים ומשתפים, וסטוריז.</span></li>
+        <li><span><b>טיקטוק:</b> פתיחה חזקה בשתי השניות הראשונות, קצב מהיר, טרנדים וסאונדים של הרשת.</span></li>
+        <li><span><b>יוטיוב:</b> שורטס שמגיעים לקהל חדש, וסרטונים ארוכים שבונים אמון — הלקוחות מכירים אתכם עוד לפני שהם מתקשרים.</span></li>
+        <li><span><b>פייסבוק:</b> רילס וסטוריז, מותאמים לקהל של פייסבוק.</span></li>
+        <li><span><b>לינקדאין:</b> פוסטים מקצועיים בכתב שבונים סמכות מול לקוחות עסקיים.</span></li>
+        <li><span><b>X (טוויטר):</b> פוסטים קצרים וחדים בכתב, ודעה על מה שקורה בתחום.</span></li>
       </ol>
     </div>
   </div>
+  <p class="statement ov">לא מעלים את אותו פוסט לכל מקום. מידות, אורך, קצב, שפה ושעת פרסום — <span class="hand">לפי מה שכל רשת מתגמלת.</span></p>
 </div></section>
 
 <section id="why"><div class="wrap">
   <div class="head ov">
     <p class="label"><span class="n">04</span> למה אנחנו</p>
-    <h2>איך אני יודע? כי ראיתי את זה <span class="hand">מכל הצדדים</span></h2>
-    <p>עבדנו עם למעלה מ-1,000 לקוחות, ואני מכיר את כל הבעיות שלכם. יצרתי אלפי יחידות מדיה לבעלי עסקים, הפקתי מדיה ליזמי הנדל"ן הגדולים בארה"ב, ותוכן שהגיע למיליוני אנשים.</p>
+    <h2>20 שנה של קולנוע, <span class="hand">פרסום ותוכן</span></h2>
   </div>
   <div class="figures">
     <div class="figure ov"><b>1,000+</b><span>לקוחות שעבדנו איתם</span></div>
@@ -434,51 +501,19 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
     <div class="figure ov"><b>1,018,806</b><span>צפיות באינסטגרם בחודש אחד</span></div>
     <div class="figure ov"><b>1,200+</b><span>אורחים באירוע ההשקה</span></div>
   </div>
-  <div class="proof-block">
-    <div class="proof-text ov">
-      <h3>אירוע המכירות הגדול ביותר בפלורידה עד היום</h3>
-      <p>הפקתי את אירוע ההשקה של מגדל רוש בובואה בסנט פיט — יותר מ-1,200 אורחים והופעה פרטית של ריקי מרטין — ואת כל התוכן שסביבו, כולל קמפיין הבניינים הוורודים, שסוקר בערוץ החדשות המקומי של רשת אי-בי-סי. <b>האירוע קיבל חשיפה של 34 מיליון איש</b>.</p>
-    </div>
-    <div class="shots three">
-      <figure class="ov"><img src="/media/proof/news-tampabay28.jpg" alt="סיקור בחדשות רשת אי-בי-סי על קמפיין הבניינים הוורודים" loading="lazy"><figcaption>בחדשות רשת אי-בי-סי בטמפה</figcaption></figure>
-      <figure class="ov"><img src="/media/proof/press-1.jpg" alt="כתבה בעיתון על השקת מגדל רוש בובואה בסנט פיט" loading="lazy"><figcaption>מתוך העיתון</figcaption></figure>
-      <figure class="ov"><img src="/media/proof/press-2.jpg" alt="עמוד בעיתון עם תמונות מאירוע ההשקה" loading="lazy"><figcaption>מתוך העיתון</figcaption></figure>
-      <figure class="ov"><img src="/media/proof/ricky-martin.jpg" alt="ריקי מרטין מופיע באירוע ההשקה" loading="lazy"><figcaption>ריקי מרטין באירוע ההשקה</figcaption></figure>
-      <figure class="ov"><img src="/media/proof/storefront-mural.jpg" alt="חזית גלריית המכירות בעיצוב הקמפיין" loading="lazy"><figcaption>חזית גלריית המכירות</figcaption></figure>
-      <figure class="ov"><img src="/media/proof/sales-gallery.jpg" alt="גלריית המכירות של הפרויקט" loading="lazy"><figcaption>גלריית המכירות</figcaption></figure>
-    </div>
+  <ul class="history">
+    <li class="ov"><b>קולנוע</b><span>מפיק סרטים עטור פרסים. אחד הסרטים משודר היום בשירות הסטרימינג של אפל.</span></li>
+    <li class="ov"><b>פרסום</b><span>הקמתי וניהלתי משרד פרסום, ובניתי מותגים וקמפיינים ללקוחות.</span></li>
+    <li class="ov"><b>קורסים דיגיטליים</b><span>הפקתי את הקורסים הדיגיטליים הגדולים בישראל, ביניהם אבא חטוב ופרויקט 001.</span></li>
+    <li class="ov"><b>נדל״ן בפלורידה</b><span>שיווק ופרסום לפרויקטים בשווי של יותר ממיליארד דולר, ואירוע ההשקה של מגדל רוש בובואה — 1,200 אורחים וסיקור ברשת אי-בי-סי.</span></li>
+    <li class="ov"><b>היום</b><span>בעלים של חברת נדל״ן מתרחבת בפלורידה, ושל Omni Core.</span></li>
+  </ul>
+  <div class="shots three why-shots">
+    <figure class="ov"><img src="/media/proof/news-tampabay28.jpg" alt="סיקור בחדשות רשת אי-בי-סי על קמפיין הבניינים הוורודים" loading="lazy"><figcaption>בחדשות רשת אי-בי-סי בטמפה</figcaption></figure>
+    <figure class="ov"><img src="/media/proof/ricky-martin.jpg" alt="ריקי מרטין מופיע באירוע ההשקה" loading="lazy"><figcaption>ריקי מרטין באירוע ההשקה</figcaption></figure>
+    <figure class="ov"><img src="/media/proof/sales-gallery.jpg" alt="גלריית המכירות של הפרויקט" loading="lazy"><figcaption>גלריית המכירות</figcaption></figure>
   </div>
-
-  <div class="proof-block">
-    <div class="proof-text ov">
-      <h3>הקורסים הדיגיטליים הגדולים בישראל</h3>
-    </div>
-    <div class="courses-proof ov">
-      <p>הפקתי את הקורסים הדיגיטליים הגדולים בישראל, ביניהם <b>אבא חטוב</b> ו<b>פרויקט 001</b>, ועוד.</p>
-    </div>
-  </div>
-
-  <div class="proof-block">
-    <div class="proof-text ov">
-      <h3>תוכן שהגיע למיליוני אנשים</h3>
-      <p>צפיות באינסטגרם בתוך 30 יום. יותר מ-90% מהן הגיעו מאנשים שעוד לא עקבו.</p>
-    </div>
-    <div class="shots insights">
-      <figure class="ov"><img src="/media/proof/ig-1018806.jpg" alt="1,018,806 צפיות ב-30 יום" loading="lazy"></figure>
-      <figure class="ov"><img src="/media/proof/ig-931605.jpg" alt="931,605 צפיות ב-30 יום" loading="lazy"></figure>
-      <figure class="ov"><img src="/media/proof/ig-732533.jpg" alt="732,533 צפיות ב-30 יום" loading="lazy"></figure>
-    </div>
-  </div>
-
-  <div class="story" style="margin-top:clamp(64px,8vw,104px)">
-    <div class="head ov"><h2 style="font-size:clamp(1.8rem,3.4vw,2.8rem)">אני מכיר את הבעיה הזו <span class="hand">מבפנים</span></h2></div>
-    <div class="story-text">
-      <p class="ov">לפני הנדל"ן היו הקולנוע והפרסום. הייתי מפיק סרטים עטור פרסים, ואחד הסרטים שלי משודר היום בשירות הסטרימינג של אפל. הקמתי וניהלתי משרד פרסום, ובניתי מותגים וקמפיינים ללקוחות.</p>
-      <p class="ov">אחר כך עברתי לנדל"ן. היום אני הבעלים של חברת נדל"ן מתרחבת בפלורידה.</p>
-      <p class="ov">ולכן אני יודע בדיוק כמה קשה לעשות הכול בבת אחת: לנהל עסק שגדל, ובאותו זמן להופיע ברשתות כל יום. <em>את המערכת הזו בנינו קודם בשבילנו — עכשיו אנחנו מפעילים אותה בשבילכם.</em></p>
-    </div>
-  </div>
-  <p class="statement ov">אני מכיר את השיטה. אני יודע מה עובד ומה לא.</p>
+  <p class="statement ov">את המערכת הזו בנינו קודם בשבילנו. <span class="hand">עכשיו אנחנו מפעילים אותה בשבילכם.</span></p>
 </div></section>
 
 <section id="examples"><div class="wrap">
@@ -529,14 +564,14 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
     <h2>מה אומרים מי שעבדו איתנו</h2>
   </div>
   <div class="quotes">
-    <figure class="panel quote ov"><blockquote>״אורי הצטרף בתחילת הדרך, כשהיה לנו רק חלום. כמפיק הראשי, הוא לקח את הפרויקט מחלום <b>למוצר שעובד, מוכר ומכניס מיליון שקלים.</b> הוא היה מעורב בהכול — מכתיבת התוכן, דרך ההפקה ועד הצילומים — וניהל את התהליך ביד רמה.״</blockquote>
+    <figure class="panel quote ov"><blockquote>״המערכת שאורי ייצר לא רק שייצרה לנו <b>תוכן שמכר לנו במאות אלפי דולרים</b> היא גם ניהלה עבורנו את השיווק, את כל הרשתות החברתיות והביאה לנו חשיפה מתמדת והחזר משמעותי יותר גבוהה על ההשקעה שלנו.״</blockquote>
       <figcaption><span class="initial">ע</span><span><b>עומרי דן</b><i>פרויקט 001</i></span></figcaption></figure>
-    <figure class="panel quote ov"><blockquote>״כשאורי הגיע, היה לנו בלגן. היו לנו שעות של תוכן שצריך להפיק, והיינו תקועים. אורי לקח את הכול: הפקה מלאה מקצה לקצה, ו<b>יותר מ-300 יחידות תוכן ברמה מקצועית</b> — תוכן ששדרג את המוצר שלנו.״</blockquote>
+    <figure class="panel quote ov"><blockquote>״המערכת שהוא בנה <b>חסכה לנו אלפי שעות כוח אדם והמון המון כסף.</b> זה גאוני, המערכת של אורי מייצרת לנו מאות פוסטים, בכל הרשתות, אני במודעות של הלקוח 24 שעות ביום, 7 ימים בשבוע.״</blockquote>
       <figcaption><img src="/media/testimonials/arik-ben-yair.jpg" alt="אריק בן יאיר" loading="lazy"><span><b>אריק בן יאיר</b><i>מנכ״ל אבא חטוב</i></span></figcaption></figure>
     <figure class="panel quote ov"><blockquote>״עבדנו יחד שנים. אורי הוא מאנשי הפרסום וההפקה החזקים ביותר שאני מכיר: <b>מה שאחרים עושים בימים או בשבועות, הוא עושה בכמה שעות.</b> המיקוד, הניתוח וההבנה שלו — מהמובילים שאני מכיר.״</blockquote>
       <figcaption><img src="/media/testimonials/ran-barko.jpg" alt="רן ברקו" loading="lazy"><span><b>רן ברקו</b><i>יזם פרסום ובעלים של סוכנות פרסום</i></span></figcaption></figure>
-    <figure class="panel quote ov"><blockquote>״אורי הצטרף אלינו בתקופה של צמיחה משמעותית, ונתן לנו פתרון מלא לשיווק ולפרסום של <b>פרויקטים בשווי של יותר ממיליארד דולר</b> ברחבי פלורידה. הוא ניהל את קמפייני הפרסום, את יצירת התוכן ואת הטמעת הבינה המלאכותית, והפיק סרטים ברמה הוליוודית.״</blockquote>
-      <figcaption><img src="/media/testimonials/moises-agami.jpg" alt="מויזס אגמי" loading="lazy"><span><b>מויזס אגמי</b><i>מנכ״ל ואלור, חברת פיתוח נדל״ן בפלורידה</i></span><small class="tr">תורגם מאנגלית</small></figcaption></figure>
+    <figure class="panel quote ov"><blockquote>״עבדתי עם אורי במשך יותר משנה. המערכת שהוא בנה היא גאונית, <b>חסכה לי עשרות אלפי דולרים והביאה לקוחות שהכניסו למעלה מ-50 מיליון דולר.</b>״</blockquote>
+      <figcaption><img src="/media/testimonials/moises-agami.jpg" alt="מויזס אגמי" loading="lazy"><span><b>מויזס אגמי</b><i>מנכ״ל ואלור, חברת פיתוח נדל״ן בפלורידה</i></span></figcaption></figure>
     <figure class="panel quote ov"><blockquote>״עבדתי עם אורי על כמה פרויקטים במשך יותר משנה. הוא הוביל <b>פרויקטים שנראו בלתי אפשריים להפקה</b>, ומצא להם פתרונות מחוץ לקופסה — עם הבנה וניסיון ברמה המקצועית הגבוהה ביותר.״</blockquote>
       <figcaption><img src="/media/testimonials/darius.jpg" alt="דריוס וילהר" loading="lazy"><span><b>דריוס וילהר</b><i>בעלים של חברת הפקה הוליוודית</i></span><small class="tr">תורגם מאנגלית</small></figcaption></figure>
     <figure class="panel quote ov"><blockquote>״אורי התחיל לעבוד איתי כשלא היו לי רשתות חברתיות, לא היו לנו לידים, ואף אחד לא הכיר אותנו. אורי יצר תוכנית עבודה ויצא לדרך. <b>היום יש לנו יותר מ-35 מיליון צפיות.</b>״</blockquote>
@@ -549,42 +584,118 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
     <p class="label"><span class="n">07</span> המחיר</p>
     <h2>פחות מעלות של עובד אחד. <span class="hand">צוות שלם.</span></h2>
   </div>
+  <p class="cmp-hint">החליקו הצידה כדי לראות את כל המסלולים ←</p>
+  <div class="cmp-wrap ov">
+    <table class="cmp">
+      <thead><tr><th scope="col"><span class="cmp-note">כמויות לחודש</span></th><th scope="col" class="rec"><span class="cmp-rec">מומלץ</span><span dir="ltr">Presence</span></th><th scope="col"><span dir="ltr">Growth</span></th><th scope="col"><span dir="ltr">OmniPresence</span></th></tr></thead>
+      <tbody>
+        <tr><th scope="row">מחיר חודשי</th><td class="rec"><b class="cmp-price">₪650</b></td><td><b class="cmp-price">₪1,490</b></td><td><b class="cmp-price">₪3,450</b></td></tr>
+        <tr><th scope="row">דמי הקמה</th><td class="rec">אין</td><td>אין</td><td>₪1,950</td></tr>
+        <tr><th scope="row">אינסטגרם</th><td class="rec">4 רילס, 4 קרוסלות, 13 סטוריז</td><td>8 רילס, 8 קרוסלות, 30 סטוריז</td><td>17 רילס, 9 קרוסלות, 90 סטוריז</td></tr>
+        <tr><th scope="row">טיקטוק</th><td class="rec">4 רילס</td><td>8 רילס</td><td>17 רילס</td></tr>
+        <tr><th scope="row">יוטיוב</th><td class="rec">—</td><td>8 שורטס</td><td>17 שורטס ו-4 סרטונים ארוכים</td></tr>
+        <tr><th scope="row">פייסבוק</th><td class="rec">4 רילס, 13 סטוריז</td><td>8 רילס, 30 סטוריז</td><td>17 רילס, 90 סטוריז</td></tr>
+        <tr><th scope="row">לינקדאין</th><td class="rec">—</td><td>8 פוסטים בכתב</td><td>17 פוסטים בכתב</td></tr>
+        <tr><th scope="row"><bdi>X</bdi></th><td class="rec">—</td><td>—</td><td>17 פוסטים בכתב</td></tr>
+        <tr><th scope="row">סה״כ יחידות בחודש</th><td class="rec"><b>42</b></td><td><b>108</b></td><td><b>295</b></td></tr>
+        <tr><th scope="row">עלות ליחידה</th><td class="rec"><b class="cmp-unit">כ-₪15.5</b></td><td><b class="cmp-unit">כ-₪13.8</b></td><td><b class="cmp-unit">כ-₪11.7</b></td></tr>
+        <tr><th scope="row">מערכות</th><td class="rec">—</td><td>—</td><td>אווטאר AI ושיבוט קול, דף נחיתה, DM שאוסף לידים</td></tr>
+        <tr><th scope="row">מומלץ עבור</th><td class="rec">עצמאים ועסקים שמתחילים ברשתות, ורוצים נוכחות קבועה בלי השקעה גדולה</td><td>עסקים פעילים שרוצים להיות הנוכחות הבולטת בתחום, כל יום</td><td>מובילים בתחום שצריכים לידים, ולא רוצים לעמוד מול מצלמה</td></tr>
+        <tr class="cmp-actions"><th scope="row"></th><td class="rec"><a class="tlink primary cmp-pay" href="https://buy.stripe.com/bJe7sN6KD3sg6qz1Os3sI02" data-tier="Presence">לתשלום</a><a class="cmp-more" href="#plan-presence">לכל הפרטים</a></td><td><a class="tlink cmp-pay" href="#start" data-tier="Growth">לתשלום</a><a class="cmp-more" href="#plan-growth">לכל הפרטים</a></td><td><a class="tlink cmp-pay" href="#start" data-tier="OmniPresence">לתשלום</a><a class="cmp-more" href="#plan-omnipresence">לכל הפרטים</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fine ov" style="margin-top:14px">כל המחירים ללא מע״מ · בלי התחייבות · הריטיינר יורד בסוף כל חודש · כל פריט מותאם לרשת שלו</p>
   <div class="offer single">
     <div class="panel ov">
-      <p class="bigprice">₪3,450<small>לחודש</small></p>
-      <p class="setup">+ הקמה חד-פעמית: ₪650 · ללא מע״מ</p>
-      <p class="setup" style="margin-top:6px;color:var(--steel)">יום הפקה באולפן עם צלם וידאו וצלם סטילס — בתוספת תשלום.</p>
       <p class="anchor">צוות כזה בתוך העסק — צלם, עורך, מעצב, כותב ומנהל סושיאל — עולה עשרות אלפי שקלים בחודש, עוד לפני ציוד ותוכנות.</p>
+      <p class="setup" style="margin-top:10px;color:var(--steel)">כל המחירים ללא מע״מ. יום הפקה באולפן עם צלם וידאו וצלם סטילס — בתוספת תשלום, בכל מסלול.</p>
       <ul class="terms">
         <li><b>עוזבים בכל רגע.</b> בלי התחייבות. החודש שבו עוזבים משולם במלואו, ואין החזר על חודש.</li>
-        <li><b>משלמים בסוף החודש.</b> את דמי ההקמה משלמים מראש, ואת הריטיינר — בסוף כל חודש.</li>
+        <li><b>משלמים בסוף החודש.</b> את הריטיינר משלמים בסוף כל חודש עבודה. דמי הקמה יש רק ב-<bdi>OmniPresence</bdi>, ומשלמים אותם בהצטרפות.</li>
         <li><b>תוצאות.</b> אנחנו ממליצים לתת לזה 3 חודשים — זה הזמן שלוקח לרשתות ולקהל להכיר אתכם.</li>
         <li><b>הכול שלכם.</b> כל התוכן — בבעלותכם המלאה, גם אם תעזבו.</li>
       </ul>
-      <h3 class="ptitle">מה מקבלים בכל חודש</h3>
-      <table class="plan">
-        <tr><th>אינסטגרם</th><td>2 רילס + 2 קרוסלות בשבוע<br>2 סטוריז ביום, 5 ימים בשבוע</td></tr>
-        <tr><th>טיקטוק</th><td>2 סרטונים בשבוע</td></tr>
-        <tr><th>יוטיוב</th><td>2 סרטוני שורטס בשבוע</td></tr>
-        <tr><th>פייסבוק</th><td>2 פוסטים בשבוע</td></tr>
-        <tr><th>לינקדאין</th><td>פוסט אחד בשבוע</td></tr>
-        <tr><th>X (טוויטר)</th><td>פוסט אחד בשבוע</td></tr>
-      </table>
-      <p class="plan-sum"><b>סה״כ: 88 פרסומים בכל חודש</b><span>48 פוסטים וסרטונים + 40 סטוריז — יותר מ-1,000 פרסומים בשנה.</span></p>
-      <h3 class="ptitle">בונוס</h3>
-      <ul class="terms bonus">
-        <li><b>תכנון אסטרטגי לשנה קדימה.</b> תוכנית תוכן מלאה לכל פלטפורמה, ל-12 החודשים הקרובים.</li>
-        <li><b>כלים מתקדמים.</b> הודעות ישירות אוטומטיות שמגיעות לכל לקוח שמתעניין.</li>
-        <li><b>מתנות דיגיטליות.</b> מדריכים וצ'קליסטים שאנחנו יוצרים לקהל היעד שלכם — ואוספים בעזרתם לידים.</li>
-      </ul>
-      <p class="pull">״מחלום — למוצר שמכניס מיליון שקלים.״<small>עומרי דן, פרויקט 001</small></p>
+      <p class="pull">״תוכן שמכר לנו במאות אלפי דולרים.״<small>עומרי דן, פרויקט 001</small></p>
     </div>
+  </div>
+</div></section>
+
+<section id="plans"><div class="wrap">
+  <div class="head ov">
+    <p class="label"><span class="n">08</span> המסלולים בפירוט</p>
+    <h2>מה בדיוק <span class="hand">מקבלים בכל מסלול</span></h2>
+  </div>
+  <div class="plans">
+  <article class="plan-detail" id="plan-presence">
+    <div class="pd-sell ov">
+      <p class="label" dir="ltr" style="text-align:right">Presence</p>
+      <h3 class="pd-head">המסלול המומלץ. <span class="hand">נוכחות קבועה, בלי כאב ראש.</span></h3>
+      <p class="pd-pitch">במקום להיעלם מהפיד לשבועות — אתם שם כל שבוע, ברמה של מותג מוביל. אנחנו לומדים את העסק שלכם, בונים לכם קול ושפה ויזואלית, ומעלים תוכן שנבנה לכל רשת בנפרד. אתם רק מאשרים.</p>
+      <h4 class="pd-sub">למי זה מתאים</h4>
+      <ul class="pd-fit"><li>עצמאים ועסקים קטנים שמתחילים ברשתות</li><li>מי שמעלה תוכן "כשיש זמן" — כלומר כמעט אף פעם</li><li>מי שרוצה להתחיל בקטן, ולעלות מסלול כשרואים תוצאות</li></ul>
+      <h4 class="pd-sub">כלול במסלול</h4>
+      <ul class="pd-fit"><li>מחקר על העסק ועל המתחרים</li><li>קול מותג ושפה ויזואלית</li><li>דוח ביצועים חודשי</li></ul>
+    </div>
+    <div class="pd-facts ov">
+      <h4 class="pd-sub" style="margin-top:0">מה עולה, בכל שבוע</h4>
+      <table class="plan"><tr><th>אינסטגרם</th><td>רילס, קרוסלה ו-3 סטוריז</td></tr><tr><th>טיקטוק</th><td>רילס</td></tr><tr><th>פייסבוק</th><td>רילס ו-3 סטוריז</td></tr></table>
+      <p class="plan-sum"><b>כ-42 פרסומים בחודש, ב-3 רשתות</b><span>כל פריט מותאם לרשת שלו — במידות, באורך ובשפה שלה.</span></p>
+      <p class="tier-price" style="margin-top:28px">₪650<small>לחודש</small></p>
+      <p class="tier-setup">בלי דמי הקמה · ללא מע״מ · בלי התחייבות</p>
+      <p class="tier-per"><b>כ-₪15.5</b> לפוסט שמתפרסם</p>
+      <a class="tlink primary pd-cta" href="https://buy.stripe.com/bJe7sN6KD3sg6qz1Os3sI02" data-tier="Presence">מתחילים ב-<span dir="ltr">Presence</span></a>
+      <p class="pd-pay">תשלום מאובטח בכרטיס אשראי. היום לא יורד כלום מהכרטיס. הריטיינר הראשון יורד בסוף החודש הראשון, ואפשר לבטל בכל רגע.</p>
+    </div>
+  </article>
+  <article class="plan-detail" id="plan-growth">
+    <div class="pd-sell ov">
+      <p class="label" dir="ltr" style="text-align:right">Growth</p>
+      <h3 class="pd-head">נוכחות יומיומית. <span class="hand">אתם בפיד שלהם כל יום.</span></h3>
+      <p class="pd-pitch">כל יום, בכל רשת שהלקוחות שלכם גוללים בה. כשהם צריכים את מה שאתם עושים — אתם השם הראשון שעולה להם בראש. פי 2.5 יותר פרסומים מ-<bdi>Presence</bdi>, ברשתות שבהן נמצאים גם לקוחות עסקיים, ובמחיר נמוך יותר לכל פוסט.</p>
+      <h4 class="pd-sub">למי זה מתאים</h4>
+      <ul class="pd-fit"><li>עסק פעיל ומבוסס שרוצה להיות הנוכחות הבולטת בתחום</li><li>מי שרוב הלקוחות שלו מגיעים מהמלצות — ורוצה עוד</li><li>נותני שירות מקצועיים: מתווכים, יועצי משכנתאות, מרפאות, יועצים ומאמנים</li></ul>
+      <h4 class="pd-sub">כלול במסלול</h4>
+      <ul class="pd-fit"><li>כל מה שב-<span dir="ltr">Presence</span></li><li>אסטרטגיית תוכן</li><li>דוח ושיחת אסטרטגיה חודשית</li></ul>
+    </div>
+    <div class="pd-facts ov">
+      <h4 class="pd-sub" style="margin-top:0">מה עולה, בכל שבוע</h4>
+      <table class="plan"><tr><th>אינסטגרם</th><td>2 רילס, 2 קרוסלות וסטורי כל יום</td></tr><tr><th>טיקטוק</th><td>2 רילס</td></tr><tr><th>יוטיוב שורטס</th><td>2 רילס</td></tr><tr><th>פייסבוק</th><td>2 רילס וסטורי כל יום</td></tr><tr><th>לינקדאין</th><td>2 פוסטים מקצועיים בכתב</td></tr></table>
+      <p class="plan-sum"><b>כ-108 פרסומים בחודש, ב-5 רשתות</b><span>כל פריט מותאם לרשת שלו — במידות, באורך ובשפה שלה.</span></p>
+      <p class="tier-price" style="margin-top:28px">₪1,490<small>לחודש</small></p>
+      <p class="tier-setup">בלי דמי הקמה · ללא מע״מ · בלי התחייבות</p>
+      <p class="tier-per"><b>כ-₪13.8</b> לפוסט שמתפרסם</p>
+      <a class="tlink primary pd-cta" href="#start" data-tier="Growth">מתחילים ב-<span dir="ltr">Growth</span></a>
+      <p class="pd-pay">תשלום מאובטח בכרטיס אשראי. היום לא יורד כלום מהכרטיס. הריטיינר הראשון יורד בסוף החודש הראשון, ואפשר לבטל בכל רגע.</p>
+    </div>
+  </article>
+  <article class="plan-detail" id="plan-omnipresence">
+    <div class="pd-sell ov">
+      <p class="label" dir="ltr" style="text-align:right">OmniPresence</p>
+      <h3 class="pd-head">נוכחות מלאה. <span class="hand">ומערכת שמביאה לידים.</span></h3>
+      <p class="pd-pitch">אתם לא צריכים לעמוד מול מצלמה אף פעם: אווטאר AI שלכם מדבר בקול שלכם, בסרטון ארוך כל שבוע. דף נחיתה, מתנות דיגיטליות והודעות DM אוטומטיות הופכים עוקבים ללידים — בזמן שאתם עובדים. וכל זה במחיר הנמוך ביותר לפוסט.</p>
+      <h4 class="pd-sub">למי זה מתאים</h4>
+      <ul class="pd-fit"><li>מובילים בתחום שרוצים לשלוט בקטגוריה</li><li>מי שצריך לידים, לא רק חשיפה</li><li>מי שלא רוצה לעמוד מול מצלמה — ורוצה להופיע בכל מקום</li></ul>
+      <h4 class="pd-sub">כלול במסלול</h4>
+      <ul class="pd-fit"><li>כל מה שב-<span dir="ltr">Growth</span></li><li>אווטאר AI שלכם ושיבוט קול</li><li>דף נחיתה ושתי מתנות דיגיטליות</li><li>הודעות DM אוטומטיות שאוספות לידים</li><li>דוח שבועי ושיחת אסטרטגיה חודשית</li></ul>
+    </div>
+    <div class="pd-facts ov">
+      <h4 class="pd-sub" style="margin-top:0">מה עולה, בכל שבוע</h4>
+      <table class="plan"><tr><th>אינסטגרם</th><td>4 רילס, 2 קרוסלות ו-3 סטוריז ביום</td></tr><tr><th>טיקטוק</th><td>4 רילס</td></tr><tr><th>יוטיוב</th><td>4 שורטס וסרטון ארוך עם האווטאר שלכם</td></tr><tr><th>פייסבוק</th><td>4 רילס ו-3 סטוריז ביום</td></tr><tr><th>לינקדאין</th><td>4 פוסטים מקצועיים בכתב</td></tr><tr><th><bdi>X</bdi></th><td>4 פוסטים בכתב</td></tr></table>
+      <p class="plan-sum"><b>כ-295 פרסומים בחודש, בכל 6 הרשתות</b><span>כל פריט מותאם לרשת שלו — במידות, באורך ובשפה שלה.</span></p>
+      <p class="tier-price" style="margin-top:28px">₪3,450<small>לחודש</small></p>
+      <p class="tier-setup">הקמה חד-פעמית: ₪1,950 · ללא מע״מ · בלי התחייבות</p>
+      <p class="tier-per"><b>כ-₪11.7</b> לפוסט שמתפרסם</p>
+      <a class="tlink primary pd-cta" href="#start" data-tier="OmniPresence">מתחילים ב-<span dir="ltr">OmniPresence</span></a>
+      <p class="pd-pay">תשלום מאובטח בכרטיס אשראי. היום משלמים רק את דמי ההקמה (₪1,950). הריטיינר הראשון יורד בסוף החודש הראשון, ואפשר לבטל בכל רגע.</p>
+    </div>
+  </article>
   </div>
 </div></section>
 
 <section id="faq"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">08</span> שאלות ותשובות</p>
+    <p class="label"><span class="n">09</span> שאלות ותשובות</p>
     <h2>שאלות ותשובות</h2>
   </div>
   <div class="faq">
@@ -593,22 +704,24 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
     <details class="ov"><summary>למי שייך התוכן?</summary><p>לכם. כל התוכן בבעלותכם המלאה.</p></details>
     <details class="ov"><summary>מה אם זה לא מתאים לי?</summary><p>אפשר לעזוב בכל רגע, בלי התחייבות. החודש שבו עוזבים משולם במלואו, ואין החזר על חודש.</p></details>
     <details class="ov"><summary>מתי רואים תוצאות?</summary><p>אנחנו ממליצים לתת לזה 3 חודשים. זה הזמן שלוקח לרשתות ולקהל להכיר אתכם.</p></details>
-    <details class="ov"><summary>איך משלמים?</summary><p>את דמי ההקמה משלמים מראש. את הריטיינר משלמים בסוף כל חודש.</p></details>
+    <details class="ov"><summary>איך משלמים?</summary><p>בכרטיס אשראי, דרך מערכת תשלום מאובטחת. את הריטיינר משלמים בסוף כל חודש עבודה. ב-<bdi>OmniPresence</bdi> יש גם דמי הקמה חד-פעמיים, שמשלמים בהצטרפות. ב-<bdi>Presence</bdi> וב-<bdi>Growth</bdi> אין דמי הקמה.</p></details>
     <details class="ov"><summary>תוך כמה זמן עולה תוכן?</summary><p>תוך כשבועיים מיום ההפקה.</p></details>
     <details class="ov"><summary>צריך תקציב פרסום?</summary><p>לא חובה. אם רוצים להאיץ, אנחנו ממליצים על 1,000 דולר לפחות בחודש לקמפיינים, המשולמים ישירות לפלטפורמות.</p></details>
-    <details class="ov"><summary>למה רק 7 לקוחות?</summary><p>כדי שכל לקוח יקבל צוות אמיתי — לא תבנית.</p></details>
+    <details class="ov"><summary>איזה מסלול מתאים לי?</summary><p>אנחנו ממליצים להתחיל ב-<bdi>Presence</bdi>: נוכחות קבועה בשלוש רשתות. רוצים להיות בפיד כל יום, בחמש רשתות? <bdi>Growth</bdi>. רוצים מערכת שמביאה לידים, בלי לעמוד מול מצלמה? <bdi>OmniPresence</bdi>. בשיחת ההיכרות נמליץ על מסלול אחד.</p></details>
+    <details class="ov"><summary>אפשר לעבור מסלול?</summary><p>כן. אפשר לעלות או לרדת מסלול בתחילת כל חודש.</p></details>
+    <details class="ov"><summary>למה כל רשת מקבלת תוכן אחר?</summary><p>כי כל רשת מתגמלת דברים אחרים: טיקטוק את השניות הראשונות, אינסטגרם שמירות ושיתופים, לינקדאין סמכות מקצועית. אותו רעיון יוצא בגרסה נפרדת לכל רשת — במידות, באורך, בקצב ובשפה שלה.</p></details>
   </div>
 </div></section>
 
 <section id="start"><div class="wrap">
   <div class="head ov">
-    <p class="label"><span class="n">09</span> בדקו אם נשאר מקום</p>
-    <h2>מקבלים עד 7 לקוחות. <span class="hand">בדקו אם נשאר מקום.</span></h2>
+    <p class="label"><span class="n">10</span> מתחילים</p>
+    <h2>בחרו מסלול. <span class="hand">התוכן הראשון באוויר תוך 14 יום.</span></h2>
   </div>
   <div class="formwrap">
     <ol class="roman ov" style="margin-top:0">
       <li>שולחים את הפרטים</li>
-      <li>שיחת היכרות קצרה: מה המטרות שלכם ומי הקהל</li>
+      <li>שיחת היכרות קצרה: מה המטרות שלכם, מי הקהל, ואיזה מסלול מתאים</li>
       <li>מצטרפים, ואנחנו מתחילים במחקר על העסק שלכם</li>
       <li>תוך 14 יום מההצטרפות — התוכן הראשון באוויר</li>
     </ol>
@@ -618,7 +731,8 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
       <div><label for="f2">טלפון</label><input id="f2" name="phone" type="tel" required autocomplete="tel" dir="ltr"></div>
       <div><label for="f3">אימייל</label><input id="f3" name="email" type="email" required autocomplete="email" dir="ltr"></div>
       <div><label for="f4">תחום העיסוק</label><input id="f4" name="field" required></div>
-      <div class="full"><label for="f5">אתר או אינסטגרם</label><input id="f5" name="site" dir="ltr"></div>
+      <div><label for="f5">אתר או אינסטגרם</label><input id="f5" name="site" dir="ltr"></div>
+      <div><label for="f6">מסלול</label><select id="f6" name="tier"><option value="">עוד לא החלטתי</option><option>Presence — ₪650</option><option>Growth — ₪1,490</option><option>OmniPresence — ₪3,450</option></select></div>
       <button class="sendbtn" type="submit" id="fbtn">שלחו</button>
       <p class="note">בלי התחייבות. נחזור אליכם בהקדם.</p>
       <p id="fstatus" role="status" aria-live="polite"></p>
@@ -628,7 +742,7 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
 </div></section>
 
 </main>
-<a class="fab" id="fab" href="#start" aria-label="אני רוצה להירשם לתוכנית — לטופס יצירת הקשר">אני רוצה להירשם לתוכנית<span aria-hidden="true">←</span></a>
+<a class="fab" id="fab" href="#price" aria-label="בחרו מסלול — למסלולים ולמחירים">בחרו מסלול<span aria-hidden="true">←</span></a>
 <script>
 (function(){
   var els=[].slice.call(document.querySelectorAll('.ov'));
@@ -661,7 +775,7 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
     b.disabled=true; st.className=''; st.textContent='שולחים...';
     try{
       var fd=new FormData(f);
-      fd.append('_subject','OmniPresence Accelerator — ליד חדש');
+      fd.append('_subject','Omni Core — ליד חדש'+(fd.get('tier')?' · '+fd.get('tier'):''));
       fd.append('_template','table');
       var r=await fetch('https://formsubmit.co/ajax/uri@soglowekcapital.com',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
       if(!r.ok) throw 0;
@@ -669,6 +783,13 @@ main section{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(24px,2.5vw,36
     }catch(e){ st.className='err'; st.textContent='משהו השתבש — נסו שוב, או כתבו ל-uri@soglowekcapital.com'; }
     b.disabled=false;
   });
+})();
+/* a tier's button picks that tier in the form */
+(function(){
+  var s=document.getElementById('f6'); if(!s) return;
+  [].forEach.call(document.querySelectorAll('[data-tier]'),function(a){a.addEventListener('click',function(){
+    [].forEach.call(s.options,function(o){ if(o.text.indexOf(a.getAttribute('data-tier')+' ')===0) s.value=o.value; });
+  })});
 })();
 </script>
 <footer><div class="wrap">
