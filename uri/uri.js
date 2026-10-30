@@ -11,7 +11,7 @@
     var open = nav.classList.toggle("open");
     btn.setAttribute("aria-expanded", open ? "true" : "false");
   });
-  nav.querySelectorAll("#links a[href^='#']").forEach(function (a) {
+  nav.querySelectorAll("#links a").forEach(function (a) {
     a.addEventListener("click", function () {
       nav.classList.remove("open");
       btn.setAttribute("aria-expanded", "false");
