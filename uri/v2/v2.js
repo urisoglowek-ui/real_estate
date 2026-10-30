@@ -27,9 +27,10 @@
     if (reduce) return;
     var words = el.textContent.trim().split(/\s+/);
     el.textContent = "";
+    var hl = el.getAttribute("data-hl");
     words.forEach(function (word, i) {
       var span = document.createElement("span");
-      span.className = "word";
+      span.className = "word" + (hl !== null && i === Number(hl) ? " hl" : "");
       span.style.animationDelay = i * 70 + "ms";
       span.textContent = word + (i === words.length - 1 ? "" : " ");
       el.appendChild(span);
