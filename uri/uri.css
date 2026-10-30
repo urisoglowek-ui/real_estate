@@ -284,6 +284,71 @@ h2{
 }
 .out:hover{color:var(--text)}
 
+.tiers,.steps{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.tiers .card{display:flex;flex-direction:column}
+.checks{
+  margin:14px 0 0;
+  padding:0;
+  padding-inline-start:1.15em;
+  color:var(--muted);
+}
+.checks li{margin:5px 0}
+.checks li::marker{color:var(--amber)}
+.offer-price{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin-top:16px;
+}
+.offer-price .now{
+  font-family:var(--serif);
+  font-size:2rem;
+  font-weight:500;
+  color:var(--amber);
+  line-height:1;
+}
+.offer-price.sample .now{color:var(--muted)}
+.offer-price .tag{margin:0}
+.book{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin-top:auto;
+  padding-top:18px;
+}
+.book .tag{margin:0}
+.tiers .course .btn{margin-top:0}
+.steps{list-style:none;margin-top:12px;padding:0}
+.steps li{
+  background:var(--card);
+  border-radius:16px;
+  padding:18px 18px 20px;
+  min-width:0;
+}
+.step-n{
+  display:block;
+  font-family:var(--serif);
+  color:var(--amber);
+  font-size:1.35rem;
+  line-height:1;
+}
+.steps h3{
+  margin:8px 0 0;
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:1.28rem;
+  line-height:1.25;
+}
+.steps p{margin:8px 0 0;color:var(--muted)}
+.discretion{margin:22px 0 0;max-width:46rem;color:var(--muted);font-size:.98rem}
+
 .tl{list-style:none;margin:0;padding:0;max-width:760px}
 .tl li{
   display:grid;
@@ -363,6 +428,9 @@ footer{
   }
   .nav.open .links > a{padding:12px 0;font-size:1.12rem}
   .nav.open .langs{padding:10px 0 0;justify-content:flex-start}
+}
+@media (max-width:900px){
+  .tiers,.steps{grid-template-columns:1fr}
 }
 @media (max-width:800px){
   .hero-grid,.grid2,.contact,.split{grid-template-columns:1fr}
