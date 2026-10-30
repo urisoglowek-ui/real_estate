@@ -66,13 +66,15 @@ html[lang="he"] .brand{font-weight:500}
   font:600 1rem var(--sans);
   min-height:44px;padding:8px 0;cursor:pointer;
 }
-.links{display:flex;align-items:center;gap:22px;margin-inline-start:auto}
+.links{display:flex;align-items:center;gap:14px;margin-inline-start:auto}
 .links a{
   text-decoration:none;
   color:var(--muted);
-  font-size:.95rem;
+  font-size:.9rem;
   padding:8px 0;
+  white-space:nowrap;
 }
+.links a[aria-current="page"]{color:var(--text)}
 .links a:hover{color:var(--text)}
 .langs{display:flex;gap:2px;padding-inline-start:8px}
 .langs a{
@@ -349,6 +351,55 @@ h2{
 .steps p{margin:8px 0 0;color:var(--muted)}
 .discretion{margin:22px 0 0;max-width:46rem;color:var(--muted);font-size:.98rem}
 
+.reassure{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+.reassure li{color:var(--muted);font-size:.95rem}
+.reassure li::before{
+  content:"";
+  display:inline-block;
+  width:7px;height:7px;
+  margin-inline-end:8px;
+  border-radius:50%;
+  background:var(--accent);
+  transform:translateY(-1px);
+}
+.hero-slim{padding-bottom:8px}
+.hero-slim h1{font-size:clamp(2.2rem,4.5vw,3.6rem)}
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cards3 .card h3{font-size:1.28rem}
+.meta{display:block;margin-top:8px;color:var(--muted);font-size:.85rem}
+.faq{display:flex;flex-direction:column;gap:8px;max-width:760px}
+.faq details{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:0 16px;
+}
+.faq summary{
+  cursor:pointer;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  font-weight:600;
+  list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent-2);font-family:var(--serif);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 14px;color:var(--muted)}
+.cta{text-align:center}
+.cta .lede,.cta .book{margin-inline:auto}
+.cta .book{justify-content:center}
+.more{display:inline-block;margin-top:16px;color:var(--accent);font-weight:600;text-decoration:none}
+
 .tl{list-style:none;margin:0;padding:0;max-width:760px}
 .tl li{
   display:grid;
@@ -414,7 +465,7 @@ footer{
 }
 .fbase{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
 
-@media (max-width:980px){
+@media (max-width:1180px){
   .menubtn{display:inline-flex}
   .links{display:none}
   .nav.open .links{
@@ -431,7 +482,7 @@ footer{
   .nav.open .langs{padding:10px 0 0;justify-content:flex-start}
 }
 @media (max-width:900px){
-  .tiers,.steps{grid-template-columns:1fr}
+  .tiers,.steps,.cards3{grid-template-columns:1fr}
 }
 @media (max-width:800px){
   .hero-grid,.grid2,.contact,.split{grid-template-columns:1fr}
