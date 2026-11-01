@@ -260,6 +260,13 @@ h2{
   letter-spacing:.12em;
   text-transform:uppercase;
 }
+.svc-copy{max-width:46rem;margin:0;color:var(--muted)}
+.svc-copy + .svc-copy{margin-top:12px}
+.svc-block{margin-top:22px}
+.svc-actions{margin-top:22px}
+.svc-actions .btn{max-width:100%;white-space:normal;text-align:center}
+.card .chips{margin:12px 0 0;padding:0;color:var(--text)}
+.follow-tiers{margin-top:36px}
 .steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0}
 .steps li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
 .steps b{display:block;color:var(--mint);font-size:1.3rem;letter-spacing:-.03em}
