@@ -233,6 +233,10 @@ h2{
 }
 
 a.card{color:inherit;text-decoration:none}
+.wide{grid-column:1/-1}
+.card ul.companies{list-style:none;padding:0}
+.card ul.companies a{color:var(--mint-2);text-decoration:none;overflow-wrap:anywhere}
+.card ul.companies a:hover{text-decoration:underline}
 .svc-copy{max-width:46rem;margin:0;color:var(--muted)}
 .svc-copy + .svc-copy{margin-top:12px}
 .svc-block{margin-top:22px}
