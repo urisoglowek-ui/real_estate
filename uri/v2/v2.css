@@ -232,47 +232,13 @@ h2{
   font-size:.9rem;
 }
 
-.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
-.tier{display:flex;flex-direction:column}
-.tier .price{
-  margin:8px 0 4px;
-  font-size:2.4rem;
-  font-weight:560;
-  letter-spacing:-.04em;
-  color:var(--mint);
-}
-.tier .price small{font-size:.95rem;color:var(--muted);font-weight:500;letter-spacing:0}
-.tier ul{margin:14px 0 0;padding:0 0 0 1.1em;color:var(--muted)}
-.tier li{margin:7px 0}
-.tier li::marker{color:var(--mint)}
-.tier .btn{margin-top:auto;align-self:flex-start}
-.tier.featured{
-  border-color:var(--mint-2);
-  box-shadow:0 0 0 1px var(--mint-2),0 22px 50px rgba(0,208,156,.14);
-  position:relative;
-}
-.badge{
-  display:inline-block;
-  margin-bottom:8px;
-  color:var(--mint-2);
-  font-size:.75rem;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
+a.card{color:inherit;text-decoration:none}
 .svc-copy{max-width:46rem;margin:0;color:var(--muted)}
 .svc-copy + .svc-copy{margin-top:12px}
 .svc-block{margin-top:22px}
 .svc-actions{margin-top:22px}
 .svc-actions .btn{max-width:100%;white-space:normal;text-align:center}
 .card .chips{margin:12px 0 0;padding:0;color:var(--text)}
-.follow-tiers{margin-top:36px}
-.steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0}
-.steps li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
-.steps b{display:block;color:var(--mint);font-size:1.3rem;letter-spacing:-.03em}
-.steps h3{margin:8px 0 6px;font-size:1.15rem}
-.steps p{margin:0;color:var(--muted)}
-
 .acc{display:flex;flex-direction:column;gap:8px;max-width:760px}
 .acc-item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .acc-btn{
@@ -362,8 +328,7 @@ footer{
   .nav.open .nav-cta{margin:8px 0 0}
 }
 @media (max-width:900px){
-  .hero-grid,.grid3,.cards,.tiers,.steps,.contact,.grid2,.stats{grid-template-columns:1fr}
-  .tier.featured{transform:none}
+  .hero-grid,.grid3,.cards,.contact,.grid2,.stats{grid-template-columns:1fr}
   .portrait{max-width:320px}
 }
 @media (prefers-reduced-motion:reduce){
