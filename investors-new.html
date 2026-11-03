@@ -21,12 +21,14 @@ layout: null
   --bg:#f4f5f7;--surface:#ffffff;--surface-2:#eceef2;--ink:#141d26;--ink-soft:#4d5966;--ink-faint:#7c8792;
   --line:#d9dce1;--navy:#0d1b2a;--navy-ink:#0a141e;--gold:#a9793f;--gold-soft:#c99a5b;--forest:#2c5240;--brick:#9c4530;--focus:#5b7fa6;
   --shadow:0 1px 2px rgba(13,27,42,.04),0 8px 24px -12px rgba(13,27,42,.14);
+  --on-surface-navy:#14304f;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#0b1218;--surface:#121b24;--surface-2:#182430;--ink:#eef1f4;--ink-soft:#aab5be;--ink-faint:#7c8892;
     --line:#26333e;--navy:#060d15;--navy-ink:#040a10;--gold:#d1a565;--gold-soft:#e2bb82;--forest:#4c8a6d;--brick:#c4664a;--focus:#7fa4cc;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 28px -14px rgba(0,0,0,.6);
+    --on-surface-navy:#d5e6f7;
   }
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -43,7 +45,16 @@ section{padding:96px 0}
 @media (max-width:720px){section{padding:64px 0}.wrap{padding-left:20px;padding-right:20px}}
 header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--navy) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
 .navrow{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.18rem;color:#f4efe6;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.18rem;color:#f4efe6;text-decoration:none;display:flex;align-items:center;gap:10px;min-width:0}
+.brand-name{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+.brand-title{white-space:nowrap}
+.brand-sub{font-family:"Libre Franklin",sans-serif;font-weight:500;font-size:.68rem;letter-spacing:.03em;color:var(--gold-soft);white-space:nowrap}
+@media (max-width:880px){
+  .brand{font-size:.98rem}
+  .brand-sub{font-size:.6rem}
+  .navrow{gap:10px;padding:12px 16px}
+  .navrow > .btn-gold{padding:8px 10px;white-space:nowrap}
+}
 .brand .mark{width:28px;height:28px;flex:none;border:1.5px solid var(--gold-soft);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--gold-soft);font-size:.85rem}
 nav.links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
 nav.links a{color:#cdd6de;text-decoration:none;font-size:.88rem;font-weight:500}
@@ -166,7 +177,7 @@ section[id]{scroll-margin-top:76px}
 <body>
 <header class="site" id="siteheader">
   <div class="navrow">
-    <a class="brand" href="#top"><span class="mark">U</span>UBM Ventures</a>
+    <a class="brand" href="#top"><span class="mark">U</span><span class="brand-name"><span class="brand-title">UBM Ventures</span><span class="brand-sub">a Soglowek Company</span></span></a>
     <button class="navtoggle" id="navtoggle" type="button" aria-expanded="false" aria-controls="links">Menu</button>
     <nav class="links" id="links">
       <a href="#offer">The offer</a>
@@ -337,11 +348,11 @@ section[id]{scroll-margin-top:76px}
           <p>A typical flip returns about 25% on capital over 160 to 240 days. The hold is short, so exposure to interest rates is short. The flip company runs about 35 flips in parallel.</p>
           <div class="stat-line">About 25% on capital · 160 to 240 days</div>
         </article>
-        <article class="service-card" style="--s-color:var(--navy)">
-          <div class="tag" style="color:var(--navy)">Section 8 rentals</div>
+        <article class="service-card" style="--s-color:var(--on-surface-navy)">
+          <div class="tag" style="color:var(--on-surface-navy)">Section 8 rentals</div>
           <h3>Packages of about 10 homes</h3>
           <p>Packages of about 10 homes in Columbus, Ohio, and in similar markets. Buy for about $50–60K, about $10K of rehab. Rent is about $1,300–$1,500 a month, paid by the federal voucher program.</p>
-          <div class="stat-line">About $50–60K buy · about $10K rehab · about $1,300–$1,500 rent</div>
+          <div class="stat-line">ROI: 15-22% · About $50–60K buy · about $10K rehab · about $1,300–$1,500 rent</div>
         </article>
         <article class="service-card" style="--s-color:var(--gold)">
           <div class="tag gold">Manufactured housing</div>
@@ -393,9 +404,9 @@ section[id]{scroll-margin-top:76px}
           </div>
           <div class="note">Escrow-like. One structure. Not the only one.</div>
         </article>
-        <article class="deal-card" style="--d-color:var(--navy)">
+        <article class="deal-card" style="--d-color:var(--on-surface-navy)">
           <div class="dc-head">
-            <div class="tag" style="color:var(--navy)">Agreed per investor</div>
+            <div class="tag" style="color:var(--on-surface-navy)">Agreed per investor</div>
             <h3>Another structure</h3>
           </div>
           <div class="rows">
@@ -468,7 +479,7 @@ section[id]{scroll-margin-top:76px}
         <div class="reveal">
           <div class="contact-info-item">
             <div class="ci-label">Email</div>
-            <div><a href="mailto:info@ubm-ventures.com">info@ubm-ventures.com</a></div>
+            <div><a href="mailto:uri@soglowekcapital.com">uri@soglowekcapital.com</a></div>
           </div>
           <div class="contact-info-item">
             <div class="ci-label">Offices</div>
@@ -517,7 +528,7 @@ section[id]{scroll-margin-top:76px}
       var message = document.getElementById("cf-message").value;
       var subject = encodeURIComponent("UBM Ventures — debt or joint venture");
       var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
-      window.location.href = "mailto:info@ubm-ventures.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:uri@soglowekcapital.com?subject=" + subject + "&body=" + body;
       document.getElementById("sendStatus").style.display = "block";
     });
   }
