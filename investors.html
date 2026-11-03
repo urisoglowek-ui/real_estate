@@ -123,7 +123,8 @@ nav.links a.quiet{font-size:.78rem;color:#9aa8b3}
 .tag.gold{color:var(--gold)}
 .tag.forest{color:var(--forest)}
 .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media (max-width:780px){.service-grid{grid-template-columns:1fr}}
+.service-card.span-row{grid-column:1 / -1;width:calc(50% - 10px);justify-self:center}
+@media (max-width:780px){.service-grid{grid-template-columns:1fr}.service-card.span-row{width:100%}}
 .service-card,.offer-card,.deal-card{min-width:0}
 .service-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--s-color);padding:28px;box-shadow:var(--shadow)}
 .service-card h3{font-size:1.28rem;margin-top:10px}
@@ -236,7 +237,7 @@ section[id]{scroll-margin-top:76px}
           <ul>
             <li>One way to hold it: a pool in a lawyer-controlled account, escrow-like, drawn deal by deal against the documented deal.</li>
             <li>Or another structure agreed with the investor.</li>
-            <li>Rate, term, and structure are agreed individually. No rate is published here.</li>
+            <li>Rate, term, and structure are agreed individually.</li>
           </ul>
           <p>We prefer raising debt to bringing in equity partners. Equity or project participation is still possible.</p>
         </article>
@@ -360,7 +361,7 @@ section[id]{scroll-margin-top:76px}
     <div class="wrap">
       <div class="head reveal">
         <div class="eyebrow">What we build</div>
-        <h2>Four lines, one discipline</h2>
+        <h2>Five lines, one discipline</h2>
       </div>
       <div class="service-grid reveal">
         <article class="service-card" style="--s-color:var(--brick)">
@@ -380,6 +381,7 @@ section[id]{scroll-margin-top:76px}
           <h3>About 500 units, in preparation</h3>
           <p>Homes of about 60 to 230 square meters, with a premium finish. Uri puts the cost at about a third of conventional construction. After the infrastructure is in, a home is installed in about four days. The homes are factory-built, so the labor is the manufacturer's.</p>
           <p>The project in preparation is the purchase of about 300 acres and the development of about 500 units, at an average cost of about $200,000 per unit.</p>
+          <p>Manufactured homes are about 6.5% of all US homes. Over 100,000 units are sold a year. It is a recession-proof model.</p>
           <div class="table-wrap">
             <table>
               <caption>Targets, before financing and selling costs.</caption>
@@ -394,11 +396,18 @@ section[id]{scroll-margin-top:76px}
             </table>
           </div>
           <p>Sale prices are set to represent about 25% profit on cost. The per-unit gross profit is that gap: about $250,000 minus about $200,000.</p>
+          <div class="stat-line">6.5% of all US homes · over 100,000 units a year · recession-proof model</div>
         </article>
         <article class="service-card" style="--s-color:var(--forest)">
           <div class="tag forest">Multifamily</div>
           <h3>Buying as the market resets</h3>
           <p>We are building a unit to buy multifamily at a deep discount as the multifamily market resets. Investors who bought at 4.5–5 cap rates are now facing 7–8 cap rates.</p>
+        </article>
+        <article class="service-card span-row" style="--s-color:var(--focus)">
+          <div class="tag" style="color:var(--focus)">RV parks</div>
+          <h3>Real estate and hospitality in one asset</h3>
+          <p>Over 1 million Americans live in RVs. A park is a rare combination of real estate and hospitality. Good parks generate a 16% cap rate.</p>
+          <div class="stat-line">16% cap rate on good parks</div>
         </article>
       </div>
     </div>
