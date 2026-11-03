@@ -81,8 +81,16 @@ nav.links a.quiet{font-size:.78rem;color:#9aa8b3}
 .hero-eyebrow{color:var(--gold-soft)}
 .hero h1{color:#fbf7ee;font-size:clamp(2.5rem,6vw,4.4rem);margin-top:18px}
 .hero .lede{margin-top:22px;max-width:640px;font-size:1.12rem;color:#d7dde2;line-height:1.65}
-.luxury{margin-top:28px;max-width:680px;padding:18px 20px;border-left:3px solid var(--gold-soft);background:rgba(201,154,91,.12);color:#fbf7ee;font-family:"Fraunces",Georgia,serif;font-size:clamp(1.2rem,2.4vw,1.55rem);line-height:1.35}
 .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+#who h3{font-size:clamp(1.35rem,2.4vw,1.75rem);margin:28px 0 0}
+#who .pull{margin:32px 0 8px;max-width:16em;font-family:"Fraunces",Georgia,serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.2;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 18px}
+#who .more{margin-top:18px;border:0;padding:0}
+#who .more summary{display:inline-flex;align-items:center;min-height:44px;width:auto;padding:0;border-bottom:1px solid var(--gold);color:var(--gold);font-family:"Libre Franklin",sans-serif;font-size:.9rem;font-weight:600;letter-spacing:.01em;cursor:pointer;list-style:none}
+#who .more summary::-webkit-details-marker{display:none}
+#who .more summary::marker{content:""}
+#who .more .when-open{display:none}
+#who .more[open] .when-closed{display:none}
+#who .more[open] .when-open{display:inline}
 .hero-stats{margin-top:56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16);display:flex;gap:40px;flex-wrap:wrap}
 .hero-stats .hs-num{font-family:"Fraunces",serif;font-size:1.7rem;font-weight:600;color:#fff}
 .hero-stats .hs-label{font-size:.78rem;color:#aab4bd;margin-top:2px;max-width:12rem}
@@ -197,7 +205,6 @@ section[id]{scroll-margin-top:76px}
       <div class="eyebrow hero-eyebrow">UBM Ventures · Debt raise</div>
       <h1>Up to $5 million in debt.</h1>
       <p class="lede">Debt is secured with a first lien on a property, always. Our own capital goes into every deal. This is not other people's money passed through.</p>
-      <p class="luxury">Uri comes from the world of luxury real estate. He raised and led projects worth over NIS 1.5 billion.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="#offer">See the two options</a>
         <a class="btn btn-line" href="#contact">Write to us</a>
@@ -269,7 +276,19 @@ section[id]{scroll-margin-top:76px}
       </div>
       <div class="reveal">
         <p class="prose">UBM Ventures is led by three partners, Uri Soglowek, Meke Kattan and Beau Vuillemot, two of whom live in Tampa Bay.</p>
-        <p class="prose">Uri comes from the world of luxury real estate. He raised and led projects worth over NIS 1.5 billion. He is the fourth generation of the Soglowek family business. He and his siblings built the Soglowek family office, which invests in public companies as well as real estate. He studied the US market from zero, then worked inside a luxury residential developer in Florida, from land acquisition through permits, on branded condominium towers: Roche Bobois Tower in St. Petersburg, 29 floors and 166 units; an Aston Martin branded tower in Daytona Beach Shores; and Serena by the Sea in Clearwater/Dunedin.</p>
+        <h3>A family tradition of building</h3>
+        <p class="prose">In Israel, the Soglowek name has been known for generations through the family’s food company. Uri Soglowek grew up inside that business and worked there until his military service. When he returned in 1997, his father introduced a new way of thinking: to manage the family’s wealth the way a family office would.</p>
+        <details class="more">
+          <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+          <p class="prose">Uri and his siblings built that operation from one guiding principle: in business, you lose money where you don’t understand. It became the Soglowek Family Office, a single-family office run entirely in-house, investing in public companies and in commercial and residential real estate in Israel.</p>
+          <h3>Learning America from the ground up</h3>
+          <p class="prose">Uri’s early real estate investments in Israel and Europe did not deliver the returns the family expected. Rather than accept it, he moved to the United States and set out to learn the American market from the inside.</p>
+          <p class="prose">He joined a luxury residential developer in Florida and worked across the full life of a project, from land acquisition and permitting to delivery. His work included some of the state’s most recognized branded residences: the 29-story, 166-residence Roche Bobois Tower in St. Petersburg, the Aston Martin-branded tower in Daytona Beach Shores, and Serena by the Sea in Dunedin. The company was at the forefront of Florida’s branded-condominium movement beyond Miami.</p>
+          <h3>Building his own platform</h3>
+          <p class="prose">With that foundation, Uri went independent. He began with fix-and-flip projects funded entirely by family capital and completed dozens of them. Along the way he identified the market’s central challenge: the best deals rarely reach the open market. To solve it, his team built Sonar, a proprietary deal-sourcing platform now offered to the industry as software.</p>
+          <p class="prose">Today, the group invests across fix-and-flip, Section 8 rental housing, manufactured housing, and real estate lending. Until mid-2025, every investment was made with the Soglowek family’s own capital. Now, for the first time, the platform is opening to outside investors.</p>
+          <p class="pull">High-level investing. Boots-on-the-ground development.</p>
+        </details>
       </div>
     </div>
   </section>
