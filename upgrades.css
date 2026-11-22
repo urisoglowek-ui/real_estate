@@ -120,3 +120,6 @@ table.rtable{min-width:560px}
 .coursecta h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2}
 .coursecta p{color:var(--steel);margin-top:12px}
 .coursecta .ctas2{display:flex;gap:30px;flex-wrap:wrap}
+
+.course-hero .en-line{margin-top:14px;font-size:.92rem;color:var(--steel);letter-spacing:.01em}
+.course-hero .crumbs{margin-bottom:22px}
