@@ -3,11 +3,11 @@
    shared strings below use data-s="key". */
 (function(){
  var S={
-  he:{about:'אודות',blog:'בלוג',home:'הבית',services:'השירותים',deals:'העסקאות',tools:'המחשבונים',reports:'הדוחות',books:'הספרים',sm:'כסף חכם',mentorship:'הליווי',contact:'צרו קשר',menu:'תפריט',
+  he:{about:'אודות',blog:'בלוג',home:'הבית',services:'השירותים',deals:'העסקאות',tools:'המחשבונים',reports:'הדוחות',books:'הספרים',sm:'כסף חכם',mentorship:'הליווי',contact:'צרו קשר',menu:'תפריט',course:'הקורס',courses:'הקורסים',s8:'Section 8',
       sig:'להיות הכי טוב — אצל אחרים זו שאיפה. <span>אצלנו זו ירושה.</span>',name:'אורי זוגלובק',disclaimer:'הכלים חינוכיים ואינם ייעוץ פיננסי, משפטי או מיסויי'},
-  en:{about:'About',blog:'Blog',home:'Home',services:'Services',deals:'Our Deals',tools:'Calculators',reports:'Reports',books:'The Books',sm:'Smart Money',mentorship:'Mentorship',contact:'Contact us',menu:'Menu',
+  en:{about:'About',blog:'Blog',home:'Home',services:'Services',deals:'Our Deals',tools:'Calculators',reports:'Reports',books:'The Books',sm:'Smart Money',mentorship:'Mentorship',contact:'Contact us',menu:'Menu',course:'The Course',courses:'Courses',s8:'Section 8',
       sig:'Being the best — for others, an aspiration. <span>For us, an inheritance.</span>',name:'Uri Soglowek',disclaimer:'Educational tools only — not financial, legal or tax advice'},
-  es:{about:'Sobre mí',blog:'Blog',home:'Inicio',services:'Servicios',deals:'Operaciones',tools:'Calculadoras',reports:'Informes',books:'Los Libros',sm:'Dinero Inteligente',mentorship:'Mentoría',contact:'Contáctanos',menu:'Menú',
+  es:{about:'Sobre mí',blog:'Blog',home:'Inicio',services:'Servicios',deals:'Operaciones',tools:'Calculadoras',reports:'Informes',books:'Los Libros',sm:'Dinero Inteligente',mentorship:'Mentoría',contact:'Contáctanos',menu:'Menú',course:'El Curso',courses:'Cursos',s8:'Section 8',
       sig:'Ser los mejores — para otros, una aspiración. <span>Para nosotros, una herencia.</span>',name:'Uri Soglowek',disclaimer:'Herramientas educativas — no constituyen asesoría financiera, legal o fiscal'}
  };
  var T=window.__T||{};
@@ -32,6 +32,7 @@
  }
  document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.lang)})});
  var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
+ if(!saved && window.__LANG0 && S[window.__LANG0]) saved=window.__LANG0;   // page-declared default for first-time visitors (and crawlers, which render as en-US)
  if(!saved){
    var nl=(navigator.languages&&navigator.languages.length?navigator.languages[0]:navigator.language||'he').toLowerCase();
    if(nl.indexOf('he')===0||nl.indexOf('iw')===0) saved='he';
