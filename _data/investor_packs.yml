@@ -1,0 +1,10 @@
+# Investor packs listed at /deals/investor-packs/ (unlisted, noindex).
+# To add a pack: copy a block below and fill it in. Newest first.
+- slug: largo-1001
+  title: "1001 15th Ave NW & 1455 10th St NW"
+  location: "Largo, Pinellas County, FL 33770"
+  one_liner: "2 houses on one corner parcel · 2 bd / 1 ba each · flood zone X"
+  price: "$260,000"
+  price_note: "+ 2% transaction fee"
+  url: /deals/largo-1001/
+  image: /deals/largo-1001/photos/hero-t.jpg
