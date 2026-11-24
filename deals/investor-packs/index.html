@@ -1,0 +1,73 @@
+---
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Investor Packs — UBM Ventures</title>
+<meta name="description" content="Private investor packs from UBM Ventures.">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b2a;--navy2:#13263a;--line:#24394f;--gold:#c9a25b;--gold2:#e2c48a;--ink:#eef2f6;--soft:#a9b6c4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+a{color:var(--gold2)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--line);padding:16px 0}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700}
+.brand small{display:block;font-family:Inter,sans-serif;font-size:.72rem;font-weight:500;color:var(--gold);letter-spacing:.14em;text-transform:uppercase}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:6px}
+.intro{padding:40px 0 10px}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:99px;padding:4px 12px;margin-bottom:12px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);line-height:1.15}
+.intro p{color:var(--soft);margin-top:8px;max-width:640px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:28px 0 10px}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card:hover{border-color:var(--gold)}
+.card img{width:100%;aspect-ratio:2/1;object-fit:cover;display:block}
+.card .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h2{font-family:'Cormorant Garamond',serif;font-size:1.45rem;line-height:1.2}
+.card .loc{color:var(--soft);font-size:.9rem}
+.card .one{font-size:.95rem}
+.card .pr{margin-top:6px}.card .pr b{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--gold2)}.card .pr span{color:var(--soft);font-size:.85rem;margin-left:6px}
+.card .btn{margin-top:auto;text-align:center}
+.contact{margin:40px 0 0;background:var(--navy2);border:1px solid var(--gold);border-radius:10px;padding:24px;text-align:center}
+.contact p{color:var(--soft);margin-top:6px}
+footer{color:var(--soft);font-size:.8rem;padding:28px 0 40px;text-align:center}
+</style>
+</head><body>
+<header class="top"><div class="wrap">
+<div class="brand">UBM Ventures<small>a Soglowek Company</small></div>
+<a class="btn" href="mailto:Uri@ubm-ventures.com?subject=Investor%20packs">Contact Uri</a>
+</div></header>
+<main class="wrap">
+<section class="intro">
+<span class="tag">Private · Investors only</span>
+<h1>Investor Packs</h1>
+<p>Current opportunities from UBM Ventures. Each pack has the property photos, facts, inspection and supporting documents.</p>
+</section>
+<div class="cards">
+{% for p in site.data.investor_packs %}
+<article class="card">
+<a href="{{ p.url }}"><img src="{{ p.image }}" alt="{{ p.title | escape }}" loading="lazy"></a>
+<div class="b">
+<h2>{{ p.title | escape }}</h2>
+<div class="loc">{{ p.location | escape }}</div>
+<div class="one">{{ p.one_liner | escape }}</div>
+<div class="pr"><b>{{ p.price }}</b>{% if p.price_note %}<span>{{ p.price_note }}</span>{% endif %}</div>
+<a class="btn" href="{{ p.url }}">View investor pack</a>
+</div>
+</article>
+{% endfor %}
+</div>
+<section class="contact">
+<h2 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--gold2)">Questions?</h2>
+<p>Uri — UBM Ventures · <a href="mailto:Uri@ubm-ventures.com">Uri@ubm-ventures.com</a></p>
+</section>
+</main>
+<footer>UBM Ventures, a Soglowek Company</footer>
+</body></html>
