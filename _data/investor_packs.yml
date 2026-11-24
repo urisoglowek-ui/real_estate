@@ -1,5 +1,13 @@
 # Investor packs listed at /deals/investor-packs/ (unlisted, noindex).
 # To add a pack: copy a block below and fill it in. Newest first.
+- slug: 4503-n-72nd-st-tampa
+  title: "4503 N 72nd St"
+  location: "Tampa, Hillsborough County, FL 33610"
+  one_liner: "Block 3/1 flip · 836 sf + carport upside · 7,600 sf corner lot · flood zone X"
+  price: "$142,000"
+  price_note: "+ 2% transaction fee"
+  url: /deals/4503-n-72nd-st-tampa/
+  image: /deals/4503-n-72nd-st-tampa/photos/hero-t.jpg
 - slug: largo-1001
   title: "1001 15th Ave NW & 1455 10th St NW"
   location: "Largo, Pinellas County, FL 33770"
